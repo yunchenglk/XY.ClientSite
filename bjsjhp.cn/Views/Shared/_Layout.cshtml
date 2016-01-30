@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>伯爵私家烘培</title>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,400italic,600,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Damion' rel='stylesheet' type='text/css'>
+    <link href="~/Content/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/Content/css/templatemo-style.css" rel="stylesheet">
+    <link href="~/Content/css/zerogrid.css" rel="stylesheet" />
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <link href="~/Content/css/slide.css" rel="stylesheet" />
+    <link href="~/Content/css/menu.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+
+    <script src="~/Content/js/templatemo-script.js"></script>
+    <script src="~/Content/js/responsiveslides.min.js"></script>
+    <script src="~/Content/Config.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var obj_gywm = $.GetApiData(apiurl + "/Content/" + urlitems.gywm);
+            if (obj_gywm.status == 1) {
+                var content = obj_gywm.data.Short_Desc;
+                if (content.length > 170)
+                    content = content.substr(0, 170) + "...";
+                $("#gywm_").html(content);
+            }
+            var obj_lxwm = $.GetApiData(apiurl + "/Content/" + urlitems.lxwm);
+            if (obj_lxwm.status == 1) {
+                var content = obj_lxwm.data.Short_Desc;
+                var arrdata = obj_lxwm.data.Description.match('<iframe[^>]+src="([^"]+)"');
+                $(".ueditor_baidumap").attr("src", arrdata[1]);
+            }
+        })
+    </script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left">
+            <img src="~/Content/img/logo-l.png" style="float: right; top: 45%; position: relative;" />
+        </div>
+        <div class="loader-section section-right">
+            <img src="~/Content/img/logo-r.png" style="top: 45%; position: relative;" />
+        </div>
+    </div>
+    <!-- End Preloader -->
+    <!--Header-->
+    <header>
+        <div class="zerogrid">
+            <center><div class="logo"><img src="/content/img/logo.png"></div></center>
+        </div>
+    </header>
+    <div class="site-title">
+        <div class="zerogrid">
+            <div class="row">
+                <h2 class="t-center">我们只做最专业的私人定制</h2>
+            </div>
+        </div>
+    </div>
+    <!--End Header-->
+    <!--Menu-->
+    @*<a href="#" class="nav-toggle">Toggle Navigation</a>*@
+    <nav class="cmn-tile-nav">
+        <ul class="clearfix">
+            <li class="colour-1"><a href="/">首页</a></li>
+            <li class="colour-2"><a href="/Home/About/B1441684-D1E5-4A56-AEF1-5606E4D1F17C">品牌介绍</a></li>
+            <li class="colour-3"><a href="/Home/Produce_/9c51686a-1e22-4661-90d4-28183e79cf84">蛋糕名录</a></li>
+            <li class="colour-4"><a href="/Home/Message">私人定制</a></li>
+            <li class="colour-5"><a href="/Home/Product/573BBF6D-EEE1-44B1-8EBE-88AA022AB180">新品推荐</a></li>
+            <li class="colour-6"><a href="#">最新活动</a></li>
+            <li class="colour-7"><a href="/Home/About/FC408096-5198-4F76-BD13-8982B9BEFED5">产品规格</a></li>
+            <li class="colour-8"><a href="/Home/About/04D5D253-2614-4853-9C3E-734F5B7C38B0">联系我们</a></li>
+        </ul>
+    </nav>
+    <!--End Menu-->
+    @RenderBody()
+
+    <!--Footer-->
+    <footer class="zerogrid">
+        <div class="wrap-footer">
+            <div class="row">
+                <div class="col-1-3">
+                    <div class="wrap-col">
+                        <h4>关于我们</h4>
+                        <div class="row">
+                            <p id="gywm_"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-3">
+                    <div class="wrap-col">
+                        <h4>地址</h4>
+                        <div class="wrap-map">
+                            <iframe class="ueditor_baidumap" src="" frameborder="0" width="307" height="250"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-3">
+                    <div class="wrap-col">
+                        <h4>营业时间</h4>
+                        <p><span>mon.</span> 17:00 - 21:00</p>
+                        <p><span>tue.-wed.</span> 16:30 – 21:00</p>
+                        <p><span>thu.-sat.</span> 16:30 – 21:00</p>
+                        <p><span>sun.</span> 11:00 – 21:00</p>
+                        <p>
+                            <span>Need help getting home?</span></br>
+                            We will call a cab for you!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <div class="wrapper">
+                Copyright 2016 - 伯爵私人烘培
+                <ul class="quick-link f-right">
+                    <li>技术支持&#12288;<a href="http://www.0359i.com/">鑫跃国际</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!--End Footer-->
+</body>
+</html>

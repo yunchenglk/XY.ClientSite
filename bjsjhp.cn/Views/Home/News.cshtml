@@ -1,0 +1,59 @@
+﻿<script src="~/Content/jquery-tmpl.js"></script>
+<script src="~/Content/jBootstrapPage.js"></script>
+<script type="text/x-jquery-tmpl" id="dataModel">
+    <div class="product-grid">
+        <a href="single.html">
+            <div class="more-product"><span> </span></div>
+            <div class="product-img b-link-stripe b-animate-go  thickbox">
+                <img src="${sourceWeb_}${SlidePic}" class="img-responsive" alt="">
+                <div class="b-wrapper">
+                    <h4 class="b-animate b-from-left  b-delay03">
+                        <button>View</button>
+                    </h4>
+                </div>
+            </div>
+        </a>
+        <div class="product-info simpleCart_shelfItem">
+            <div class="product-info-cust prt_name">
+                <h4>Product #1</h4>
+                <span class="item_price">$2000.00</span>
+                <div class="ofr">
+                    <p class="pric1"><del>$2300.00</del></p>
+                </div>
+                <input type="button" class="item_add items" value="查看详情">
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        $("#news").bindPage({
+            where: "ClassID|equal|" + '@ViewBag.ID' + "#DR|equal|0",
+            url: apiurl + "/news/",
+            pagesize: 12,
+            paginationObj: $(".pagination ul")
+        })
+    })
+</script>
+
+
+<section id="container" class="sub-page">
+    <div class="wrap-container zerogrid">
+        <div class="crumbs">
+            <ul>
+                <li><a href="/">首页</a></li>
+                <li><a href="javascript:void(0);">Blog</a></li>
+            </ul>
+        </div>
+        <div id="main-content" class="col-full">
+            <div class="wrap-content" id="news">
+
+            </div>
+        </div>
+        <aside style="text-align: center">
+            <ul class="pagination"></ul>
+        </aside>
+    </div>
+</section>

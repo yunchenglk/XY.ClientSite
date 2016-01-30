@@ -89,11 +89,150 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Config.js" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\flexslider.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\css\menu.css" />
+    <Content Include="Content\css\slide.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\templatemo-style.css" />
+    <Content Include="Content\css\zerogrid.css" />
+    <Content Include="Content\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\Images\fade1.jpg" />
+    <Content Include="Content\Images\fade2.jpg" />
+    <Content Include="Content\Images\fade3.jpg" />
+    <Content Include="Content\Images\fade4.jpg" />
+    <Content Include="Content\Images\fade5.jpg" />
+    <Content Include="Content\Images\fade6.jpg" />
+    <Content Include="Content\Images\popular-item-bg-hover.png" />
+    <Content Include="Content\Images\popular-item-bg.png" />
+    <Content Include="Content\Images\shadow.png" />
+    <Content Include="Content\img\10.jpg" />
+    <Content Include="Content\img\11.jpg" />
+    <Content Include="Content\img\12.jpg" />
+    <Content Include="Content\img\13.jpg" />
+    <Content Include="Content\img\14.jpg" />
+    <Content Include="Content\img\15.jpg" />
+    <Content Include="Content\img\4.jpg" />
+    <Content Include="Content\img\5.jpg" />
+    <Content Include="Content\img\6.jpg" />
+    <Content Include="Content\img\7.jpg" />
+    <Content Include="Content\img\8.jpg" />
+    <Content Include="Content\img\9.jpg" />
+    <Content Include="Content\img\a-1.jpg" />
+    <Content Include="Content\img\banner1.jpg" />
+    <Content Include="Content\img\banner2.jpg" />
+    <Content Include="Content\img\banner3.jpg" />
+    <Content Include="Content\img\bg-1.png" />
+    <Content Include="Content\img\bg-2.png" />
+    <Content Include="Content\img\bg-3.png" />
+    <Content Include="Content\img\bg-header.png" />
+    <Content Include="Content\img\bg.png" />
+    <Content Include="Content\img\chef-1.jpg" />
+    <Content Include="Content\img\chef-2.jpg" />
+    <Content Include="Content\img\chef-3.jpg" />
+    <Content Include="Content\img\chef-4.jpg" />
+    <Content Include="Content\img\chef.jpg" />
+    <Content Include="Content\img\fast-food.jpg" />
+    <Content Include="Content\img\logo-l.png" />
+    <Content Include="Content\img\logo-r.png" />
+    <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\m1.png" />
+    <Content Include="Content\img\m2.png" />
+    <Content Include="Content\img\m3.png" />
+    <Content Include="Content\img\m4.png" />
+    <Content Include="Content\img\m5.png" />
+    <Content Include="Content\img\m6.png" />
+    <Content Include="Content\img\m7.png" />
+    <Content Include="Content\img\m8.png" />
+    <Content Include="Content\img\m9.png" />
+    <Content Include="Content\img\Mail.png" />
+    <Content Include="Content\img\menu.jpg" />
+    <Content Include="Content\img\Phone.png" />
+    <Content Include="Content\img\popular-1.jpg" />
+    <Content Include="Content\img\popular-2.jpg" />
+    <Content Include="Content\img\popular-3.jpg" />
+    <Content Include="Content\img\popular-item-bg-hover.png" />
+    <Content Include="Content\img\popular-item-bg.png" />
+    <Content Include="Content\img\preview.jpg" />
+    <Content Include="Content\img\reservation.jpg" />
+    <Content Include="Content\img\s1.png" />
+    <Content Include="Content\img\s2.png" />
+    <Content Include="Content\img\s3.png" />
+    <Content Include="Content\img\sy.png" />
+    <Content Include="Content\jBootstrapPage.js" />
+    <Content Include="Content\jquery-tmpl.js" />
+    <Content Include="Content\jquery.form.js" />
+    <Content Include="Content\jquery.HashTable.js" />
+    <Content Include="Content\js\imagezoom.js" />
+    <Content Include="Content\js\jquery.cxslide.min.js" />
+    <Content Include="Content\js\jquery.flexslider.js" />
+    <Content Include="Content\js\responsiveslides.min.js" />
+    <Content Include="Content\js\templatemo-script.js" />
+    <Content Include="Content\style.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Content\font-awesome\less\core.less" />
+    <Content Include="Content\font-awesome\less\fixed-width.less" />
+    <Content Include="Content\font-awesome\less\font-awesome.less" />
+    <Content Include="Content\font-awesome\less\icons.less" />
+    <Content Include="Content\font-awesome\less\larger.less" />
+    <Content Include="Content\font-awesome\less\list.less" />
+    <Content Include="Content\font-awesome\less\mixins.less" />
+    <Content Include="Content\font-awesome\less\path.less" />
+    <Content Include="Content\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Content\font-awesome\less\spinning.less" />
+    <Content Include="Content\font-awesome\less\stacked.less" />
+    <Content Include="Content\font-awesome\less\variables.less" />
+    <Content Include="Content\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Content\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Content\font-awesome\scss\_core.scss" />
+    <Content Include="Content\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Content\font-awesome\scss\_icons.scss" />
+    <Content Include="Content\font-awesome\scss\_larger.scss" />
+    <Content Include="Content\font-awesome\scss\_list.scss" />
+    <Content Include="Content\font-awesome\scss\_mixins.scss" />
+    <Content Include="Content\font-awesome\scss\_path.scss" />
+    <Content Include="Content\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Content\font-awesome\scss\_spinning.scss" />
+    <Content Include="Content\font-awesome\scss\_stacked.scss" />
+    <Content Include="Content\font-awesome\scss\_variables.scss" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -102,6 +241,23 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Properties\PublishProfiles\bjsjhp.pubxml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Message.cshtml" />
+    <Content Include="Views\Home\News.cshtml" />
+    <Content Include="Views\Home\News_Show.cshtml" />
+    <Content Include="Views\Home\Product.cshtml" />
+    <Content Include="Views\Home\Product_Show.cshtml" />
+    <Content Include="Views\Home\test.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Home\Produce_.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -111,7 +267,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

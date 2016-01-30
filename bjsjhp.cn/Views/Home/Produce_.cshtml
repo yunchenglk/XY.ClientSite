@@ -1,0 +1,118 @@
+﻿<script src="~/Content/jquery-tmpl.js"></script>
+<script src="~/Content/jBootstrapPage.js"></script>
+<script type="text/x-jquery-tmpl" id="dataModel">
+    <div class="product-grid">
+        <a href="single.html">
+            <div class="more-product"><span> </span></div>
+            <div class="product-img b-link-stripe b-animate-go  thickbox">
+                <img src="${sourceWeb_}${SlidePic}" class="img-responsive" alt="">
+                <div class="b-wrapper">
+                    <h4 class="b-animate b-from-left  b-delay03">
+                        <button>查看详情</button>
+                    </h4>
+                </div>
+            </div>
+        </a>
+        <div class="product-info simpleCart_shelfItem">
+            <div class="product-info-cust prt_name">
+                <h4>${Title}</h4>
+                <span class="item_price">${Attr[0].price.PriceStr}</span>
+                @*<div class="ofr">
+                        <p class="pric1"><del>$2300.00</del></p>
+                    </div>*@
+                <a href="/Home/Product_Show/${ID}" class="item_add items">查看详情</a>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/javascript">
+    $(function () {
+        $("#news").bindPage({
+            where: "ClassID|equal|" + '@ViewBag.ID' + "#DR|equal|0",
+            url: apiurl + "/Product/",
+            pagesize: 8
+        });
+        var result = $.GetApiData(apiurl + "/Content/" + '@ViewBag.ID');
+        if (result.status == 1) {
+            $("#classname").html(result.data.Title);
+        };
+    })
+</script>
+<style type="text/css">
+    blockquote {
+        font-size: 18px;
+        color: #666;
+        margin:8px 0;
+    }
+
+        blockquote a {
+            border-left: 2px solid #E4000D;
+            font-size: 18px;
+            color: #666;
+            padding-left: 20px;
+        }
+
+            blockquote a:hover {
+                border-left: 2px solid #750107;
+                font-size: 18px;
+                color: #E4000D;
+                padding-left: 20px;
+            }
+</style>
+<section id="container" class="sub-page">
+    <div class="wrap-container zerogrid">
+        <div class="crumbs">
+            <ul>
+                <li><a href="/">首页</a></li>
+                <li><a href="javascript:void(0);" id="classname"></a></li>
+            </ul>
+        </div>
+        <div id="main-content" class="col-full">
+            <div class="col-1-4">
+
+                <div class="wrap-sidebar">
+                    <div class="widget">
+                        <div class="wid-header">
+                            <h5>蛋糕名录</h5>
+                        </div>
+                        <div class="art-content">
+                            <blockquote>
+                                <a href="/Home/Produce_/9c51686a-1e22-4661-90d4-28183e79cf84">经典系列</a>
+                            </blockquote>
+                            <blockquote>
+                                <a href="/Home/Produce_/2f9e81bf-dd9f-47b1-9516-0913808a576f">欧式水果</a>
+                            </blockquote>
+                            <blockquote>
+                                <a href="/Home/Produce_/100107e6-1172-4a39-b4f8-25fd96ec9a42">巧克力系列</a>
+                            </blockquote>
+                            <blockquote>
+                                <a href="/Home/Produce_/76759b94-a374-4856-92ba-4040101bba2e">慕斯系列</a>
+                            </blockquote>
+                            <blockquote>
+                                <a href="/Home/Produce_/114f9e1a-a40f-49ac-8388-6b3ebaa89a95">儿童系列</a>
+                            </blockquote>
+                            <blockquote>
+                                <a href="/Home/Produce_/d2dfb166-12a6-4bcf-8c39-9282fc2fb2fc">过寿系列</a>
+                            </blockquote>
+                            <blockquote>
+                                <a href="/Home/Produce_/db6f9bb6-af95-4672-81ab-c1b3d8829d01">乳酪系列</a>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-3-4" style="border-left:1px solid #ddd">
+                <div class="wrap-content" id="news">
+
+                </div>
+            </div>
+        </div>
+        <div style=" clear:both;"></div>
+        <aside class="col-full" style=" text-align:center">
+            <ul class="pagination"></ul>
+        </aside>
+    </div>
+</section>
+

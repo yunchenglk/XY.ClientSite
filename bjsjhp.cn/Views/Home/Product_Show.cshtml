@@ -1,0 +1,113 @@
+﻿
+<script src="~/Content/js/jquery.flexslider.js"></script>
+<script src="~/Content/js/imagezoom.js"></script>
+<link href="~/Content/css/flexslider.css" rel="stylesheet" />
+<script src="~/Content/jquery.HashTable.js"></script>
+<script type="text/javascript">
+    var keys = new HashTable();
+    var vals = new HashTable();
+    var prices = new HashTable();
+    $(function () {
+        var result = $.GetApiData(apiurl + "/Product/" + '@ViewBag.ID');
+        if (result.status == 1) {
+            $("#ClassName").html(result.data.Title);
+            $("#content").html(result.data.DescriptionStr);
+            $.each(result.data.Attr, function (i, n) {
+                keys.add(n.key.ID, n.key.Name);
+                vals.add([n.key.ID] + "|" + [n.val.ID], n.val.Value);
+                prices.add([n.key.ID] + "|" + [n.val.ID], n.price.Price + "|" + n.price.Stock);
+            })
+            ////准备信息
+            $("#key").text(keys.getValues()[0]);
+            for (var i in vals.getValues()) {
+                $("#sizes").append('<li><a href="javascript:_getPrice(\'' + vals.getKeys()[i] + '\')">' + vals.getValues()[i] + '</a></li>');
+            }
+            _getPrice(vals.getKeys()[0]);
+        }
+        //获取图片
+        var Imgs = $.GetApiData(apiurl + "/Files?RelationID=" + '@ViewBag.ID');
+        if (Imgs.status == 1) {
+            var imghtml = '';
+            $.each(Imgs.data, function (i, n) {
+                imghtml += '<li data-thumb="' + n.FilePathStr + '">';
+                imghtml += '<div class="thumb-image"> <img src="' + n.FilePathStr + '" data-imagezoom="true" class="img-responsive"> </div>';
+                imghtml += '</li>';
+            })
+            $("#img_files").html(imghtml);
+            $('.flexslider').flexslider({
+                animation: "slide",
+                controlNav: "thumbnails"
+            });
+        }
+    })
+    function _getPrice(id) {
+        var params = prices.getValue(id).split('|');
+        $("#jiaqian").text(params[0]);
+        $("#kucun").text(params[1] + "(个/份)");
+    }
+</script>
+<style type="text/css">
+    .imagezoom -cursor, .imagezoom-view {
+        background: #fff;
+    }
+</style>
+<section id="container" class="sub-page">
+    <div class="wrap-container zerogrid">
+        <div class="crumbs">
+            <ul>
+                <li><a href="/">首页</a></li>
+                <li><a href="javascript:void(0);">产品详情</a></li>
+            </ul>
+        </div>
+        <div id="main-content" class="col-2-5">
+            <div class="wrap-content">
+                <div class="single-grids">
+                    <div class="col-md-4 single-grid">
+                        <div class="flexslider">
+                            <ul class="slides" id="img_files"></ul>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3-5">
+            <div class="main-content">
+                <div class="wrap-content" style="margin:40px 10px;">
+                    <article>
+                        <div class="art-header">
+                            <a href="javascript:void(0);"><h3 id="ClassName"></h3></a>
+                        </div>
+                        <br />
+                        <ul class="size" id="sizes">
+                            <h3 id="key"></h3>
+                           
+                        </ul>
+                        <ul class="size">
+                            <h3>价钱</h3>
+                            <h4 class="item_price" id="jiaqian"></h4>
+                        </ul>
+                        <ul class="size">
+                            <h3>库存</h3>
+                            <h4 class="item_price" id="kucun"></h4>
+                        </ul>
+                        <br />
+                        <a class="button button02" href="/Home/Message">购买</a>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-full " style=" padding: 30px; ">
+            <article style="background: #f8f8f8; padding: 30px; width:100%; border-top: 1px solid #eee; ">
+                <h2>商品详情</h2>
+                <hr />
+                <p id="content"></p>
+            </article>
+        </div>
+    </div>
+</section>
+
+
+
+

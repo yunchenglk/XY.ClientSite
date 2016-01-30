@@ -1,0 +1,87 @@
+﻿
+<script type="text/javascript">
+    $(function () {
+        //闪图
+        var obj_syst = $.GetApiData(apiurl + "/News/" + urlitems.syst + "?type=0&count=3");
+        if (obj_syst.status == 1) {
+            var slider_ht = "";
+            $.each(obj_syst.data, function (i, n) {
+                slider_ht += "<li>";
+                slider_ht += '<img src="' + n.SlidePicStr_ + '" alt="">';
+                slider_ht += '<div class="caption">';
+                slider_ht += '<h2>' + n.Title + '</h2></br>';
+                slider_ht += '<p>' + n.Short_Dec + '</p>';
+                slider_ht += '</div>';
+                slider_ht += '</li>';
+            })
+            $("#slider4").html(slider_ht);
+            $("#slider4").responsiveSlides({
+                auto: true,
+                pager: false,
+                nav: false,
+                speed: 500,
+                namespace: "callbacks",
+                before: function () {
+                    $('.events').append("<li>before event fired.</li>");
+                },
+                after: function () {
+                    $('.events').append("<li>after event fired.</li>");
+                }
+            });
+        }
+        //新品推荐
+       // var obj_xptj = $.GetApiData(apiurl + "/Product/" + urlitems.xptj + "?type=1&count=6");
+        var obj_xptj = $.GetApiData(apiurl + "/Product/2f9e81bf-dd9f-47b1-9516-0913808a576f?type=1&count=6");
+        if (obj_xptj.data.length > 0) {
+            var xptj = '<div class="row">';
+            for (var i = 0; i < obj_xptj.data.length ; i++) {
+                var obj = obj_xptj.data[i];
+                xptj += '<div class="col-1-3">';
+                xptj += '<div class="wrap-col">';
+                xptj += '<div class="box-item">';
+                xptj += '<span class="ribbon">' + obj.Title + '<b></b></span>';
+                xptj += '<img src="' + (obj.sourceWeb_ + obj.SlidePic) + '" alt="">';
+                xptj += '<p>' + (obj.DescriptionStr.length > 30 ? obj.DescriptionStr.substr(0, 30) + "..." : obj.DescriptionStr) + '</p>';
+                xptj += '<a href="/Home/Product_Show/' + obj.ID + '" class="button button-1">查案详情</a>';
+                xptj += '</div></div></div>';
+                if (i == 2) {
+                    xptj += '</div><div class="row">';
+                }
+            }
+            if (obj_xptj.data.length > 3) {
+                xptj.substr(0, xptj.length - 17);
+            }
+            $("#xptj").append(xptj);
+        }
+    });
+</script>
+<div class="zerogrid">
+    <div class="callbacks_container">
+        <ul class="rslides" id="slider4"></ul>
+    </div>
+</div>
+<section id="container" class="index-page">
+    <div class="wrap-container zerogrid">
+        <!-----------------content-box-1-------------------->
+        <section class="content-box box-1">
+            <div class="zerogrid">
+                <div class="row box-item">
+                    <!--Start Box-->
+                    <h2>“产品理念”</h2>
+                    <span>真正的自然美味，均有其自身的生命规律，人力智慧应该用在如何保护食物的天然本色上，这样做，不只是为了健康，更是尊重每一种精心挑选的地道食材。</span>
+                </div>
+            </div>
+        </section>
+        <section class="content-box box-2">
+            <div class="zerogrid">
+                <div class="row wrap-box" id="xptj">
+                    <!--Start Box-->
+                    <div class="header">
+                        <h2>新品推荐</h2>
+                        <hr class="line">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>

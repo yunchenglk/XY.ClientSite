@@ -1,0 +1,61 @@
+﻿<script src="~/Content/jquery-tmpl.js"></script>
+<script src="~/Content/jBootstrapPage.js"></script>
+<script type="text/x-jquery-tmpl" id="dataModel">
+    <div class="product-grid">
+        <a href="single.html">
+            <div class="more-product"><span> </span></div>
+            <div class="product-img b-link-stripe b-animate-go  thickbox">
+                <img src="${sourceWeb_}${SlidePic}" class="img-responsive" alt="">
+                <div class="b-wrapper">
+                    <h4 class="b-animate b-from-left  b-delay03">
+                        <button>查看详情</button>
+                    </h4>
+                </div>
+            </div>
+        </a>
+        <div class="product-info simpleCart_shelfItem">
+            <div class="product-info-cust prt_name">
+                <h4>${Title}</h4>
+                <span class="item_price">${Attr[0].price.PriceStr}</span>
+                @*<div class="ofr">
+                        <p class="pric1"><del>$2300.00</del></p>
+                    </div>*@
+                <a href="/Home/Product_Show/${ID}" class="item_add items">查看详情</a>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        $("#news").bindPage({
+            where: "ClassID|equal|" + '@ViewBag.ID' + "#DR|equal|0",
+            url: apiurl + "/Product/",
+            pagesize: 8
+        });
+        var result = $.GetApiData(apiurl + "/Content/" + '@ViewBag.ID');
+        if (result.status == 1) {
+            $("#classname").html(result.data.Title);
+        };
+    })
+</script>
+<section id="container" class="sub-page">
+    <div class="wrap-container zerogrid">
+        <div class="crumbs">
+            <ul>
+                <li><a href="/">首页</a></li>
+                <li><a href="javascript:void(0);" id="classname">Blog</a></li>
+            </ul>
+        </div>
+        <div id="main-content" class="col-full">
+            <div class="wrap-content" id="news">
+
+            </div>
+        </div>
+        <div style=" clear:both;"></div>
+        <aside class="col-full" style=" text-align:center">
+            <ul class="pagination"></ul>
+        </aside>
+    </div>
+</section>

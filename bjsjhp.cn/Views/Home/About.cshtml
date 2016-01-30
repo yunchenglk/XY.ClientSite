@@ -1,0 +1,28 @@
+﻿<script type="text/javascript">
+    $(function () {
+        var result = $.GetApiData(apiurl + "/Content/" + '@ViewBag.ID');
+        if (result.status == 1) {
+            $("#Title").html(result.data.Title);
+            //$("#metitle").append("|" + result.data.Title);
+            $("#content").html(result.data.DescriptionStr);
+            //$("#Publisher").html(result.data.Publisher);
+            //$("#Count").html(result.data.Count);
+            //$(".loading").hide();
+        }
+    })
+</script>
+<section id="container" class="sub-page">
+    <div class="wrap-container zerogrid">
+        <div class="crumbs">
+            <ul>
+                <li><a href="/">首页</a></li>
+                <li><a href="javascript:void(0);" id="Title">Location</a></li>
+            </ul>
+        </div>
+        <div id="main-content">
+            <div class="wrap-content" id="content">
+                阿斯蒂芬
+            </div>
+        </div>
+    </div>
+</section>

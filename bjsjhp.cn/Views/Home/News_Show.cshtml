@@ -1,0 +1,68 @@
+﻿
+<script src="~/Content/js/jquery.flexslider.js"></script>
+<script src="~/Content/js/imagezoom.js"></script>
+<link href="~/Content/css/flexslider.css" rel="stylesheet" />
+<script type="text/javascript">
+    $(function () {
+        var result = $.GetApiData(apiurl + "/News/" + '@ViewBag.ID');
+        if (result.status == 1) {
+            //$("#ClassName,#Meta").html(result.data.Title);
+            //$("#content_title").html("<b>" + result.data.Title + "</b>");
+            //$("#ClassName,#wz_ClassName").html(result.data.ClassName);
+            //$("#metitle").append("|" + result.data.Title);
+            //$("#content").html(result.data.DescriptionStr);
+            //$("#Publisher").html(result.data.Publisher);
+            //$("#Count").html(result.data.Count);
+            //$(".loading").hide();
+        }
+        //获取图片
+        var Imgs = $.GetApiData(apiurl + "/Files?RelationID=" + '@ViewBag.ID');
+        if (Imgs.status == 1) {
+            var imghtml = '';
+            $.each(Imgs.data, function (i, n) {
+                imghtml += '<li data-thumb="' + (n.WatermarkUEL + n.FilePath) + '">';
+                imghtml += '<div class="thumb-image"> <img src="' + (n.WatermarkUEL + n.FilePath) + '" data-imagezoom="true" class="img-responsive"> </div>';
+                imghtml += '</li>';
+            })
+            $("#img_files").html(imghtml);
+            $('.flexslider').flexslider({
+                animation: "slide",
+                controlNav: "thumbnails"
+            });
+        }
+
+
+    })
+</script>
+<section id="container" class="sub-page">
+    <div class="wrap-container zerogrid">
+        <div class="crumbs">
+            <ul>
+                <li><a href="/">首页</a></li>
+                <li><a href="javascript:void(0);">Blog</a></li>
+            </ul>
+        </div>
+        <div id="main-content" class="col-2-5">
+            <div class="wrap-content">
+                <div class="single-grids">
+                    <div class="col-md-4 single-grid">
+                        <div class="flexslider">
+                            <ul class="slides" id="img_files">
+                               
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3-5">
+            <div class="wrap-content">
+                asdf
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
