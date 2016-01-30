@@ -93,7 +93,7 @@ function createPage(objs, pageIndex, pageSize, total, url, wheres, sortname, sor
 }
 
 
-var apiurl = "http://api.com/api";
+var apiurl = "http://api1.0359i.com/api";
 var urlitems = {
     //首页闪图
     syst: "8E325643-94B6-45FD-B608-21C5267FAEBC",
