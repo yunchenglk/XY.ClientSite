@@ -29,8 +29,8 @@
         if (Imgs.status == 1) {
             var imghtml = '';
             $.each(Imgs.data, function (i, n) {
-                imghtml += '<li data-thumb="' + n.FilePathStr + '">';
-                imghtml += '<div class="thumb-image"> <img src="' + n.FilePathStr + '" data-imagezoom="true" class="img-responsive"> </div>';
+                imghtml += '<li data-thumb="' + (n.WatermarkUEL + n.FilePath) + '">';
+                imghtml += '<div class="thumb-image"> <img src="' + (n.WatermarkUEL + n.FilePath) + '" data-imagezoom="true" class="img-responsive"> </div>';
                 imghtml += '</li>';
             })
             $("#img_files").html(imghtml);
@@ -81,7 +81,7 @@
                         <br />
                         <ul class="size" id="sizes">
                             <h3 id="key"></h3>
-                           
+
                         </ul>
                         <ul class="size">
                             <h3>价钱</h3>
