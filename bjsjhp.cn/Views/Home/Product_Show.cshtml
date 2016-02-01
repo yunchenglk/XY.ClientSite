@@ -15,7 +15,7 @@
             $.each(result.data.Attr, function (i, n) {
                 keys.add(n.key.ID, n.key.Name);
                 vals.add([n.key.ID] + "|" + [n.val.ID], n.val.Value);
-                prices.add([n.key.ID] + "|" + [n.val.ID], n.price.Price + "|" + n.price.Stock);
+                prices.add([n.key.ID] + "|" + [n.val.ID], n.price.PriceStr + "|" + n.price.Stock);
             })
             ////准备信息
             $("#key").text(keys.getValues()[0]);
