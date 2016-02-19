@@ -26,12 +26,12 @@
                     content = content.substr(0, 170) + "...";
                 $("#gywm_").html(content);
             }
-            var obj_lxwm = $.GetApiData(apiurl + "/Content/" + urlitems.lxwm);
-            if (obj_lxwm.status == 1) {
-                var content = obj_lxwm.data.Short_Desc;
-                var arrdata = obj_lxwm.data.Description.match('<iframe[^>]+src="([^"]+)"');
-                $(".ueditor_baidumap").attr("src", arrdata[1]);
-            }
+            //var obj_lxwm = $.GetApiData(apiurl + "/Content/" + urlitems.lxwm);
+            //if (obj_lxwm.status == 1) {
+            //    var content = obj_lxwm.data.Short_Desc;
+            //    var arrdata = obj_lxwm.data.Description.match('<iframe[^>]+src="([^"]+)"');
+            //    $(".ueditor_baidumap").attr("src", arrdata[1]);
+            //}
         })
     </script>
 </head>
@@ -93,8 +93,9 @@
                 <div class="col-1-3">
                     <div class="wrap-col">
                         <h4>地址</h4>
-                        <div class="wrap-map">
-                            <iframe class="ueditor_baidumap" src="" frameborder="0" width="307" height="250"></iframe>
+                        <div class="wrap-map" style=" height:100% ">
+                            <img src="http://api.map.baidu.com/staticimage?center=111.010298,35.023025&zoom=18&width=530&height=340&markers=111.00913,35.022759" />
+                            <div class="clearfix"></div>
                         </div>
                     </div>
                 </div>

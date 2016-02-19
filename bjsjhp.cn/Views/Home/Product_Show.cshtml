@@ -12,11 +12,13 @@
         if (result.status == 1) {
             $("#ClassName").html(result.data.Title);
             $("#content").html(result.data.DescriptionStr);
+	  
             $.each(result.data.Attr, function (i, n) {
                 keys.add(n.key.ID, n.key.Name);
                 vals.add([n.key.ID] + "|" + [n.val.ID], n.val.Value);
                 prices.add([n.key.ID] + "|" + [n.val.ID], n.price.PriceStr + "|" + n.price.Stock);
             })
+	    
             ////准备信息
             $("#key").text(keys.getValues()[0]);
             for (var i in vals.getValues()) {
@@ -25,6 +27,7 @@
             _getPrice(vals.getKeys()[0]);
         }
         //获取图片
+	 
         var Imgs = $.GetApiData(apiurl + "/Files?RelationID=" + '@ViewBag.ID');
         if (Imgs.status == 1) {
             var imghtml = '';
