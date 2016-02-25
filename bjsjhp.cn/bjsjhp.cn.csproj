@@ -167,6 +167,7 @@
     <Content Include="Content\jquery-tmpl.js" />
     <Content Include="Content\jquery.form.js" />
     <Content Include="Content\jquery.HashTable.js" />
+    <Content Include="Content\jquery.scrollLoading.js" />
     <Content Include="Content\js\imagezoom.js" />
     <Content Include="Content\js\jquery.cxslide.min.js" />
     <Content Include="Content\js\jquery.flexslider.js" />

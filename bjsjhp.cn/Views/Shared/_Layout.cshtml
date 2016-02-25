@@ -13,7 +13,7 @@
     <link href="~/Content/css/slide.css" rel="stylesheet" />
     <link href="~/Content/css/menu.css" rel="stylesheet" />
     <script src="~/Scripts/jquery-1.8.2.min.js"></script>
-
+    <script src="~/Content/jquery.scrollLoading.js"></script>
     @*<script src="~/Content/js/templatemo-script.js"></script>*@
     <script src="~/Content/js/responsiveslides.min.js"></script>
     <script src="~/Content/Config.js"></script>
@@ -26,6 +26,14 @@
                     content = content.substr(0, 170) + "...";
                 $("#gywm_").html(content);
             }
+            $("img").load(function () {
+                //图片默认隐藏  
+                $(this).hide();
+                //使用fadeIn特效  
+                $(this).fadeIn("5000");
+            });
+            // 异步加载图片，实现逐屏加载图片
+            $(".scrollLoading").scrollLoading();
             //var obj_lxwm = $.GetApiData(apiurl + "/Content/" + urlitems.lxwm);
             //if (obj_lxwm.status == 1) {
             //    var content = obj_lxwm.data.Short_Desc;
