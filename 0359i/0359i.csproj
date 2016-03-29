@@ -373,13 +373,13 @@
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Web.config" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Service.cshtml" />
     <Content Include="Views\Home\Case.cshtml" />
-    <Content Include="Views\Home\News.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\News.cshtml" />
+    <Content Include="Views\Home\Service.cshtml" />
+    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
