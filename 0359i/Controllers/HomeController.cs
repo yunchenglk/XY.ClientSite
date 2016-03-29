@@ -13,5 +13,25 @@ namespace _0359i.Controllers
         {
             return View();
         }
+        public ActionResult About()
+        {
+            return View();
+        }
+        public ActionResult Service()
+        {
+            return View();
+        }
+        public ActionResult Case()
+        {
+            return View();
+        }
+        public ActionResult News()
+        {
+            return View();
+        }
+        public ActionResult Contact()
+        {
+            return View();
+        }
     }
 }
