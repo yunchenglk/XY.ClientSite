@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>@ViewBag.Title - 鑫跃国际|打造运城IT尚品生活圈</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta content="telephone=no" name="format-detection" />
@@ -20,6 +20,13 @@
             border-bottom: 3px solid #e4392a !important;
         }
     </style>
+    <script type="text/javascript">
+        $(function () {
+            var _menu = '@ViewBag._menu';
+            $("#nav").find("a").removeClass("action");
+            $("#nav > ul > li:eq(" + _menu + ")").find("a").addClass("action");
+        })
+    </script>
 </head>
 <body>
 
