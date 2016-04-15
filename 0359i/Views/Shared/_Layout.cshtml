@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/less.css" />
     <script type="text/javascript" src="/js/jquery.js"></script>
+    <script src="~/Content/Config.js"></script>
     <style type="text/css">
         .action {
             color: #e4392a;
@@ -190,9 +191,7 @@
         });
     </script>
     <script>
-        $('.ul-news-i li').hover(function () {
-            $(this).toggleClass('on');
-        })
+      
         $('.ul-icon-i li').hover(function () {
             $(this).find('img:first').fadeIn(100);
             $(this).find('.pic-icon').animate({ top: 0 });

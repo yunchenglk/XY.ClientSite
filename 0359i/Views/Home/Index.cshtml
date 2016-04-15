@@ -2,6 +2,58 @@
     ViewBag.Title = "鑫跃国际";
     ViewBag._menu = 0;
 }
+<script type="text/javascript">
+    $(function () {
+        //学员风采
+        var obj_xyfc = $.GetApiData(apiurl + "/News/" + urlitems.xyfc + "?type=0&count=8");
+        if (obj_xyfc.status == 1) {
+            var slider_ht = "";
+            $.each(obj_xyfc.data, function (i, n) {
+                slider_ht += '<li>';
+                slider_ht += '<a href="case_info_4_110.html">';
+                slider_ht += '<div class="pic"><img src="' + n.SlidePicStr + '"></div>';
+                slider_ht += '<div class="hover">';
+                slider_ht += '<b></b>';
+                slider_ht += '<div class="txt">';
+                slider_ht += '<img src="/images/logo_small.png" alt="">';
+                slider_ht += '<h3>鑫跃国际</h3>';
+                slider_ht += '</div>';
+                slider_ht += '</div>';
+                slider_ht += '</a>';
+                slider_ht += '</li>';
+            })
+            $("#_xyfc_div").html(slider_ht);
+        }
+        //行业动态
+        var obj_hydt = $.GetApiData(apiurl + "/News/" + urlitems.hydt + "?type=0&count=4");
+        if (obj_hydt.status == 1) {
+            var slider_ht = "";
+            $.each(obj_hydt.data, function (i, n) {
+                slider_ht += '<li>';
+                slider_ht += '<div class="pad">';
+                slider_ht += '<div class="txt">';
+                slider_ht += '<span><em>' + n.CreateTime_.Day + '/' + n.CreateTime_.Month + '</em>' + n.CreateTime_.Year + '</span>';
+                slider_ht += '<h3><a href="news_info_5_313.html">' + n.Title + '</a></h3>';
+                slider_ht += '<p>' + (n.Short_Dec.length > 40 ? n.Short_Dec.substr(0, 40) + "..." : n.Short_Dec) + '</p>';
+                slider_ht += '<a href="news_info_5_313.html" class="more"></a>';
+                slider_ht += '</div>';
+                slider_ht += '<div class="hover">';
+                slider_ht += '<div class="img" style="background: url(' + n.SlidePicStr + ') 0 0 /100% 100% no-repeat;background: url(images/14568143499060.jpg) 0 0 no-repeat\9;"></div>';
+                slider_ht += '<div class="pad">';
+                slider_ht += '<h3><a href="news_info_5_313.html">' + n.Title + '</a></h3>';
+                slider_ht += '<p>' + (n.Short_Dec.length > 40 ? n.Short_Dec.substr(0, 40) + "..." : n.Short_Dec) + '</p>';
+                slider_ht += '</div>';
+                slider_ht += '</div>';
+                slider_ht += '</div>';
+                slider_ht += '</li>';
+            })
+            $("#_hydt_div").html(slider_ht);
+            $('.ul-news-i li').hover(function () {
+                $(this).toggleClass('on');
+            })
+        }
+    })
+</script>
 <div id="bd">
     <div id="banner">
         <div class="banner-bg"></div>
@@ -49,7 +101,7 @@
                             <span></span>
                             <h3>软件工程师人才培养</h3>
                             <em></em>
-                            <p>近五年来，IT行业的发展可以用“迅雷不及掩耳之势”来形容，作为一个有基础的潜力巨大并且人才稀缺的朝阳行业，投身IT，做时下大热的IT男已经成为越来越多男生就业的不二选择。</p>
+                            <p>“互联网”技术绝对是未来的发展核心。</p>
                             <div class="pic">
                                 <img src="/images/m1.png" alt="">
                                 <img src="/images/m2.png" alt="" class="pic-icon">
@@ -63,7 +115,7 @@
                             <span></span>
                             <h3>“响应式”网站建设</h3>
                             <em></em>
-                            <p>在移动互联时代，我们得出“简单使用，精彩体验”的移动应用开发理念，创造属于无线时代的精彩互联。</p>
+                            <p>实现一个站点，所有平台全兼容，更智能、边界，用户体验急速提升。</p>
                             <div class="pic">
                                 <img src="/images/m3.png" alt="">
                                 <img src="/images/m4.png" alt="" class="pic-icon">
@@ -77,7 +129,7 @@
                             <span></span>
                             <h3>微信应用开发</h3>
                             <em></em>
-                            <p>为客户提供全方位的移动端营销服务，微信公众平台开发，微站设计。</p>
+                            <p>微信已经家喻户晓，微信营销和宣传效果，已经被大多数人认可和使用</p>
                             <div class="pic">
                                 <img src="/images/m5.png" alt="">
                                 <img src="/images/m6.png" alt="" class="pic-icon">
@@ -111,104 +163,7 @@
             <div class="case-i">
 
                 <div class="case-i-r" style="width: 100%;">
-                    <ul class="ul-case-i">
-                        <li>
-                            <a href="case_info_4_110.html">
-                                <div class="pic"><img src="/images/14429937588106.jpg"></div>
-                                <div class="hover">
-                                    <b></b>
-                                    <div class="txt">
-                                        <img src="/images/logo_small.png" alt="">
-                                        <h3>LMP品牌站官网</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="case_info_4_54.html">
-                                <div class="pic"><img src="/images/14425590613750.jpg"></div>
-                                <div class="hover">
-                                    <b></b>
-                                    <div class="txt">
-                                        <img src="/images/logo_small.png" alt="">
-                                        <h3>连洋鞋业网站</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="case_info_4_52.html">
-                                <div class="pic"><img src="/images/14423045107241.jpg"></div>
-                                <div class="hover">
-                                    <b></b>
-                                    <div class="txt">
-                                        <img src="/images/logo_small.png" alt="">
-                                        <h3>礼悦利达</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="case_info_4_49.html">
-                                <div class="pic"><img src="/images/14423036593132.jpg"></div>
-                                <div class="hover">
-                                    <b></b>
-                                    <div class="txt">
-                                        <img src="/images/logo_small.png" alt="">
-                                        <h3>竣腾影业网站</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="case_info_4_20.html">
-                                <div class="pic"><img src="/images/14422959085097.jpg"></div>
-                                <div class="hover">
-                                    <b></b>
-                                    <div class="txt">
-                                        <img src="/images/logo_small.png" alt="">
-                                        <h3>国家信息安全中心网站</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="case_info_4_102.html">
-                                <div class="pic"><img src="/images/14429911135818.jpg"></div>
-                                <div class="hover">
-                                    <b></b>
-                                    <div class="txt">
-                                        <img src="/images/logo_small.png" alt="">
-                                        <h3>中亿行官网</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="case_info_4_100.html">
-                                <div class="pic"><img src="/images/14429905909518.jpg"></div>
-                                <div class="hover">
-                                    <b></b>
-                                    <div class="txt">
-                                        <img src="/images/logo_small.png" alt="">
-                                        <h3>中粮集团</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="case_info_4_70.html">
-                                <div class="pic"><img src="/images/14429012824914.jpg"></div>
-                                <div class="hover">
-                                    <b></b>
-                                    <div class="txt">
-                                        <img src="/images/logo_small.png" alt="">
-                                        <h3>十方天使基金</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
+                    <ul class="ul-case-i" id="_xyfc_div"></ul>
                 </div>
                 <div class="c"></div>
                 <div class="more-i"><a href="case4_0-1"></a></div>
@@ -221,77 +176,7 @@
                 <h3>行业动态</h3>
                 <h5>XINYUE <span>news</span></h5>
             </div>
-            <ul class="ul-news-i">
-                <li>
-                    <div class="pad">
-                        <div class="txt">
-                            <span><em>03/01</em>2016</span>
-                            <h3><a href="news_info_5_313.html">给设计师的网页动画设计基础</a></h3>
-                            <p>随着技术的积累，网页中的动画也已经是遍地开花，它时尚，有趣，也人性化。不断涌现的新技术和新工</p>
-                            <a href="news_info_5_313.html" class="more"></a>
-                        </div>
-                        <div class="hover">
-                            <div class="img" style="background: url(/images/14568143499060.jpg) 0 0 /100% 100% no-repeat;background: url(images/14568143499060.jpg) 0 0 no-repeat\9;"></div>
-                            <div class="pad">
-                                <h3><a href="news_info_5_313.html">给设计师的网页动画设计基础</a></h3>
-                                <p>随着技术的积累，网页中的动画也已经是遍地开花，它时尚，有趣，也人性化。不断涌现的新技术和新工</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="pad">
-                        <div class="txt">
-                            <span><em>02/22</em>2016</span>
-                            <h3><a href="news_info_5_310.html">常见的网站交互设计错误</a></h3>
-                            <p>好的交互设计可以区分开有质量的网站和其他普通网站。然而，如果有明显的设计错误，它只会给予你本</p>
-                            <a href="news_info_5_310.html" class="more"></a>
-                        </div>
-                        <div class="hover">
-                            <div class="img" style="background: url(/images/14561176714477.png) 0 0 /100% 100% no-repeat;background: url(images/14561176714477.png) 0 0 no-repeat\9;"></div>
-                            <div class="pad">
-                                <h3><a href="news_info_5_310.html">常见的网站交互设计错误</a></h3>
-                                <p>好的交互设计可以区分开有质量的网站和其他普通网站。然而，如果有明显的设计错误，它只会给予你本</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="pad">
-                        <div class="txt">
-                            <span><em>02/15</em>2016</span>
-                            <h3><a href="news_info_5_305.html">聊聊WEB网站和移动APP的六大交</a></h3>
-                            <p>交互设计中的Web网站和移动App的设计，前者依托于PC的浏览器，后者则是依托于手机/平板电脑。不同的设</p>
-                            <a href="news_info_5_305.html" class="more"></a>
-                        </div>
-                        <div class="hover">
-                            <div class="img" style="background: url(/images/14555070718366.jpg) 0 0 /100% 100% no-repeat;background: url(images/14555070718366.jpg) 0 0 no-repeat\9;"></div>
-                            <div class="pad">
-                                <h3><a href="news_info_5_305.html">聊聊WEB网站和移动APP的六大交</a></h3>
-                                <p>交互设计中的Web网站和移动App的设计，前者依托于PC的浏览器，后者则是依托于手机/平板电脑。不同的设</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="pad">
-                        <div class="txt">
-                            <span><em>01/26</em>2016</span>
-                            <h3><a href="news_info_5_299.html">设计注册/登录界面时注意的常</a></h3>
-                            <p>随着时代的发展，新用户注册、登录到真正加入一个网站的过程一直在变化，从简单的信息填写发展到全</p>
-                            <a href="news_info_5_299.html" class="more"></a>
-                        </div>
-                        <div class="hover">
-                            <div class="img" style="background: url(/images/14537972384811.jpg) 0 0 /100% 100% no-repeat;background: url(images/14537972384811.jpg) 0 0 no-repeat\9;"></div>
-                            <div class="pad">
-                                <h3><a href="news_info_5_299.html">设计注册/登录界面时注意的常</a></h3>
-                                <p>随着时代的发展，新用户注册、登录到真正加入一个网站的过程一直在变化，从简单的信息填写发展到全</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-            </ul>
+            <ul class="ul-news-i" id="_hydt_div"></ul>
             <div class="c"></div>
             <div class="news-more"><a href="news5_0-1">load more</a></div>
         </div>
