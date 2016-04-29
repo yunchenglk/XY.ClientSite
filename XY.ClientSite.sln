@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0359i", "0359i\0359i.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wytx", "wytx\wytx.csproj", "{C25329DE-58E8-4B9A-9DDC-60192446DDDA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sxbcmy.com.cn", "sxbcmy.com.cn\sxbcmy.com.cn.csproj", "{BA71E398-CE33-4FB4-B0C2-AE8FB6626472}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{C25329DE-58E8-4B9A-9DDC-60192446DDDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C25329DE-58E8-4B9A-9DDC-60192446DDDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C25329DE-58E8-4B9A-9DDC-60192446DDDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA71E398-CE33-4FB4-B0C2-AE8FB6626472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA71E398-CE33-4FB4-B0C2-AE8FB6626472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA71E398-CE33-4FB4-B0C2-AE8FB6626472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA71E398-CE33-4FB4-B0C2-AE8FB6626472}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

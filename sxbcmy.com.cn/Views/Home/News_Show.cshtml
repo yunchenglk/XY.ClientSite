@@ -1,0 +1,38 @@
+﻿<link href="~/Content/video-js.css" rel="stylesheet" />
+<script type="text/javascript">
+    $(function () {
+        var result = $.GetApiData(apiurl + "/News/" + '@ViewBag.ID');
+        if (result.status == 1) {
+            $("#ClassName,#Meta").html(result.data.Title);
+            $("#content_title").html("<b>" + result.data.Title + "</b>");
+            $("#ClassName,#wz_ClassName").html(result.data.ClassName);
+            $("#metitle").append("|" + result.data.Title);
+            $("#content").html(result.data.DescriptionStr);
+            $("#Publisher").html(result.data.Publisher);
+            $("#Count").html(result.data.Count);
+            $(".loading").hide();
+        }
+    })
+</script>
+
+<!--=== Breadcrumbs ===-->
+<div class="row-fluid breadcrumbs margin-bottom-40">
+    <div class="container">
+        <h1 class="pull-left" id="ClassName"></h1>
+        <ul class="pull-right breadcrumb">
+            <li><a href="/">Home</a> <span class="divider">/</span></li>
+            <li class="active" id="wz_ClassName"></li>
+        </ul>
+    </div><!--/container-->
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+<div class="container">
+    <div class="loading"><b class="icon-spinner"></b> 信息加载中...</div>
+    <blockquote class="hero-unify">
+        发布者：<strong id="Publisher"></strong> &#12288;点击率：<strong id="Count"></strong>次 &#12288;Meta：<strong id="Meta"></strong>
+    </blockquote>
+    <div>
+        <h3 id="content_title" style="text-align:center;"></h3>
+        <div id="content"></div>
+    </div>
+</div>

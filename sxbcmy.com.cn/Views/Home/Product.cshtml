@@ -1,0 +1,49 @@
+﻿
+<link rel="stylesheet" href="/Content/css/img-hover-effect.css" />
+<script src="~/Content/jBootstrapPage.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#picTable").bindPage({
+            where: "ClassID|equal|" + '@ViewBag.ID',
+            url: apiurl + "/news/",
+            pagesize: 16,
+            paginationObj: $(".pagination ul")
+        })
+    })
+    function pageAfter(result, obj) {
+        var html = "";
+        $.each(result.content, function (i, n) {
+            if (i % 4 == 0) {
+                if (i > 0)
+                    html += "</div>";
+                html += '<div class="row-fluid"> ';
+            }
+            html += '<div class="view view-tenth span3">';
+            html += '<img src="' + n.SlidePicStr + '" alt="" />';
+            html += '<div class="mask">';
+            html += '<h2>' + n.Title + '</h2>';
+            html += '<a href="/Home/News_Show/' + n.ID + '" class="info">Read More</a>';
+            html += '</div></div>';
+        })
+        $("#picTable").html(html);
+    }
+
+</script>
+<!--=== Breadcrumbs ===-->
+<div class="row-fluid breadcrumbs margin-bottom-40">
+    <div class="container">
+        <h1 class="pull-left" id="ClassName">矿区图片</h1>
+        <ul class="pull-right breadcrumb">
+            <li><a href="/">Home</a> <span class="divider">/</span></li>
+            <li class="active" id="wz_ClassName">矿区图片</li>
+        </ul>
+    </div><!--/container-->
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+<!--=== Content Part ===-->
+<div class="container portfolio-columns portfolio-responsive" id="picTable">
+</div>
+<div class="pagination pagination-centered">
+    <ul></ul>
+</div>
+<!--=== End Content Part ===-->

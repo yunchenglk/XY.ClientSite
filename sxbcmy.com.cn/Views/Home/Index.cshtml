@@ -1,0 +1,303 @@
+﻿<script src="~/Content/jquery-tmpl.js"></script>
+<link href="~/Content/video-js.css" rel="stylesheet" />
+<script type="text/x-jquery-tmpl" id="kqtpModel">
+    <li class="span3">
+        <div class="thumbnail-style thumbnail-kenburn">
+            <div class="thumbnail-img">
+                <div class="overflow-hidden"><img src="${SlidePicStr}" alt="" /></div>
+                <a class="btn-more hover-effect" href="/Home/News_Show/${ID}">查看详情 +</a>
+            </div>
+            <h3><a class="hover-effect" href="#">${Title}</a></h3>
+            @*<p>矿区图片简介矿区图片简介矿区图片简介矿区图片简介矿区图片简介...</p>*@
+        </div>
+    </li>
+</script>
+<script type="text/javascript">
+    $(function () {
+        var obj_dycy = $.GetApiData(apiurl + "/Content/" + urlitems.dycy);
+        var obj_mtwl = $.GetApiData(apiurl + "/Content/" + urlitems.mtwl);
+        var obj_mtcy = $.GetApiData(apiurl + "/Content/" + urlitems.mtcy);
+        if (obj_dycy.status == 1) {
+            var content = obj_dycy.data.Short_Desc;
+            if (content.length > 100)
+                content = content.substr(0, 100) + "...";
+            $("#dycy").html(content + '<a href="/Home/About/' + urlitems.dycy + '" style="color:red">→查看详情</a>');
+        }
+        if (obj_mtwl.status == 1) {
+            var content = obj_mtwl.data.Short_Desc;
+            if (content.length > 125)
+                content = content.substr(0, 125) + "...";
+            $("#mtwl").html(content + '<a href="/Home/About/' + urlitems.mtwl + '" style="color:red">→查看详情</a>');
+        }
+        if (obj_mtcy.status == 1) {
+            var content = obj_mtcy.data.Short_Desc;
+            if (content.length > 125)
+                content = content.substr(0, 125) + "...";
+            $("#mtcy").html(content + '<a href="/Home/About/' + urlitems.mtcy + '" style="color:red">→查看详情</a>');
+        }
+        //矿区图片
+        var obj_kqtp = $.GetApiData(apiurl + "/News/" + urlitems.kqtp + "?type=0&count=4");
+        if (obj_kqtp.status == 1) {
+            $("#kqtpModel").tmpl(obj_kqtp.data).appendTo("#kqtpTable");
+        }
+        //新闻中心
+        var obj_xwzx = $.GetApiData(apiurl + "/Class/" + urlitems.xwzx + "?cid=" + urlitems.CID);
+        if (obj_xwzx.status == 1) {
+            // <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+            //xx_content
+            $.each(obj_xwzx.data, function (i, n) {
+                var cont = "";
+                if (i == 0) {
+                    $("#xx_tabs").append('<li class="active"><a href="#' + n.EnTitle + '" data-toggle="tab">' + n.Title + '</a></li>');
+                    cont += '<div class="tab-pane active" id="' + n.EnTitle + '">';
+                } else {
+                    $("#xx_tabs").append('<li><a href="#' + n.EnTitle + '" data-toggle="tab">' + n.Title + '</a></li>');
+                    cont += '<div class="tab-pane" id="' + n.EnTitle + '">';
+                }
+                var obj = $.GetApiData(apiurl + "/News/" + n.ID + "?type=0&count=8");
+                if (obj.status == 1) {
+                    $.each(obj.data, function (x, y) {
+                        cont += '<blockquote style="margin-bottom:5px;" >';
+                        cont += '<small><a href="/Home/News_Show/' + y.ID + '" alt="' + y.Title + '" style="color:#999;" >' + y.Title + '</a></small>';
+                        cont += '</blockquote>';
+                    })
+                }
+                cont += '</div>';
+                $("#xx_content").append(cont);
+            })
+            $("#xx_tabs > li:eq(0)").click();
+        }
+        //企业视频
+        //var qysp = $.GetApiData(apiurl + "/News/" + urlitems.qysp + "?type=2&count=1");
+        //if (qysp.status == 1) {
+        //    var file = $.GetApiData(apiurl + "/files/" + qysp.data[0].ID);
+        //    if (file.status == 1) {
+        //        $("video").attr("poster", file.data.LargeStr)
+        //        $("video").attr("src", file.data.FilePathStr);
+        //    }
+
+        //}
+
+    })
+</script>
+<style type="text/css">
+    .more {
+        float: right;
+        line-height: 45px;
+        color: red;
+    }
+</style>
+<!--=== Slider ===-->
+<div class="slider-inner">
+    <div id="da-slider" class="da-slider">
+        <div class="da-slide">
+            <h2><i>尚德 &amp; 诚信</i> <br /> &#12288;<i>务实 &amp; 求精</i><br />  &#12288;&#12288;<i>务实 &amp; 求精</i></h2>
+            <p><i>陕西彬长煤业有限公司</i></p>
+            <div class="da-img"><img src="/Content/plugins/parallax-slider/img/1.png" alt="" /></div>
+        </div>
+        <div class="da-slide">
+            <h2><i>安全就是效益</i> <br /> &#12288;<i>安全大于一切</i> <br /> &#12288;&#12288;<i>安全重于一切</i></h2>
+            <p><i>陕西彬长煤业有限公司</i></p>
+            <div class="da-img"><img src="/Content/plugins/parallax-slider/img/html5andcss3.png" alt="image01" /></div>
+        </div>
+        @*<div class="da-slide">
+                <h2><i>以煤为主</i> <br /> &#12288;<i>综合开发</i> <br /> &#12288;&#12288;<i>全面发展</i></h2>
+                <p><i>陕西彬长煤业有限公司</i></p>
+                <div class="da-img"><img src="/Content/plugins/parallax-slider/img/html5andcss3.png" alt="image01" /></div>
+            </div>*@
+        <div class="da-slide">
+            <h2>&#12288;&#12288;<i>开拓创新</i> <br /> &#12288;<i>科学发展</i> <br /> <i>可持续发展</i></h2>
+            <p><i>陕西彬长煤业有限公司</i></p>
+            <div class="da-img"><img src="/Content/plugins/parallax-slider/img/3.png" alt="image01" /></div>
+        </div>
+        <nav class="da-arrows">
+            <span class="da-arrows-prev"></span>
+            <span class="da-arrows-next"></span>
+        </nav>
+    </div><!--/da-slider-->
+</div>
+<!--=== End Slider ===-->
+<!--=== Purchase Block ===-->
+@*<div class="row-fluid purchase margin-bottom-30">
+        <div class="container">
+            <div class="span9">
+                <span>游客说：“你们的销售联系电话是多少？”</span>
+                <p>我们的办公室电话是：029-34767925/34767931</p>
+            </div>
+            <a href="#" class="btn-buy hover-effect">联系我们</a>
+        </div>
+    </div>*@
+<!-- End Purchase Block -->
+<div class="container" style="margin-top:30px;">
+    <!-- Service Blocks -->
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="service clearfix">
+                <i class="icon-beaker"></i>
+                <div class="desc">
+                    <h4>煤炭产业</h4>
+                    <p id="mtcy" style="text-indent:2em;"></p>
+                </div>
+            </div>
+        </div>
+        <div class="span4">
+            <div class="service clearfix">
+                <i class="icon-truck"></i>
+                <div class="desc">
+                    <h4>煤炭物流</h4>
+                    <p id="mtwl" style="text-indent:2em;"></p>
+                </div>
+            </div>
+        </div>
+        <div class="span4">
+            <div class="service clearfix">
+                <i class="icon-cogs"></i>
+                <div class="desc">
+                    <h4>多元产业</h4>
+                    <p id="dycy" style="text-indent:2em;"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //End Service Blokcs -->
+    <!-- Information Blokcs -->
+    <div class="row-fluid margin-bottom-20">
+        <!-- Who We Are -->
+        <div class="span6">
+            <div class="headline" style="width:100%">
+                <h3>新闻中心</h3>
+                <a class="glyphicons no-js more" href="#"><i></i>更多</a>
+            </div>
+            <ul class="nav nav-tabs tabs" id="xx_tabs"></ul>
+            <div class="tab-content" id="xx_content">
+            </div>
+        </div>
+        <!-- Latest Shots -->
+        <div class="span6">
+            <div class="headline">
+                <h3>企业视频</h3>
+                <a class="glyphicons no-js more" href="javascript:void(0);" onclick="javascript: location.href = '/Home/Video/' + urlitems.qysp"><i></i>更多</a>
+            </div>
+            <div id="myCarousel" class="carousel slide">
+                <embed src="http://yuntv.letv.com/bcloud.swf" allowfullscreen="true" quality="high" width="640" height="360" align="middle" allowscriptaccess="always" flashvars="uu=njzbir7sle&vu=34ac0945fa&pu=2b61d05c2a&auto_play=0&gpcflag=1&width=640&height=360" type="application/x-shockwave-flash"></embed>
+            </div>
+        </div><!--/span4-->
+    </div><!--/row-fluid-->
+    <!-- //End Information Blokcs -->
+    <!-- Recent Works -->
+    <div class="headline">
+        <h3>矿区图片</h3>
+        <a class="glyphicons no-js more" href="javascript:void(0);" onclick="javascript: location.href = '/Home/Product/' + urlitems.kqtp"><i></i>更多</a>
+    </div>
+    <ul class="thumbnails" id="kqtpTable"></ul><!--/thumbnails-->
+    <!-- //End Recent Works -->
+    <!-- Our Clients -->
+    @*<div id="clients-flexslider" class="flexslider home clients">
+            <div class="headline"><h3>友情链接</h3></div>
+            <ul class="slides">
+                <li>
+                    <a href="#">
+                        <img src="/Content/img/clients/hp_grey.png" alt="" />
+                        <img src="/Content/img/clients/hp.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/Content/img/clients/igneus_grey.png" alt="" />
+                        <img src="/Content/img/clients/igneus.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/Content/img/clients/vadafone_grey.png" alt="" />
+                        <img src="/Content/img/clients/vadafone.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/Content/img/clients/walmart_grey.png" alt="" />
+                        <img src="/Content/img/clients/walmart.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/Content/img/clients/shell_grey.png" alt="" />
+                        <img src="/Content/img/clients/shell.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/Content/img/clients/natural_grey.png" alt="" />
+                        <img src="/Content/img/clients/natural.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/Content/img/clients/aztec_grey.png" alt="" />
+                        <img src="/Content/img/clients/aztec.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/Content/img/clients/gamescast_grey.png" alt="" />
+                        <img src="/Content/img/clients/gamescast.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/Content/img/clients/cisco_grey.png" alt="" />
+                        <img src="/Content/img/clients/cisco.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/Content/img/clients/everyday_grey.png" alt="" />
+                        <img src="/Content/img/clients/everyday.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/Content/img/clients/cocacola_grey.png" alt="" />
+                        <img src="/Content/img/clients/cocacola.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/Content/img/clients/spinworkx_grey.png" alt="" />
+                        <img src="/Content/img/clients/spinworkx.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/Content/img/clients/shell_grey.png" alt="" />
+                        <img src="/Content/img/clients/shell.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/Content/img/clients/natural_grey.png" alt="" />
+                        <img src="/Content/img/clients/natural.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/Content/img/clients/gamescast_grey.png" alt="" />
+                        <img src="/Content/img/clients/gamescast.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/Content/img/clients/everyday_grey.png" alt="" />
+                        <img src="/Content/img/clients/everyday.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/Content/img/clients/spinworkx_grey.png" alt="" />
+                        <img src="/Content/img/clients/spinworkx.png" class="color-img" alt="" />
+                    </a>
+                </li>
+            </ul>
+        </div>*@<!--/flexslider-->
+    <!-- //End Our Clients -->
+</div>

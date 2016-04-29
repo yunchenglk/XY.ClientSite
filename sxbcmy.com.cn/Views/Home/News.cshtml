@@ -1,0 +1,84 @@
+﻿<script src="~/Content/jquery-tmpl.js"></script>
+<script src="~/Content/jBootstrapPage.js"></script>
+<script type="text/x-jquery-tmpl" id="HotNews">
+    <div class="headline"><h3>热点新闻</h3></div>
+    {{each data}}
+    <dl class="dl-horizontal">
+        <dt><a href="#"><img src="${SlidePicStr}" alt="" /></a></dt>
+        <dd>
+            <p><a href="/Home/News_Show/${ID}">${Title}</a></p>
+        </dd>
+    </dl>
+    {{/each}}
+</script>
+<script type="text/x-jquery-tmpl" id="dataModel">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#news" href="#collapse${ID}">
+                ${GetNum()}.${Title}
+            </a>
+        </div>
+        <div id="collapse${ID}" class="accordion-body collapse" style="height: 0px;">
+            <div class="accordion-inner">
+                <p style="text-indent:2em">${Short_Dec}...<a href="/Home/News_Show/${ID}" style="color:red">→查看详情</a></p>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/javascript">
+    var i = 1;
+    $(function () {
+        var result = $.GetApiData(apiurl + "/Content/" + '@ViewBag.ID');
+        if (result.status == 1) {
+            $("#ClassName,#wz_ClassName,#Meta,#table_title").html(result.data.Title);
+            $("#metitle").append("|" + result.data.Title);
+            $("#content").html(result.data.DescriptionStr);
+            $("#Publisher").html(result.data.Publisher);
+            $("#Count").html(result.data.Count);
+            $(".loading").hide();
+        };
+        var result1 = $.GetApiData(apiurl + "/News/?type=2&id=" + '@ViewBag.ID' + "&count=10");
+        if (result1.status == 1) {
+            $("#HotNews").tmpl(result1).appendTo("#hotnews");
+        };
+        $("#news").bindPage({
+            where: "DR|equal|0#ClassID|equal|" + '@ViewBag.ID',
+            url: apiurl + "/news/",
+            pagesize: 10,
+            paginationObj: $(".pagination ul")
+        })
+    });
+    function GetDataBefor() {
+        i = 1;
+    }
+    function GetNum() {
+        return i++;
+    }
+</script>
+<div class="row-fluid breadcrumbs margin-bottom-40">
+    <div class="container">
+        <h1 class="pull-left" id="ClassName">暂无信息</h1>
+        <ul class="pull-right breadcrumb">
+            <li><a href="/">Home</a> <span class="divider">/</span></li>
+            <li class="active" id="wz_ClassName">暂无信息</li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div class="row-fluid blog-page blog-item">
+        <div class="span3">
+            <!-- Photo Stream -->
+            <div class="posts margin-bottom-20" id="hotnews">
+            </div>
+        </div>
+        <div class="span9">
+            <div class="headline"><h3 id="table_title">暂无信息</h3></div>
+            <div class="accordion acc-home" id="news">
+
+            </div>
+            <div class="pagination pagination-centered">
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+</div>

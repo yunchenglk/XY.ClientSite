@@ -1,0 +1,261 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title id="metitle">陕西彬长煤业有限公司</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- CSS Global Compulsory-->
+    <link rel="stylesheet" href="/Content/plugins/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Content/css/style.css" />
+    <link rel="stylesheet" href="/Content/css/headers/header1.css" />
+    <link rel="stylesheet" href="/Content/plugins/bootstrap/css/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" href="/Content/css/style_responsive.css" />
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="/Content/plugins/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="/Content/plugins/flexslider/flexslider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/Content/plugins/parallax-slider/css/parallax-slider.css" type="text/css" />
+    <!-- CSS Theme -->
+    <link rel="stylesheet" href="/Content/css/themes/default.css" id="style_color" />
+    <link rel="stylesheet" href="/Content/css/themes/default.css" id="style_color-header-1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- JS Global Compulsory -->
+    <script type="text/javascript" src="/Content/js/jquery-1.8.2.min.js"></script>
+    <script src="~/Content/Config.js"></script>
+    <script type="text/javascript" src="/Content/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="/Content/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- JS Implementing Plugins -->
+    <script type="text/javascript" src="/Content/plugins/flexslider/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="/Content/plugins/parallax-slider/js/modernizr.js"></script>
+    <script type="text/javascript" src="/Content/plugins/parallax-slider/js/jquery.cslider.js"></script>
+    <script type="text/javascript" src="/Content/plugins/back-to-top.js"></script>
+    <!-- JS Page Level -->
+    <script type="text/javascript" src="/Content/js/app.js"></script>
+    <script type="text/javascript" src="/Content/js/pages/index.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            App.init();
+            App.initSliders();
+            Index.initParallaxSlider();
+        });
+        function shoucang(sTitle, sURL) {
+            try {
+                window.external.addFavorite(sURL, sTitle);
+            }
+            catch (e) {
+                try {
+                    window.sidebar.addPanel(sTitle, sURL, "");
+                }
+                catch (e) {
+                    alert("加入收藏失败，请使用Ctrl+D进行添加");
+                }
+            }
+        }
+    </script>
+    <!--[if lt IE 9]>
+        <script src="/Content/js/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--=== Top ===-->
+    <div class="top">
+        <div class="container">
+            <ul class="loginbar pull-right">
+                <li><a href="http://192.168.21.18/myoa/Default.aspx" target="_blank" class="login-btn">进入企业OA</a></li>
+                <li class="devider">&nbsp;</li>
+                <li><a href="#" class="login-btn">企业宣传短片</a></li>
+                <li class="devider">&nbsp;</li>
+                <li><a href="javascript:void(0);" onclick="shoucang(document.title, window.location)" class="login-btn">加入收藏</a></li>
+                <li class="devider">&nbsp;</li>
+                <li><a href="/Home/About/1631189b-f463-4509-8fca-8cafe17f9368" class="login-btn">联系我们</a></li>
+            </ul>
+        </div>
+    </div><!--/top-->
+    <!--=== End Top ===-->
+    <!--=== Header ===-->
+    <div class="header">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo" style="z-index:99" />
+            <a href="/"><img id="logo-header" src="/Content/img/logo1-default.png" alt="Logo"></a>
+        </div><!-- /logo -->
+        <!-- Menu -->
+        <div class="navbar">
+            <div class="navbar-inner">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a><!-- /nav-collapse -->
+                <div class="nav-collapse collapse">
+                    <ul class="nav top-2">
+                        <li class="active">
+                            <a href="/" class="dropdown-toggle">
+                                首页
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                集团概况
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="active"><a href="/Home/About/E62149D9-61DF-4BFF-B06E-6702887CE6BE">集团简介</a></li>
+                                <li><a href="/Home/About/D21C2764-75BA-47E9-8F59-7B81589E7D33">组织架构</a></li>
+                                <li><a href="/Home/About/9D6EE1C4-DA68-4042-A32E-457DDA18F9A9">领导介绍</a></li>
+                                <li><a href="/Home/About/D9BA001E-8AC5-4DA0-A473-CD1A964EDC64">发展战略</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                                新闻中心
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="active"><a href="/Home/News/C87F19FC-1B60-46C3-987B-7BB59E9ACA04">集团要闻</a></li>
+                                <li><a href="/Home/News/0E1ED7A1-C2DA-4248-A57D-B44B4DB0039B">安全生产</a></li>
+                                <li><a href="/Home/News/F948110D-DECD-4BBF-B0B6-E65B846BE86B">党群动态</a></li>
+                                <li><a href="/Home/News/822FAFD7-31EA-4FEA-865C-A0B1CEA97F45">企业要闻</a></li>
+                                <li><a href="/Home/News/E804A3FA-6CFB-44A2-96BA-4E6E3D951817">媒体报道</a></li>
+                                <li><a href="/Home/News/E011A22A-1810-4958-AE79-16E4AFF0D614">行业资讯</a></li>
+                            </ul>
+                            <b class="caret-out"></b>
+                        </li>
+                        <li>
+                            <a href="/Home/About/AAFCDD4C-4F8B-47A5-BF9F-CC5F53E49BFF" class="dropdown-toggle">
+                                企业文化
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                安全管理
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="active"><a href="/Home/About/9128c02e-25d9-4c16-8f59-78628fe06268">规章制度</a></li>
+                                <li><a href="/Home/About/7318138b-f102-4b6a-8e52-c08e35f5dcf5">教育培训</a></li>
+                            </ul>
+                            <b class="caret-out"></b>
+                        </li>
+                        <li>
+                            <a href="/Home/News/c4930b36-9df8-49d7-ab33-33df60537048" class="dropdown-toggle">
+                                人力资源
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                矿业资源
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="active"><a href="/Home/News/336f8c5d-0d4c-4c4a-9bc7-1c9beac8c55d">火石咀煤矿</a></li>
+                                <li><a href="/Home/News/bcf21471-50a8-41db-b356-1800011739fb">燕家河煤矿</a></li>
+                                <li><a href="/Home/News/a3c9fd19-494e-401c-8ca9-2bf6abbdf6d7">子长焦家沟煤矿</a></li>
+                                <li><a href="/Home/News/d5ce32cc-d5f8-42f1-a944-2d52618217cb">子长安定煤矿</a></li>
+                            </ul>
+                            <b class="caret-out"></b>
+                        </li>
+                        <li>
+                            <a href="/Home/Message" class="dropdown-toggle">
+                                留言板
+                            </a>
+                        </li>
+                        @*<li>
+                                <a href="/Home/About/1631189b-f463-4509-8fca-8cafe17f9368" class="dropdown-toggle">
+                                    联系我们
+                                </a>
+                            </li>*@
+                        @*<li><a class="search"><i class="icon-search search-btn"></i></a></li>*@
+                    </ul>
+                    @*<div class="search-open">
+                            <div class="input-append">
+                                <form />
+                                <input type="text" class="span3" placeholder="Search" />
+                                <button type="submit" class="btn-u">Go</button>
+                                </form>
+                            </div>
+                        </div>*@
+                </div><!-- /nav-collapse -->
+            </div><!-- /navbar-inner -->
+        </div><!-- /navbar -->
+    </div><!-- /container -->
+    </div><!--/header -->
+    <!--=== End Header ===-->
+    @RenderBody()
+    <!--=== Footer ===-->
+    <div class="footer">
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span4">
+                    <!-- About -->
+                    <div class="headline"><h3>关于</h3></div>
+                    <p class="margin-bottom-25">&#12288;&#12288;陕西彬长煤业有限责任公司成立于2002年，是一家集对煤炭业的投资、精煤加工、销售、煤矿物资供应等为一体的大型煤化工集团管理公司。</p>
+
+                    <!-- Monthly Newsletter -->
+                    <div class="headline"><h3>邮箱地址</h3></div>
+                    <p>提交您的邮箱地址，我们会有业务人员联系您</p>
+                    <div class="input-append">
+                        <input type="text" placeholder="Email Address" class="input-medium" />
+                        <button class="btn-u">Subscribe</button>
+                    </div>
+                </div><!--/span4-->
+
+                <div class="span4">
+                    <div class="posts">
+                        <div class="headline"><h3>最新动态</h3></div>
+                        <dl class="dl-horizontal">
+                            <dt><a href="#"><img src="/Content/img/sliders/elastislide/6.jpg" alt="" /></a></dt>
+                            <dd>
+                                <p><a href="#">公司领导到子长焦家沟煤矿检查工作</a></p>
+                            </dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                            <dt><a href="#"><img src="/Content/img/sliders/elastislide/10.jpg" alt="" /></a></dt>
+                            <dd>
+                                <p><a href="#">陕西省河北商会在会长张锁良的带领下来我公司参观指导工作</a></p>
+                            </dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                            <dt><a href="#"><img src="/Content/img/sliders/elastislide/11.jpg" alt="" /></a></dt>
+                            <dd>
+                                <p><a href="#">公司领导和旬邑县委书记、县长会谈</a></p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div><!--/span4-->
+
+                <div class="span4">
+                    <!-- Monthly Newsletter -->
+                    <div class="headline"><h3>联系方式</h3></div>
+                    <address>
+                        陕西彬长煤业有限责任公司地址<br />
+                        陕西省咸阳市彬县 <br />
+                        电话:029-34767925 <br />
+                        传真:029-34767925 <br />
+                        Email: <a href="mailto:sxbcmy@163.com" class="">sxbcmy@163.com</a>
+                    </address>
+
+                    <!-- Stay Connected -->
+                    <div class="headline"><h3>备案信息</h3></div>
+                    @*<ul class="social-icons">
+                        <li><a href="#" data-original-title="Feed" class="social_rss"></a></li>
+                        <li><a href="#" data-original-title="Facebook" class="social_facebook"></a></li>
+                        <li><a href="#" data-original-title="Twitter" class="social_twitter"></a></li>
+                        <li><a href="#" data-original-title="Goole Plus" class="social_googleplus"></a></li>
+                        <li><a href="#" data-original-title="Pinterest" class="social_pintrest"></a></li>
+                        <li><a href="#" data-original-title="Linkedin" class="social_linkedin"></a></li>
+                        <li><a href="#" data-original-title="Vimeo" class="social_vimeo"></a></li>
+                    </ul>*@
+                </div><!--/span4-->
+            </div><!--/row-fluid-->
+        </div><!--/container-->
+    </div><!--/footer-->
+    <!--=== End Footer ===-->
+</body>
+</html>
