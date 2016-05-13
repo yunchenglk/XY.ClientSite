@@ -1,0 +1,99 @@
+@media screen and (max-width:1030px){
+.header .head , .nav_m,.f_sq,.i_service ul,.i_newm,.step ul,.i_news,.i_box,.i_casem,.foot,.scd_em,.scd{width:740px; margin:0px auto;}
+.p_ctn,.news,.about{ width:485px;}
+.apply,.case,.sense,.contact{ width:700px;}
+.nav li{ margin:0px;}
+.nav li a{ font-size:16px;}
+.f_sqm .title{ font-size:30px; padding-top:8%;}
+.i_service ul li .tu{ width:100px; height:100px;}
+.i_service ul li .tu img{ width:63px; height:63px;}
+.i_newm dl dt{ width:147px; height:103px;}
+.i_newm dl dt img{ width:142px; height:99px;}
+.i_newm dl{ width:360px; height:105px;}
+.i_newm dl dd{ width:200px;}
+.i_newm dl dd .des{ line-height:145%;}
+.i_newm dl dd .title{ height:32px; line-height:32px;}
+.step ul li{ width:185px;}
+.step ul li.duan{ width:90px;}
+.i_nm .tu, .i_nm .tu img{ width:360px; height:235px;}
+.i_nm .tu .des p{ width:96%;}
+.i_nm .wen{ width:370px;}
+.i_nm .wen li .title i{ width:40px;}
+.i_nm .wen li .title p{ width:315px;}
+.i_nm .wen li .l_m .des_c{ width:315px; margin-left:50px;}
+.i_box .a_r,.i_box .a_l{ width:360px;}
+.a_lm dl dt{ width:115px;}
+.a_lm dl dd{ width:230px;}
+.i_casem .line{ left:370px;}
+.i_casem ul li .li_m{ width:350px;}
+.i_casem ul li .li_m p{ width:335px;}
+.i_casem ul li.l_er .li_m i{ left:355px;}
+.i_casem ul li .li_m p a{ font-size:14px;}
+.i_casem ul li .li_m p a em{ display:inline-block; *display:inline; zoom:1; width:240px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; vertical-align:top;}
+.foot .f_m .f_v,.f_m .share{ width:100%; text-align:center;}
+.scd_em .scd_mr{ width:515px;}
+.scd .b_h .pst, .scd_em .b_h .pst{ width:100%;}
+.case dl dt,.case dl dt img{ width:224px; height:144px;}
+.case dl dd{ width:460px;}
+.sense dl dt, .sense dl dt img{ width:260px; height:139px;}
+.sense dl dd{ width:425px; line-height:195%;}
+.news_m ul li .li_m{ width:380px;}
+.news_m ul li.hot .time{ height:240px;}
+.news_m ul li .li_m dl dd{ width:100%; margin-left:0px;}
+}
+@media screen and (max-width:770px) {
+.header .head , .nav_m,.f_sq,.i_service ul,.i_newm,.step ul,.i_news,.i_box,.i_casem,.foot,.scd_em,.scd{width:480px; margin:0px auto;}
+.head .logo,.head .logo img{ width:98%; height:auto; float:none; margin:0px auto; margin-top:10px;}
+.head .head_r{ width:100%;}
+.head_r .tel{ margin-left:30px;}
+.f_sq .f_sqm{ position:static;}
+.nav_m .nav{ display:none; position:absolute; background:url(../images/bg_c.png) repeat; top:35px;}
+.nav_m .n_icon{ display:block !important;}
+.nav_m{ min-height:35px;}
+.nav li a,.nav li{ padding:0px; width:100%; display:block; color:#FFF; text-align:left;}
+.nav li a,.nav li ul li a{ width:96%; padding:0 2%;}
+.nav li ul{ position:static; display:block !important; background:none !important;}
+.nav li ul li a{ text-align:left; background:none !important;}
+.f_sq .f_sqm{ width:100%; height:auto !important; padding-bottom:25px;}
+.f_sqm ul li, .apply li .li_m .btn{ margin-top:20px;}
+.i_service ul li{ width:33.33%;}
+.i_newm dl{ width:100%; margin-right:0px;}
+.i_newm dl dd{ width:310px;}
+.i_newm dl dd .des{ line-height:175%;}
+.step ul li.duan{ display:none;}
+.step ul li{ width:32%; margin-left:1%; margin-bottom:25px;}
+.i_nm .tu, .i_nm .tu img{ width:480px; height:313px;}
+.i_nm .tu{ margin-bottom:20px;}
+.i_nm .wen,.i_box .a_r, .i_box .a_l,.scd_em .scd_ml,.scd_em .scd_mr,.case dl dd,.sense dl dd{ width:100%;}
+.i_nm .wen li .title p,.i_nm .wen li .l_m .des_c{ width:425px;}
+.i_box .a_r{ margin-top:50px;}
+.i_casem .line,.i_casem ul li .li_m i{ display:none;}
+.i_casem ul li .li_m p{ width:460px;}
+.i_casem ul li{ text-align:left;}
+.i_casem ul li .li_m p a em{ width:340px;}
+.scd_ml ul li a{ width:88%; padding:0 6%; text-align:left;}
+.p_ctn, .news, .about,.apply, .case, .sense, .contact{ width:94%;}
+.case dl dt, .case dl dt img,.sense dl dt, .sense dl dt img{ width:100%; height:auto;}
+.news_m ul li .li_m{ width:360px;}
+}
+@media screen and (max-width:510px) {
+.header .head , .nav_m,.f_sq,.i_service ul,.i_newm,.step ul,.i_news,.i_box,.i_casem,.foot,.scd_em,.scd{width:320px; margin:0px auto;}
+.flex-direction-nav a{ display:none;}
+.i_newm dl dd{ width:155px;}
+.i_nm .tu, .i_nm .tu img{ width:320px; height:208px;}
+.i_nm .wen li .title p, .i_nm .wen li .l_m .des_c{ width:268px;}
+.a_lm dl dd{ width:203px;}
+.i_casem ul li .li_m p{ width:300px;}
+.i_casem ul li .li_m p a em{ width:210px;}
+.f_m .share a{ margin-left:10px;}
+.d_nav{ border:0px;}
+.d_nav a{ margin-bottom:10px;}
+.scd .b_h{ height:auto;}
+.scd .b_h .pst{ position:static; text-align:left; width:90%; height:auto; line-height:150%; padding:15px 5%;}
+.scd .b_h .name, .scd_em .b_h .name{ width:260px;}
+.news_m ul li .time{ width:60px;}
+.news_m ul li .li_m{ width:225px}
+.pages a{ margin:0 3px;}
+.contact dl dt{ display:none;}
+.contact dl dd{ width:100%;}
+}
