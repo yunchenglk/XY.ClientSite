@@ -1,1 +1,126 @@
-﻿@RenderBody()
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="/Content/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <!-- Custom Theme files -->
+    <link href="/Content/css/style.css" rel='stylesheet' type='text/css' />
+    <script src="/Content/js/jquery.min.js"> </script>
+    <!--webfonts-->
+    <link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700|Orbitron:400,500,700,900' rel='stylesheet' type='text/css'>
+    <!--//webfonts-->
+    <!--Animation-->
+    <script src="/Content/js/wow.min.js"></script>
+    <link href="/Content/css/animate.css" rel='stylesheet' type='text/css' />
+    <script>
+        new WOW().init();
+    </script>
+</head>
+<body>
+    <div class="banner" id="home">
+        <div class="header-bottom">
+            <div class="fixed-header">
+                <div class="container">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="~/Content/images/logo.png" style="float:left; height:70px;" /></h1>
+                        </a>
+                    </div>
+                    <span class="menu"> </span>
+                    <div class="top-menu">
+                        <nav class="navigation">
+                            <ul class="cl-effect-16">
+                                <li><a class="active" href="/">首页</a></li>
+                                <li><a href="/Home/About">关于我们</a></li>
+                                <li><a href="/Home/Teachers">师资力量</a></li>
+                                <li><a href="/Home/Contact">在线报名</a></li>
+                                <li><a href="#">课程查询</a></li>
+                                <li><a href="#">联系我们</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- script for menu -->
+                    <script>
+                        $("span.menu").click(function () {
+                            $(".top-menu").slideToggle("slow", function () {
+                                // Animation complete.
+                            });
+                        });
+                    </script>
+                    <!-- script for menu -->
+                    <script>
+                        $(document).ready(function () {
+                            var navoffeset = $(".header-bottom").offset().top;
+                            $(window).scroll(function () {
+                                var scrollpos = $(window).scrollTop();
+                                if (scrollpos >= navoffeset) {
+                                    $(".header-bottom").addClass("fixed");
+                                } else {
+                                    $(".header-bottom").removeClass("fixed");
+                                }
+                            });
+
+                        });
+                    </script>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @RenderBody()
+    <!----footer--->
+    <div class="footer">
+        <div class="container">
+            <div class="f-grids">
+                <div class="col-md-4 footer-grid wow fadeInUpBig animated animated" data-wow-delay="0.4s">
+                    <h3>最新<span class="opening">动态</span></h3>
+                    <a href="#"><h5>舞蹈作品《快乐的小青蛙》荣获组委会颁发的金奖</h5></a>
+                    <a href="#"><h5>孙老师率队前往意大利，参加2015米兰世博会中国馆官方系列活动“意大利之夏”</h5></a>
+                    <a href="#"><h5>舞蹈作品《快乐的小青蛙》荣获组委会颁发的金奖</h5></a>
+                    <a href="#"><h5>孙老师率队前往意大利，参加2015米兰世博会中国馆官方系列活动“意大利之夏”</h5></a>
+                    <a href="#"><h5>舞蹈作品《快乐的小青蛙》荣获组委会颁发的金奖</h5></a>
+                    <a href="#"><h5>孙老师率队前往意大利，参加2015米兰世博会中国馆官方系列活动“意大利之夏”</h5></a>
+                </div>
+                <div class="col-md-4 footer-grid wow fadeInUpBig animated animated" data-wow-delay="0.3s">
+                    <div class="opening_hours">
+                        <ul class="times">
+                            <h3>最新<span class="opening">课程</span></h3>
+                            <li><i class="calender"> </i><span class="week">星期一（Monday）</span><div class="hours">h.6:00-h.24:00</div>  <div class="clearfix"></div></li>
+                            <li><i class="calender"> </i><span class="week">星期二（Tuesday）</span><div class="hours">h.6:00-h.24:00</div>  <div class="clearfix"></div></li>
+                            <li><i class="calender"> </i><span class="week">星期三（Wednesday）</span><div class="hours">h.6:00-h.24:00</div>  <div class="clearfix"></div></li>
+                            <li><i class="calender"> </i><span class="week">星期四（Thrusday）</span><div class="hours">h.6:00-h.24:00</div>  <div class="clearfix"></div></li>
+                            <li><i class="calender"> </i><span class="week">星期五（Friday）</span><div class="hours">h.6:00-h.24:00</div>  <div class="clearfix"></div></li>
+                            <li><i class="calender"> </i><span class="week">星期六（Saturday）</span><div class="hours">h.6:00-h.24:00</div>  <div class="clearfix"></div></li>
+                            <li><i class="calender"> </i><span class="week">星期日（Sunday）</span><div class="hours">Closed</div>  <div class="clearfix"></div></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 footer-grid wow fadeInUpBig animated animated" data-wow-delay="0.2s">
+                    <h3>联系<span class="opening">方式</span></h3>
+                    <ul class="address">
+                        <li>北京市丰台区蒲方路9号院</li>
+                        <li>010 - 123456789</li>
+                        <li><a class="mail" href="mailto:wuyuntongxin@163.com">wuyuntongxin@163.com</a></li>
+                    </ul>
+                    <div class="support">
+                        <input type="text" class="text" value="Enter email... " onfocus="this.value = '';" onblur="if (this.value == 'Enter email...') {this.value = 'Enter email...';}">
+                        <input type="submit" value="SUBMIT" class="botton">
+                        <p>Lorem ipsum dolor sit amet conse aliqua. Ut enim ad minim veniam Lorem ctetur adipisicing .</p>
+                    </div>
+
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="copy">
+                <p>Copyright &copy; 2015.Company name All rights reserved.<a target="_blank" href="http://www.0359i.com">鑫跃国际</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

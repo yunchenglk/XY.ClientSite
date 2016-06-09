@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C25329DE-58E8-4B9A-9DDC-60192446DDDA}</ProjectGuid>
+    <ProjectGuid>{772F1922-39F8-4708-9D20-3596954A5A9E}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>wytx</RootNamespace>
-    <AssemblyName>wytx</AssemblyName>
+    <RootNamespace>fangjingdian</RootNamespace>
+    <AssemblyName>fangjingdian</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -117,60 +117,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\css\animate.css" />
-    <Content Include="Content\css\bootstrap.css" />
-    <Content Include="Content\css\component.css" />
-    <Content Include="Content\css\owl.carousel.css" />
-    <Content Include="Content\css\style.css" />
-    <Content Include="Content\images\ab.jpg" />
-    <Content Include="Content\images\arrow.png" />
-    <Content Include="Content\images\arrows.png" />
-    <Content Include="Content\images\b1.jpg" />
-    <Content Include="Content\images\b2.jpg" />
-    <Content Include="Content\images\b3.jpg" />
-    <Content Include="Content\images\banner-two.jpg" />
-    <Content Include="Content\images\banner.jpg" />
-    <Content Include="Content\images\blog1.jpg" />
-    <Content Include="Content\images\blog2.jpg" />
-    <Content Include="Content\images\blog3.jpg" />
-    <Content Include="Content\images\c1.jpg" />
-    <Content Include="Content\images\c2.jpg" />
-    <Content Include="Content\images\c3.jpg" />
-    <Content Include="Content\images\co.png" />
-    <Content Include="Content\images\img_spt.png" />
-    <Content Include="Content\images\logo.png" />
-    <Content Include="Content\images\menu-icon.png" />
-    <Content Include="Content\images\move-top.png" />
-    <Content Include="Content\images\n1.jpg" />
-    <Content Include="Content\images\n2.jpg" />
-    <Content Include="Content\images\n3.jpg" />
-    <Content Include="Content\images\read.png" />
-    <Content Include="Content\images\slide2.png" />
-    <Content Include="Content\images\slide3.png" />
-    <Content Include="Content\images\slide4.png" />
-    <Content Include="Content\images\t1.jpg" />
-    <Content Include="Content\images\t2.jpg" />
-    <Content Include="Content\images\t3.jpg" />
-    <Content Include="Content\js\jquery.cbpFWSlider.min.js" />
-    <Content Include="Content\js\jquery.min.js" />
-    <Content Include="Content\js\modernizr.custom.js" />
-    <Content Include="Content\js\owl.carousel.js" />
-    <Content Include="Content\js\wow.min.js" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
-    <Content Include="scripts\bootstrap.js" />
-    <Content Include="scripts\bootstrap.min.js" />
-    <None Include="scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="scripts\jquery-1.10.2.js" />
-    <Content Include="scripts\jquery-1.10.2.min.js" />
-    <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -182,16 +135,6 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Teachers.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -201,6 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
@@ -216,9 +160,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>55886</DevelopmentServerPort>
+          <DevelopmentServerPort>59811</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:55886/</IISUrl>
+          <IISUrl>http://localhost:59811/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
