@@ -1,0 +1,104 @@
+﻿
+@{
+    ViewBag.Title = "Support";
+}
+<!--幻灯片-->
+<div class="banner_s"><img src="/Content/upload/banner_c.jpg" alt="" /></div>
+<!--幻灯片-->
+<div class="s_bg">
+    <div class="scd clearfix">
+        <ul class="scd_l">
+            <li class="now"><a href="">常见问题</a></li>
+            <li><a href="">资料下载</a></li>
+            <li><a href="">咨询留言</a></li>
+        </ul>
+        <div class="scd_r">
+            <div class="r_top">
+                <p>TECHNICAL SUPPORT</p>
+                <em>技术支持</em>
+            </div>
+            <div class="scd_rm">
+                <div class="pst">
+                    <div class="line">&nbsp;</div>
+                    <p>COMMON PROBLEM</p>
+                    <b>常见问题</b>
+                </div>
+                <ul class="support">
+                    <li>
+                        <div class="title">1． 文件（或流）打开失败？</div>
+                        <div class="des">
+                            常见原因：
+                            <div class="des_m">
+                                <p>> 生成文件（流）的编码器比播放器新，播放器只向后兼容。 </p>
+                                <p>> 文件少于4k. </p>
+                                <p>> 文件中找不到完整的有效数据，可能是应用软件写文件时缓冲区操作有误。</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title"> 2． 文件（或流）可以打开但无法播放，关闭声音或改变播放速度后可以播放？ </div>
+                        <div class="des">
+                            常见原因：
+                            <div class="des_m">
+                                <p>> 文件头和实际码流不对应。复合流的文件头加到了纯视频流文件（或流）上。</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title"> 3． 关闭声音或改变播放速度后文件仍然无法播放，但进度条在走？ </div>
+                        <div class="des">
+                            常见原因：
+                            <div class="des_m">
+                                <p>> 录像数据有误。</p>
+                                <p>> 启动了Netmeeting，或者显卡驱动有缺陷，导致无法显示。</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title"> 4． 文件能播放，但不流畅？ </div>
+                        <div class="des">
+                            常见原因：
+                            <div class="des_m">
+                                <p>> 录像时设置的帧率小于正常帧率（PAL 25帧/秒，NTSC 30帧/秒） </p>
+                                <p>> 录像数据有误。</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title"> 5． 流播放不流畅？ </div>
+                        <div class="des">
+                            常见原因：
+                            <div class="des_m">
+                                <p>> 网络环境差，数据来的不均匀。可以适当加大播放缓冲区缓冲的帧数。 </p>
+                                <p>> 录像时设置的帧率小于正常帧率（PAL 25帧/秒，NTSC 30帧/秒）</p>
+                                <p>> 录像数据有误。</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title"> 6． 使用错误号 </div>
+                        <div class="des">
+                            常见原因：
+                            <div class="des_m">
+                                <p>使用方法：当某个接口返回失败时，可以调用Hik_PlayM4_GetLastError来获得错误的详细信息。</p>
+                                <p>
+                                    错误 错误号定义如下：
+                                    <div>
+                                <p>#define HIK_PLAYM4_NOERROR 0</p>
+                                <p>#define HIK_PLAYM4_PARA_OVER 1 </p>
+                                <p>#define HIK_PLAYM4_ORDER_ERROR 2 </p>
+                                <p>#define HIK_PLAYM4_TIMER_ERROR 3 </p>
+                                <p>#define HIK_PLAYM4_DEC_VIDEO_ERROR 4</p>
+                                <p>#define HIK_PLAYM4_DEC_AUDIO_ERROR 5 </p>
+                                <p>#define HIK_PLAYM4_ALLOC_MEMORY_ERROR 6</p>
+                                <p>#define HIK_PLAYM4_OPEN_FILE_ERROR 7 </p>
+                                <p>#define HIK_PLAYM4_CREATE_OBJ_ERROR 8</p>
+                            </div>
+                            </p>
+                        </div>
+            </div>
+            </li>
+            </ul>
+        </div>
+    </div>
+</div>

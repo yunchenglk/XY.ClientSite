@@ -1,0 +1,336 @@
+﻿<script language="javascript">
+    $(window).load(function () {
+        $('.header').removeClass('h_fix');
+        $('.flexslider').flexslider({
+            animation: "slide"
+        });
+        $('.s_a').click(function () { $('html,body').animate({ scrollTop: $('.a').offset().top }, 500); });
+        $('.s_b').click(function () { $('html,body').animate({ scrollTop: $('.b').offset().top }, 500); });
+        $('.s_c').click(function () { $('html,body').animate({ scrollTop: $('.c').offset().top }, 500); });
+        $('.s_d').click(function () { $('html,body').animate({ scrollTop: $('.d').offset().top }, 500); });
+        $('.s_e').click(function () { $('html,body').animate({ scrollTop: $('.e').offset().top }, 500); });
+        $('.s_f').click(function () { $('html,body').animate({ scrollTop: $('.f').offset().top }, 500); });
+        $('.s_g').click(function () { $('html,body').animate({ scrollTop: $('.g').offset().top }, 500); });
+    });
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 0) {
+            $('.header').addClass('h_fix');
+        } else {
+            $('.header').removeClass('h_fix');
+        }
+        if ($(window).scrollTop() > 3500) {
+            $('.m_bg').addClass('m_bg_a');
+        } else {
+            $('.m_bg').removeClass('m_bg_a');
+        }
+    });
+</script>
+<!--幻灯片-->
+<div class="banner a">
+    <div class="slider">
+        <div class="flexslider">
+            <ul class="slides">
+                <li><a href=""><img src="/Content/upload/banner.jpg" alt="" /></a></li>
+                <li><a href=""><img src="/Content/upload/banner.jpg" alt="" /></a></li>
+                <li><a href=""><img src="/Content/upload/banner.jpg" alt="" /></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--幻灯片-->
+
+<div class="i_mf b">
+    <div class="i_name">
+        <em>关于</em>我们
+        <p>ABOUT US</p>
+    </div>
+    <div class="i_mfm">
+        <p>深圳市芊熠智能硬件有限公司前身深圳市为科科技有限公司，成立于2013年，总部设在中国深圳。现已发展成为一家拥有多项自主知识产权、专注于道路与安防监控、智慧停车产品，集研发生产与销售于一体的现代化高科技企业。 </p>
+        <p>位于中国深圳、北京的两大研发中心始终坚持科技创新的路线，汇聚了一批具有丰富视频研发经验的专业人才，在智能工业摄像机方面拥有一流的开发力量，通过与日韩国际高端芯片技术伙伴的密切合作，成功推出了芊熠品牌系列安防产品，以“科技创新,质量先行、客户满意、持续改进”的质量方针和严谨、完善的管理制度,同时凭借着对安全保障的深入理解，依靠不断创新的产品和细致的服务，一直被公认为最受信赖的产品供货商。</p>
+        <p>芊熠是国内领先的智能视频产品及解决方案供应商企业，主要业务在智能交通产产品、智慧安防、智慧停车产品三大领域。为科以“将最新科技成果应用于智慧停车和智能安防领域”为使命，致力于成为行业内先锋企业。</p>
+        <p>“客户第一，品质至上”，是芊熠的企业文化，在获得公安部产品质量检测报告的同时也通过了ISO9001:2008国际质量体系认证，为芊熠走向全球打下了坚实基础，销售网络遍布全球多个国家和地区。</p>
+        <p>芊熠将继续坚持“以人为本、服务客户”的崇高目标，与安防业界同仁一起书写中国安防产业的美好未来，为客户创造价值，为安防产业的发展贡献全部的力量。</p>
+        <p>聚焦客户关注的问题，敢于承担挑战和压力，提供有强竞争力的产品和服务，持续为客户创造最大价值，是芊熠责无旁贷的使命。“科技让生活更安全和美好”，是芊熠不懈追求的目标。依靠不断创新的企业发展模式，为科产品在行业中广泛应用，创造了诸多全新应用，始终引领着行业发展的潮流。</p>
+    </div>
+    <div class="more"><a href="">MORE</a></div>
+</div>
+
+
+
+<div class="i_m i_ma c">
+    <div class="i_name">
+        <em>产品</em>中心
+        <p>PRODUCT CENTER</p>
+    </div>
+    <ul class="clearfix">
+        <li>
+            <a href="">
+                <div class="tu"><img src="/Content/upload/pic1.jpg" alt="" /></div>
+                <div class="name">智能交通产品</div>
+                <p>产品是自主研发的纯嵌入式结构，采用高性能TI DM8147处理器， 通过获取...</p>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="tu"><img src="/Content/upload/pic2.jpg" alt="" /></div>
+                <div class="name">智慧安防</div>
+                <p>支持行业特殊智能视频分析功能定制，提供专业化智能视频处理支持智能数字水...</p>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="tu"><img src="/Content/upload/pic3.jpg" alt="" /></div>
+                <div class="name">智慧安防</div>
+                <p>支持行业特殊智能视频分析功能定制，提供专业化智能视频处理支持智能数字水...</p>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="i_me d">
+    <div class="i_name">
+        <em>新闻</em>中心
+        <p>NEWS</p>
+    </div>
+    <ul>
+        <li>
+            <dl class="clearfix">
+                <a href="">
+                    <dt>
+                        09-28
+                        <p>2015 YEAR</p>
+                    </dt>
+                    <dd>
+                        <div class="title">深圳市芊熠智能硬件有限公司前身深圳市为科科技有限公司</div>
+                        <p>深圳市芊熠智能硬件有限公司前身深圳市为科科技有限公司成立于2013年，总部设在中国深圳。现已发展成为一家拥有多项自主知识产权、专注于道路与安防监控、智慧停车产品，集研发生产与销售于一体的现代化高科技企业。 </p>
+                    </dd>
+                </a>
+            </dl>
+        </li>
+        <li>
+            <dl class="clearfix">
+                <a href="">
+                    <dt>
+                        09-28
+                        <p>2015 YEAR</p>
+                    </dt>
+                    <dd>
+                        <div class="title">深圳市芊熠智能硬件有限公司前身深圳市为科科技有限公司</div>
+                        <p>深圳市芊熠智能硬件有限公司前身深圳市为科科技有限公司成立于2013年，总部设在中国深圳。现已发展成为一家拥有多项自主知识产权、专注于道路与安防监控、智慧停车产品，集研发生产与销售于一体的现代化高科技企业。 </p>
+                    </dd>
+                </a>
+            </dl>
+        </li>
+        <li>
+            <dl class="clearfix">
+                <a href="">
+                    <dt>
+                        09-28
+                        <p>2015 YEAR</p>
+                    </dt>
+                    <dd>
+                        <div class="title">深圳市芊熠智能硬件有限公司前身深圳市为科科技有限公司</div>
+                        <p>深圳市芊熠智能硬件有限公司前身深圳市为科科技有限公司成立于2013年，总部设在中国深圳。现已发展成为一家拥有多项自主知识产权、专注于道路与安防监控、智慧停车产品，集研发生产与销售于一体的现代化高科技企业。 </p>
+                    </dd>
+                </a>
+            </dl>
+        </li>
+        <li>
+            <dl class="clearfix">
+                <a href="">
+                    <dt>
+                        09-28
+                        <p>2015 YEAR</p>
+                    </dt>
+                    <dd>
+                        <div class="title">深圳市芊熠智能硬件有限公司前身深圳市为科科技有限公司</div>
+                        <p>深圳市芊熠智能硬件有限公司前身深圳市为科科技有限公司成立于2013年，总部设在中国深圳。现已发展成为一家拥有多项自主知识产权、专注于道路与安防监控、智慧停车产品，集研发生产与销售于一体的现代化高科技企业。 </p>
+                    </dd>
+                </a>
+            </dl>
+        </li>
+    </ul>
+    <div class="more"><a href="">MORE</a></div>
+</div>
+
+<div class="i_m i_mb i_mc e">
+    <div class="i_name">
+        <em>工程</em>案例
+        <p>ENGINEERING CASE</p>
+    </div>
+    <ul class="clearfix">
+        <li>
+            <a href="">
+                <div class="title">卡口系统</div>
+                <img src="/Content/upload/pic5.jpg" alt="" />
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="title">卡口系统</div>
+                <img src="/Content/upload/pic5.jpg" alt="" />
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="title">卡口系统</div>
+                <img src="/Content/upload/pic5.jpg" alt="" />
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="i_m i_mb f">
+    <div class="i_name">
+        <em>解决</em>方案
+        <p>SOLUTION</p>
+    </div>
+    <ul class="clearfix">
+        <li>
+            <a href="">
+                <div class="title">视频电子警察系统</div>
+                <img src="/Content/upload/pic4.jpg" alt="" />
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="title">闯红灯抓拍（地感线圈检测）</div>
+                <img src="/Content/upload/pic4.jpg" alt="" />
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="title">闯红灯抓拍 纯视频检测</div>
+                <img src="/Content/upload/pic4.jpg" alt="" />
+            </a>
+        </li>
+    </ul>
+</div>
+@*<div class="i_md g">
+        <div class="i_name">
+            <em>技术</em>支持
+            <p>TECHNICAL SUPPORT</p>
+        </div>
+        <div class="i_mdm clearfix">
+            <div class="i_mdl">
+                <div class="box_h">
+                    <span>常见问题</span>
+                    <a href="">MORE></a>
+                </div>
+                <ul>
+                    <li class="wen">
+                        <span>问</span>
+                        <div class="nr">1． 文件（或流）打开失败？</div>
+                    </li>
+                    <li class="da">
+                        <span>答</span>
+                        <div class="nr">
+                            <p>1、 生成文件（流）的编码器比播放器新，播放器只向后兼容。 </p>
+                            <p>2、文件少于4k. </p>
+                            <p>3、 文件中找不到完整的有效数据，可能是应用软件写文件时缓冲区操作有误。</p>
+                        </div>
+                    </li>
+                    <li class="wen">
+                        <span>问</span>
+                        <div class="nr">2． 文件 （或流）可以打开但无法播放，关闭声音或改变播放速度后可以播放？</div>
+                    </li>
+                    <li class="da">
+                        <span>答</span>
+                        <div class="nr">
+                            <p>文件头和实际码流不对应。复合流的文件头加到了纯视频流文件（或流）上。</p>
+                        </div>
+                    </li>
+                    <li class="wen">
+                        <span>问</span>
+                        <div class="nr"> 3． 关闭声音或改变播放速度后文件仍然无法播放，但进度条在走？</div>
+                    </li>
+                    <li class="da">
+                        <span>答</span>
+                        <div class="nr">
+                            <p>1、录像数据有误。</p>
+                            <p>2、 启动了Netmeeting，或者显卡驱动有缺陷，导致无法显示。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="i_mdr">
+                <div class="box_h">
+                    <span>常见问题</span>
+                    <a href="">MORE></a>
+                </div>
+                <ul>
+                    <li>
+                        <a href="">
+                            <p>网络SDK开发帮助手册V3.0.5</p>
+                            <em>2015-10-12</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <p>网络SDK开发帮助手册V3.0.5</p>
+                            <em>2015-10-12</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <p>网络SDK开发帮助手册V3.0.5</p>
+                            <em>2015-10-12</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <p>网络SDK开发帮助手册V3.0.5</p>
+                            <em>2015-10-12</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <p>网络SDK开发帮助手册V3.0.5</p>
+                            <em>2015-10-12</em>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>*@
+
+<div class="i_mg g">
+    <div class="i_name">
+        <em>联系</em>我们
+        <p>CONTACT US</p>
+    </div>
+    <div class="i_mgm clearfix">
+        <ul class="clearfix">
+            <li class="one">
+                <img src="/Content/images/icon5.png" alt="" />
+                <p>0755-26827630</p>
+            </li>
+            <li>
+                <img src="/Content/images/icon6.png" alt="" />
+                <p>0755-26827630-821</p>
+            </li>
+            <li>
+                <img src="/Content/images/icon7.png" alt="" />
+                <p>深圳市南山区高新技术产业园南区中国地质大学四楼C区</p>
+            </li>
+        </ul>
+        <div class="space_hx">&nbsp;</div>
+        <ul class="i_book clearfix">
+            <li class="chang">如果您在使用我们产品时遇到问题，或者对我们有任何意见建议，欢迎在此留言，我们将关注您的问题并尽快与您联系。</li>
+            <li>
+                <span>姓名</span>
+                <input name="" type="text">
+            </li>
+            <li>
+                <span>邮箱</span>
+                <input name="" type="text">
+            </li>
+            <li class="chang">
+                <span>留言</span>
+                <textarea name="" cols="" rows=""></textarea>
+            </li>
+            <li class="btn">
+                <input name="" type="submit" value="立即提交">
+            </li>
+        </ul>
+    </div>
+</div>

@@ -117,13 +117,68 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\css\reset.css" />
+    <Content Include="Content\css\responsive.css" />
+    <Content Include="Content\css\thems.css" />
+    <Content Include="Content\images\bg_a.png" />
+    <Content Include="Content\images\bg_b.jpg" />
+    <Content Include="Content\images\bg_c.jpg" />
+    <Content Include="Content\images\bg_d.jpg" />
+    <Content Include="Content\images\bg_e.png" />
+    <Content Include="Content\images\bg_f.jpg" />
+    <Content Include="Content\images\bg_g.png" />
+    <Content Include="Content\images\icon1.png" />
+    <Content Include="Content\images\icon1_1.png" />
+    <Content Include="Content\images\icon2.png" />
+    <Content Include="Content\images\icon3.png" />
+    <Content Include="Content\images\icon4.png" />
+    <Content Include="Content\images\icon5.png" />
+    <Content Include="Content\images\icon6.png" />
+    <Content Include="Content\images\icon7.png" />
+    <Content Include="Content\images\icon8.png" />
+    <Content Include="Content\images\icon9.png" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\nav_ico.png" />
+    <Content Include="Content\images\nav_ico_a.png" />
+    <Content Include="Content\images\s_btn.png" />
+    <Content Include="Content\js\jquery-1.8.3.min.js" />
+    <Content Include="Content\js\js_z.js" />
+    <Content Include="Content\plugins\FlexSlider\flexslider.css" />
+    <Content Include="Content\plugins\FlexSlider\images\banner.jpg" />
+    <Content Include="Content\plugins\FlexSlider\images\nav_ico.png" />
+    <Content Include="Content\plugins\FlexSlider\index.html" />
+    <Content Include="Content\plugins\FlexSlider\jquery-1.9.1.min.js" />
+    <Content Include="Content\plugins\FlexSlider\jquery.flexslider-min.js" />
+    <Content Include="Content\plugins\FlexSlider\jquery.flexslider.js" />
+    <Content Include="Content\upload\banner.jpg" />
+    <Content Include="Content\upload\banner_a.jpg" />
+    <Content Include="Content\upload\banner_b.jpg" />
+    <Content Include="Content\upload\banner_c.jpg" />
+    <Content Include="Content\upload\banner_d.jpg" />
+    <Content Include="Content\upload\banner_e.jpg" />
+    <Content Include="Content\upload\pic1.jpg" />
+    <Content Include="Content\upload\pic2.jpg" />
+    <Content Include="Content\upload\pic3.jpg" />
+    <Content Include="Content\upload\pic4.jpg" />
+    <Content Include="Content\upload\pic5.jpg" />
+    <Content Include="Content\upload\pic6.jpg" />
+    <Content Include="Content\upload\pic7.jpg" />
+    <Content Include="Content\upload\pic8.jpg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <None Include="scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="scripts\jquery-1.10.2.js" />
+    <Content Include="scripts\jquery-1.10.2.min.js" />
+    <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -135,6 +190,19 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Product.cshtml" />
+    <Content Include="Views\Home\Support.cshtml" />
+    <Content Include="Views\Home\News.cshtml" />
+    <Content Include="Views\Home\Case.cshtml" />
+    <Content Include="Views\Home\Solution.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -144,7 +212,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
