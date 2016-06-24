@@ -13,8 +13,9 @@ namespace fangjingdian.Controllers
         {
             return View();
         }
-        public ActionResult About()
+        public ActionResult About(string id)
         {
+            ViewBag.ID = id;
             return View();
         }
         public ActionResult Product()
@@ -25,8 +26,9 @@ namespace fangjingdian.Controllers
         {
             return View();
         }
-        public ActionResult News()
+        public ActionResult News(string id)
         {
+            ViewBag.ID = id;
             return View();
         }
         public ActionResult Case()

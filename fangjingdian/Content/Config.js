@@ -96,7 +96,7 @@ function createPage(objs, pageIndex, pageSize, total, url, wheres, sortname, sor
 var apiurl = "http://api.0359i.com/api";
 var urlitems = {
     //关于我们
-    gywm: "",
+    gywm: "F3076D41-FA91-4165-8D0F-F8C183F6BF97",
     //产品中心
     cpzx: "",
     //解决方案
@@ -106,5 +106,5 @@ var urlitems = {
     //技术支持
     jszc: "",
     //新闻中心
-    xwzx: ""
+    xwzx: "E7327750-5EE5-4A4A-A4A7-B8120CBAD26A"
 }

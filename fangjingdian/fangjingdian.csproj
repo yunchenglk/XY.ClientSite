@@ -142,6 +142,10 @@
     <Content Include="Content\images\nav_ico.png" />
     <Content Include="Content\images\nav_ico_a.png" />
     <Content Include="Content\images\s_btn.png" />
+    <Content Include="Content\jBootstrapPage.js" />
+    <Content Include="Content\jquery-tmpl.js" />
+    <Content Include="Content\jquery.form.js" />
+    <Content Include="Content\jquery.HashTable.js" />
     <Content Include="Content\js\jquery-1.8.3.min.js" />
     <Content Include="Content\js\js_z.js" />
     <Content Include="Content\plugins\FlexSlider\flexslider.css" />
@@ -171,6 +175,7 @@
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\fjd.com.pubxml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />

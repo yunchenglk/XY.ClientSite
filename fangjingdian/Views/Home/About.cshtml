@@ -2,7 +2,19 @@
 @{
     ViewBag.Title = "About";
 }
-
+<script type="text/javascript">
+    $(function () {
+        var result = $.GetApiData(apiurl + "/Content/" + '@ViewBag.ID');
+        if (result.status == 1) {
+            $("#Title").html(result.data.Title);
+            $("#EnTitle").html(result.data.EnTitle);
+            $("#content").html(result.data.DescriptionStr);
+            //$("#Publisher").html(result.data.Publisher);
+            //$("#Count").html(result.data.Count);
+            //$(".loading").hide();
+        }
+    })
+</script>
 <!--幻灯片-->
 <div class="banner_s"><img src="/Content/upload/banner_b.jpg" alt="" /></div>
 <!--幻灯片-->
@@ -16,21 +28,10 @@
             <div class="scd_rm">
                 <div class="pst">
                     <div class="line">&nbsp;</div>
-                    <p>COMPANY PROFILE</p>
-                    <b>公司简介</b>
+                    <p id="EnTitle"></p>
+                    <b id="Title"></b>
                 </div>
-                <div class="about">
-                    <p style="margin-bottom:15px;">芊熠智能硬件有限公司成立于2013年,总部位于中国深圳，是一家专注于智能硬件研究及应用的高科技企业，在北京、深圳设有研发中心。芊熠对中、高端嵌入式智能硬件产品具有独立设计、开发的能力。拥有摄像机ISP算法、视频分析算法等自主知识产权以及基于云架构的互联网应用平台和移动APP的开发能力。公司目前专注于互联网停车4.0和高清智能监控两大产品体系。</p>
-                    <p>互联网停车4.0</p>
-                    <p style="margin-bottom:15px;">“嵌入式终端设备+智能视频分析算法+互联网云平台+大数据分析”是芊熠对互联网停车4.0的诠释。芊熠互联网停车4.0系统解决方案完全基于新一代互联网停车场服务模式而研发。不仅为停车场管理者提供便捷、可靠的服务而且大大提高车辆进出体验，同时将停车资源通过网络共享，充分利用，提高其经济效益，改善日益增长的城市停车难问题，实现多方共赢。</p>
-                    <p style="margin-bottom:15px;">全新设计的停车场系统解决方案，从出入口管理，到场内车位管理，全部采用高效，稳定的嵌入式智能硬件设备，并且数据与云端平台进行实时通信。云端平台，不仅能让停车场管理者畅享移动互联网带来的便捷管理，而且能整合城市级的停车场资源，构建城市“停车数据云”。提供优质的线下停车场智能化解决方案，为多元的互联网停车应用提供便利的接口支持，提高城市停车资源的利用效率是芊熠不懈的追求。芊熠已准备好为即将来临的“互联网停车”时代提供智能硬件与“停车大数据”接口支撑。</p>
-                    <p>高清智能监控</p>
-                    <p style="margin-bottom:15px;">高清智能监控产品是基于芊熠对智能监控的深刻理解以及在视频分析核心算法的积累与优势上而研发的。针对视频监控中大量无需实时预览，布网困难的问题，芊熠推出了新一代高清视频监控解决方案。</p>
-                    <p>芊熠高清智能监控产品具有“高，微，畅，易”的特点。</p>
-                    <p style="margin-bottom:15px;">高智能：摄像机提供包括车牌识别、车型识别、车身颜色识别，移动侦测、人脸检测、手机MAC地址收集、事件检测、周界检测等多种智能化分析，方便用户根据实际场景需求制定个性化监控方案。</p>
-                    <p>微存储：采用自研动态编码算法以及高可靠性的SSD存储介质，64G SSD最长可以录制一个月视频</p>
-                    <p>畅连接：摄像机支持3G，WiFi无线连接，完美解决网络布线的困扰</p>
-                    <p>易维护：摄像机具备自诊断功能，并将诊断报警信息上传至后台，方便实时监控摄像机运行状态。</p>
+                <div class="about" id="content">
                 </div>
             </div>
         </div>
