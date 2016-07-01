@@ -98,7 +98,7 @@ var urlitems = {
     //关于我们
     gywm: "F3076D41-FA91-4165-8D0F-F8C183F6BF97",
     //产品中心
-    cpzx: "",
+    cpzx: "461E3ADC-D319-4E82-BC92-40E8317A0A58",
     //解决方案
     jjfa: "",
     //应用案例

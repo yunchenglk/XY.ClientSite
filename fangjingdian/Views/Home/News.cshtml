@@ -2,6 +2,12 @@
 @{
     ViewBag.Title = "News";
 }
+<script type="text/javascript">
+    $(function () {
+        $(".m_bg").remove();
+
+    })
+</script>
 <script src="~/Content/jquery-tmpl.js"></script>
 <script src="~/Content/jBootstrapPage.js"></script>
 <script type="text/x-jquery-tmpl" id="dataModel">
@@ -26,7 +32,7 @@
             where: "ClassID|equal|" + '@ViewBag.ID' + "#DR|equal|0",
             url: apiurl + "/news/",
             pagesize: 12,
-            paginationObj: $(".pagination ul")
+            paginationObj: $(".pagination")
         })
     })
 </script>
@@ -44,11 +50,11 @@
                 <ul id="news">
                 </ul>
                 <div class="pages pagination">
-                    <a href="">《</a>
+                    @*<a href="">《</a>
                     <a href="" class="now">1</a>
                     <a href="">2</a>
                     <a href="">3</a>
-                    <a href="">》</a>
+                    <a href="">》</a>*@
                 </div>
             </div>
         </div>

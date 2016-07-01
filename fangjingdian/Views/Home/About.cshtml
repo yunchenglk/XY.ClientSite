@@ -4,6 +4,7 @@
 }
 <script type="text/javascript">
     $(function () {
+        $(".m_bg").remove();
         var result = $.GetApiData(apiurl + "/Content/" + '@ViewBag.ID');
         if (result.status == 1) {
             $("#Title").html(result.data.Title);

@@ -1,4 +1,5 @@
-﻿<script language="javascript">
+﻿<script src="~/Content/jquery-tmpl.js"></script>
+<script language="javascript">
     $(window).load(function () {
         $('.header').removeClass('h_fix');
         $('.flexslider').flexslider({
@@ -23,6 +24,27 @@
             $('.m_bg').removeClass('m_bg_a');
         }
     });
+    $(function () {
+        //关于我们
+        var result = $.GetApiData(apiurl + "/Content/" + urlitems.gywm);
+        if (result.status == 1) {
+            $("#Gywm").html(result.data.Short_Desc);
+        }
+        //产品中心
+        var pro_result = $.GetApiData(apiurl + "/Product?classid=" + urlitems.cpzx + "&count=3");
+        if (pro_result.status == 1) {
+            $("#pro_result_Model").tmpl(pro_result.data).appendTo("#Cpzx");
+            $("#Cpzx li:last").css("margin-right", 0);
+        }
+    })
+</script>
+<script type="text/x-jquery-tmpl" id="pro_result_Model">
+    <li>
+        <a href="">
+            <div class="tu"><img src="${sourceWeb}${SlidePic}" alt="" /></div>
+            <div class="name">${Title}</div>
+        </a>
+    </li>
 </script>
 <!--幻灯片-->
 <div class="banner a">
@@ -44,14 +66,9 @@
         <p>ABOUT US</p>
     </div>
     <div class="i_mfm">
-        <p>深圳市芊熠智能硬件有限公司前身深圳市为科科技有限公司，成立于2013年，总部设在中国深圳。现已发展成为一家拥有多项自主知识产权、专注于道路与安防监控、智慧停车产品，集研发生产与销售于一体的现代化高科技企业。 </p>
-        <p>位于中国深圳、北京的两大研发中心始终坚持科技创新的路线，汇聚了一批具有丰富视频研发经验的专业人才，在智能工业摄像机方面拥有一流的开发力量，通过与日韩国际高端芯片技术伙伴的密切合作，成功推出了芊熠品牌系列安防产品，以“科技创新,质量先行、客户满意、持续改进”的质量方针和严谨、完善的管理制度,同时凭借着对安全保障的深入理解，依靠不断创新的产品和细致的服务，一直被公认为最受信赖的产品供货商。</p>
-        <p>芊熠是国内领先的智能视频产品及解决方案供应商企业，主要业务在智能交通产产品、智慧安防、智慧停车产品三大领域。为科以“将最新科技成果应用于智慧停车和智能安防领域”为使命，致力于成为行业内先锋企业。</p>
-        <p>“客户第一，品质至上”，是芊熠的企业文化，在获得公安部产品质量检测报告的同时也通过了ISO9001:2008国际质量体系认证，为芊熠走向全球打下了坚实基础，销售网络遍布全球多个国家和地区。</p>
-        <p>芊熠将继续坚持“以人为本、服务客户”的崇高目标，与安防业界同仁一起书写中国安防产业的美好未来，为客户创造价值，为安防产业的发展贡献全部的力量。</p>
-        <p>聚焦客户关注的问题，敢于承担挑战和压力，提供有强竞争力的产品和服务，持续为客户创造最大价值，是芊熠责无旁贷的使命。“科技让生活更安全和美好”，是芊熠不懈追求的目标。依靠不断创新的企业发展模式，为科产品在行业中广泛应用，创造了诸多全新应用，始终引领着行业发展的潮流。</p>
+        <p id="Gywm"></p>
     </div>
-    <div class="more"><a href="">MORE</a></div>
+    <div class="more"><a href="/Home/About/F3076D41-FA91-4165-8D0F-F8C183F6BF97">MORE</a></div>
 </div>
 
 
@@ -61,28 +78,8 @@
         <em>产品</em>中心
         <p>PRODUCT CENTER</p>
     </div>
-    <ul class="clearfix">
-        <li>
-            <a href="">
-                <div class="tu"><img src="/Content/upload/pic1.jpg" alt="" /></div>
-                <div class="name">智能交通产品</div>
-                <p>产品是自主研发的纯嵌入式结构，采用高性能TI DM8147处理器， 通过获取...</p>
-            </a>
-        </li>
-        <li>
-            <a href="">
-                <div class="tu"><img src="/Content/upload/pic2.jpg" alt="" /></div>
-                <div class="name">智慧安防</div>
-                <p>支持行业特殊智能视频分析功能定制，提供专业化智能视频处理支持智能数字水...</p>
-            </a>
-        </li>
-        <li>
-            <a href="">
-                <div class="tu"><img src="/Content/upload/pic3.jpg" alt="" /></div>
-                <div class="name">智慧安防</div>
-                <p>支持行业特殊智能视频分析功能定制，提供专业化智能视频处理支持智能数字水...</p>
-            </a>
-        </li>
+    <ul class="clearfix" id="Cpzx">
+       
     </ul>
 </div>
 
