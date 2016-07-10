@@ -106,5 +106,7 @@ var urlitems = {
     //技术支持
     jszc: "",
     //新闻中心
-    xwzx: "E7327750-5EE5-4A4A-A4A7-B8120CBAD26A"
+    xwzx: "E7327750-5EE5-4A4A-A4A7-B8120CBAD26A",
+    //公司ID
+    CID: "794086FD-0E70-49A9-B925-A20D9A108EB4"
 }

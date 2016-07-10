@@ -18,7 +18,7 @@
         } else {
             $('.header').removeClass('h_fix');
         }
-        if ($(window).scrollTop() > 3500) {
+        if ($(window).scrollTop() > 2000) {
             $('.m_bg').addClass('m_bg_a');
         } else {
             $('.m_bg').removeClass('m_bg_a');
@@ -36,6 +36,11 @@
             $("#pro_result_Model").tmpl(pro_result.data).appendTo("#Cpzx");
             $("#Cpzx li:last").css("margin-right", 0);
         }
+        //新闻中心
+        var new_result = $.GetApiData(apiurl + "/News/" + urlitems.xwzx + "?type=1&count=4");
+        if (new_result.status == 1) {
+            $("#new_result_Model").tmpl(new_result_Model.data).appendTo("#Xwzx");
+        }
     })
 </script>
 <script type="text/x-jquery-tmpl" id="pro_result_Model">
@@ -44,6 +49,22 @@
             <div class="tu"><img src="${sourceWeb}${SlidePic}" alt="" /></div>
             <div class="name">${Title}</div>
         </a>
+    </li>
+</script>
+<script type="text/x-jquery-tmpl" id="new_result_Model">
+    <li>
+        <dl class="clearfix">
+            <a href="">
+                <dt>
+                    09-28
+                    <p>2015 YEAR</p>
+                </dt>
+                <dd>
+                    <div class="title">深圳市芊熠智能硬件有限公司前身深圳市为科科技有限公司</div>
+                    <p>深圳市芊熠智能硬件有限公司前身深圳市为科科技有限公司成立于2013年，总部设在中国深圳。现已发展成为一家拥有多项自主知识产权、专注于道路与安防监控、智慧停车产品，集研发生产与销售于一体的现代化高科技企业。 </p>
+                </dd>
+            </a>
+        </dl>
     </li>
 </script>
 <!--幻灯片-->
@@ -78,9 +99,7 @@
         <em>产品</em>中心
         <p>PRODUCT CENTER</p>
     </div>
-    <ul class="clearfix" id="Cpzx">
-       
-    </ul>
+    <ul class="clearfix" id="Cpzx"></ul>
 </div>
 
 <div class="i_me d">
@@ -88,68 +107,12 @@
         <em>新闻</em>中心
         <p>NEWS</p>
     </div>
-    <ul>
-        <li>
-            <dl class="clearfix">
-                <a href="">
-                    <dt>
-                        09-28
-                        <p>2015 YEAR</p>
-                    </dt>
-                    <dd>
-                        <div class="title">深圳市芊熠智能硬件有限公司前身深圳市为科科技有限公司</div>
-                        <p>深圳市芊熠智能硬件有限公司前身深圳市为科科技有限公司成立于2013年，总部设在中国深圳。现已发展成为一家拥有多项自主知识产权、专注于道路与安防监控、智慧停车产品，集研发生产与销售于一体的现代化高科技企业。 </p>
-                    </dd>
-                </a>
-            </dl>
-        </li>
-        <li>
-            <dl class="clearfix">
-                <a href="">
-                    <dt>
-                        09-28
-                        <p>2015 YEAR</p>
-                    </dt>
-                    <dd>
-                        <div class="title">深圳市芊熠智能硬件有限公司前身深圳市为科科技有限公司</div>
-                        <p>深圳市芊熠智能硬件有限公司前身深圳市为科科技有限公司成立于2013年，总部设在中国深圳。现已发展成为一家拥有多项自主知识产权、专注于道路与安防监控、智慧停车产品，集研发生产与销售于一体的现代化高科技企业。 </p>
-                    </dd>
-                </a>
-            </dl>
-        </li>
-        <li>
-            <dl class="clearfix">
-                <a href="">
-                    <dt>
-                        09-28
-                        <p>2015 YEAR</p>
-                    </dt>
-                    <dd>
-                        <div class="title">深圳市芊熠智能硬件有限公司前身深圳市为科科技有限公司</div>
-                        <p>深圳市芊熠智能硬件有限公司前身深圳市为科科技有限公司成立于2013年，总部设在中国深圳。现已发展成为一家拥有多项自主知识产权、专注于道路与安防监控、智慧停车产品，集研发生产与销售于一体的现代化高科技企业。 </p>
-                    </dd>
-                </a>
-            </dl>
-        </li>
-        <li>
-            <dl class="clearfix">
-                <a href="">
-                    <dt>
-                        09-28
-                        <p>2015 YEAR</p>
-                    </dt>
-                    <dd>
-                        <div class="title">深圳市芊熠智能硬件有限公司前身深圳市为科科技有限公司</div>
-                        <p>深圳市芊熠智能硬件有限公司前身深圳市为科科技有限公司成立于2013年，总部设在中国深圳。现已发展成为一家拥有多项自主知识产权、专注于道路与安防监控、智慧停车产品，集研发生产与销售于一体的现代化高科技企业。 </p>
-                    </dd>
-                </a>
-            </dl>
-        </li>
+    <ul id="Xwzx">
     </ul>
-    <div class="more"><a href="">MORE</a></div>
+    <div class="more"><a href="/Home/news/E7327750-5EE5-4A4A-A4A7-B8120CBAD26A">MORE</a></div>
 </div>
 
-<div class="i_m i_mb i_mc e">
+@*<div class="i_m i_mb i_mc e">
     <div class="i_name">
         <em>工程</em>案例
         <p>ENGINEERING CASE</p>
@@ -174,7 +137,7 @@
             </a>
         </li>
     </ul>
-</div>
+</div>*@
 <div class="i_m i_mb f">
     <div class="i_name">
         <em>解决</em>方案
