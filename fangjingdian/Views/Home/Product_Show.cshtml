@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Product_Show";
+}
+<script type="text/javascript">
+    $(function () {
+        $(".m_bg").remove();
+        var result = $.GetApiData(apiurl + "/Product/" + '@ViewBag.ID');
+        if (result.status == 1) {
+            $("#Title").html(result.data.Title);
+            $("#EnTitle").html(result.data.EnTitle);
+            $("#content").html(result.data.DescriptionStr);
+            //$("#Publisher").html(result.data.Publisher);
+            //$("#Count").html(result.data.Count);
+            //$(".loading").hide();
+        }
+    })
+</script>
+<div class="banner_s"><img src="/Content/upload/banner_a.jpg" alt="" /></div>
+<div class="s_bg">
+    <div class="scd clearfix">
+        <div class="scd_r" style="width:100%;">
+            <div class="r_top r_top_a">
+                <p>PRODUCT CENTER</p>
+                <em>产品中心</em>
+            </div>
+            <div class="scd_rm">
+                <div class="pst">
+                    <div class="line">&nbsp;</div>
+                    <p id="EnTitle"></p>
+                    <b id="Title"></b>
+                </div>
+                <div class="about" id="content">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

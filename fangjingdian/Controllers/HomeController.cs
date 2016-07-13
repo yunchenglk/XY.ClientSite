@@ -22,6 +22,11 @@ namespace fangjingdian.Controllers
         {
             return View();
         }
+        public ActionResult Product_Show(string id)
+        {
+            ViewBag.ID = id;
+            return View();
+        }
         public ActionResult Support()
         {
             return View();

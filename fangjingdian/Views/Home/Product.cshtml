@@ -10,27 +10,31 @@
         var class_result = $.GetApiData(apiurl + "/Class/" + urlitems.cpzx + "?cid=" + urlitems.CID);
         if (class_result.status == 1) {
             $("#class_result_Model").tmpl(class_result.data).appendTo("#ClassItems");
+            GetItems(class_result.data[0].ID, class_result.data[0].Title);
         }
     })
-    function GetItems(cid) {
+    function GetItems(cid, title) {
+        $("#T_title").html(title);
+        //获取分页
         $("#Pro_dome").bindPage({
             where: "ClassID|equal|" + cid + "#DR|equal|0",
             url: apiurl + "/Product/",
-            pagesize: 8
+            pagesize: 1,
+            paginationObj: $(".pages")
         });
     }
 
 </script>
 <script type="text/x-jquery-tmpl" id="class_result_Model">
-    <li><a href="javascript:GetItems('${ID}')">${Title}</a></li>
+    <li><a href="javascript:GetItems('${ID}','${Title}')">${Title}</a></li>
 </script>
 <script type="text/x-jquery-tmpl" id="dataModel">
     <dl class="clearfix">
-        <dt><a href=""><img src="/Content/upload/pic6.jpg" alt="" /></a></dt>
+        <dt><a href="/Home/Product_Show/${ID}"><img src="/Content/upload/pic6.jpg" alt="" /></a></dt>
         <dd>
-            <div class="title"><a href="">${Title}</a></div>
-            <div class="name"><span>系统概述</span></div>
-            <p>系统以全嵌入式出入口管理控制终端，配合出入口一体化联动设备，对停车场进出车辆进行识别、抬闸、收费、放行等管理工作。广泛应用于各类停车场出入口场景。</p>
+            <div class="title"><a href="/Home/Product_Show/${ID}">${Title}</a></div>
+            <div class="name"><span>产品概述</span></div>
+            <p>${Short_Dec}...</p>
         </dd>
     </dl>
 </script>
@@ -52,18 +56,17 @@
             <div class="scd_rm">
                 <div class="pst">
                     <div class="line">&nbsp;</div>
-                    @*<p>PARKING PRODUCTS</p>*@
-                    <b>停车场产品</b>
+                    <b id="T_title"></b>
                 </div>
                 <div class="pro" id="Pro_dome">
 
                 </div>
-                <div class="pages pagination">
-                    <a href="">《</a>
+                <div class="pages">
+                    @*<a href="">《</a>
                     <a href="" class="now">1</a>
                     <a href="">2</a>
                     <a href="">3</a>
-                    <a href="">》</a>
+                    <a href="">》</a>*@
                 </div>
             </div>
         </div>
