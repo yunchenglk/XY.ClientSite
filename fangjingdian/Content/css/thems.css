@@ -141,9 +141,11 @@ input , textarea , select{font-family:"Microsoft Yahei"; color:#5B5B5B; font-siz
 .pro dl dd .name{ width:100%; height:22px; line-height:22px; margin-top:15px; background:url(../images/icon9.png) no-repeat left center;}
 .pro dl dd .name span{ font-size:14px; color:#444; margin-left:25px;}
 .pro dl dd p{ width:100%; height:45px; font-size:14px; color:#444; line-height:175%; overflow:hidden;}
-.pages{ width:100%; height:30px; line-height:30px; text-align:right; margin-top:12px;}
-.pages a{ display:inline-block; *display:inline; zoom:1; margin-left:3px; height:22px; line-height:22px; border:1px solid #ddd; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; padding:0 5px; font-size:12px; color:#1D71C7; min-width:12px; text-align:center;}
-.pages a.now,.pages a:hover{ color:#FFF; background:#1D71C7; border:1px solid #1D71C7;}
+.pages{ width:100%; height:30px; line-height:30px; text-align:center; margin-top:12px;}
+.pages li{  list-style: none; display:inline;}
+.pages li a{ display:inline-block; *display:inline; zoom:1;  height:22px; line-height:22px; border:1px solid #ddd; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; padding:0 5px; font-size:12px; color:#1D71C7; min-width:12px; text-align:center;}
+.pages li.active,.pages li.hover{ color:#FFF; background:#1D71C7; border:1px solid #1D71C7;}
+.pages li.active a{color:white;} 
 .about{ width:100%; padding:15px 0 25px; font-size:14px; color:#000; line-height:175%;}
 .support{ width:100%; padding:20px 0;}
 .support li{ padding-bottom:15px; border-bottom:1px dashed #ddd; margin-bottom:15px; font-size:14px; color:#000; line-height:175%;}
@@ -154,9 +156,9 @@ input , textarea , select{font-family:"Microsoft Yahei"; color:#5B5B5B; font-siz
 .demo{ width:100%; padding:20px 0;}
 .demo h5{ width:100%; height:50px; line-height:50px; font-size:20px; font-weight:normal; color:#00A4DF;}
 .demo ul{ width:100%; border-bottom:1px dashed #ddd; margin-bottom:20px;}
-.demo ul li{ width:395px; float:left; margin-right:30px; margin-bottom:20px;}
+.demo ul li{ width:395px; float:left;  margin-bottom:20px;}
 .demo ul li embed{ width:395px; height:300px; vertical-align:top;}
-.demo ul li .title{ width:100%; height:40px; line-height:40px; text-align:center; font-size:14px; color:#333;}
+.demo ul li .title{ width:100%; line-height:40px; text-align:center; font-size:14px; color:#333;}
 .case{ width:100%; padding:20px 0;}
 .case dl{ width:100%; padding-bottom:20px; margin-bottom:20px; border-bottom:1px solid #eee;}
 .case dl dt,.case dl dt img{ width:245px; height:160px; float:left; vertical-align:top;}

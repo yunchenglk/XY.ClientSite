@@ -27,8 +27,10 @@ namespace fangjingdian.Controllers
             ViewBag.ID = id;
             return View();
         }
-        public ActionResult Support()
+        //企业形象/荣誉证书
+        public ActionResult Support(string id)
         {
+            ViewBag.ID = id;
             return View();
         }
         public ActionResult News(string id)
