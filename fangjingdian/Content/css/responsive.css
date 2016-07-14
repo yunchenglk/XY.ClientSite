@@ -1,6 +1,6 @@
 @media screen and (max-width:1150px){
 .header .head,.i_ma ul,.i_mb ul,.i_md .i_mdm,.i_me ul li dl,.i_mf .i_mfm,.i_mgm,.scd{width:960px; margin:0px auto;}
-.head .nav{ width:555px; margin-left:25px;}
+.head .nav{  margin-left:25px;}
 .head .nav li{ margin-right:3px;}
 .i_ma ul li{ width:298px; margin-right:32px;}
 .i_mb ul li{ width:303px; margin-right:25px;}

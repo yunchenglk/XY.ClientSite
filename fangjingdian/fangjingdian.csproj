@@ -122,6 +122,9 @@
     <Content Include="Content\css\reset.css" />
     <Content Include="Content\css\responsive.css" />
     <Content Include="Content\css\thems.css" />
+    <Content Include="Content\images\banner1.jpg" />
+    <Content Include="Content\images\banner2.jpg" />
+    <Content Include="Content\images\banner3.jpg" />
     <Content Include="Content\images\bg_a.png" />
     <Content Include="Content\images\bg_b.jpg" />
     <Content Include="Content\images\bg_c.jpg" />
@@ -147,6 +150,7 @@
     <Content Include="Content\jquery-tmpl.js" />
     <Content Include="Content\jquery.form.js" />
     <Content Include="Content\jquery.HashTable.js" />
+    <Content Include="Content\jquery.scrollLoading.js" />
     <Content Include="Content\js\jquery-1.8.3.min.js" />
     <Content Include="Content\js\js_z.js" />
     <Content Include="Content\plugins\FlexSlider\flexslider.css" />

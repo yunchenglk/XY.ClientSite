@@ -9,7 +9,7 @@ input , textarea , select{font-family:"Microsoft Yahei"; color:#5B5B5B; font-siz
 .header .head{ width:1120px; height:70px; margin:0px auto; position:relative;}
 .head .logo{ width:157px; height:46px; float:left; margin-top:10px;}
 .head .logo img{ width:157px; height:46px; vertical-align:top;}
-.head .nav{ width:655px; float:left; margin-left:50px; text-align:left; margin-top:20px;}
+.head .nav{  float:left; margin-left:50px; text-align:left; margin-top:20px;}
 .head .nav li{ display:inline-block; *display:inline; zoom:1; height:30px; line-height:30px; margin-right:13px;}
 .head .nav li a{ font-size:14px; color:#fff; display:inline-block; *display:inline; zoom:1; height:30px; line-height:30px; padding:0px 10px;}
 .head .nav li.now a,.h_fix .head .nav li.now a,.head .nav li a:hover,.h_fix .head .nav li a:hover{ color:#19B1EC;}

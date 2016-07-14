@@ -3,8 +3,9 @@
     ViewBag.Title = "About";
 }
 <script type="text/javascript">
+    $(".m_bg").remove();
     $(function () {
-        $(".m_bg").remove();
+        //$(".m_bg").remove();
         var result = $.GetApiData(apiurl + "/Content/" + '@ViewBag.ID');
         if (result.status == 1) {
             $("#Title").html(result.data.Title);
