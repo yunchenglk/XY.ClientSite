@@ -2,6 +2,9 @@
 @{
     ViewBag.Title = "Product_Show";
 }
+<link href="~/Content/base.css" rel="stylesheet" />
+<script src="~/Content/jquery.jqzoom.js"></script>
+<script src="~/Content/base.js"></script>
 <script type="text/javascript">
     $(function () {
         $(".m_bg").remove();
@@ -14,26 +17,68 @@
             //$("#Count").html(result.data.Count);
             //$(".loading").hide();
         }
+        //获取图片
+        var Imgs = $.GetApiData(apiurl + "/Files?RelationID=" + '@ViewBag.ID');
+        if (Imgs.status == 1) {
+            var imghtml = '';
+            $.each(Imgs.data, function (i, n) {
+                imghtml += ' <li><img alt="防静电地板" bimg="' + n.FilePathStr + '" src="' + n.FilePathStr + '" onmousemove="preview(this);"></li>';
+                //imghtml += '<li data-thumb="' + (n.WatermarkUEL + n.FilePath) + '">';
+                //imghtml += '<div class="thumb-image"> <img src="' + (n.WatermarkUEL + n.FilePath) + '" data-imagezoom="true" class="img-responsive"> </div>';
+                //imghtml += '</li>';
+            })
+            $("#img_files ul").html(imghtml);
+        }
     })
 </script>
 <div class="banner_s"><img src="/Content/upload/banner_a.jpg" alt="" /></div>
 <div class="s_bg">
-    <div class="scd clearfix">
+    <div class="scd clearfix" style="background-color:white; ">
         <div class="scd_r" style="width:100%;">
             <div class="r_top r_top_a">
                 <p>PRODUCT CENTER</p>
                 <em>产品中心</em>
             </div>
             <div class="scd_rm">
-                <div class="pst">
+                <div class="pst" style="border-bottom:none;">
                     <div class="line">&nbsp;</div>
                     <p id="EnTitle"></p>
                     <b id="Title"></b>
                 </div>
-                <div class="about" id="content">
-                </div>
             </div>
         </div>
+
+        <div class="right-extra" style="margin:100px;">
+            <!--产品参数开始-->
+            <div>
+                <div id="preview" class="spec-preview"> <span class="jqzoom"><img jqimg="/Content/images/b1.jpg" src="/Content/images/s1.jpg" /></span> </div>
+                <!--缩图开始-->
+                <div class="spec-scroll">
+                    <a class="prev">&lt;</a> <a class="next">&gt;</a>
+                    <div class="items" id="img_files">
+                        <ul>
+                            <li><img alt="佳能" bimg="/Content/images/b1.jpg" src="/Content/images/s1.jpg" onmousemove="preview(this);"></li>
+                            <li><img alt="佳能" bimg="/Content/images/b2.jpg" src="/Content/images/s2.jpg" onmousemove="preview(this);"></li>
+                            <li><img alt="佳能" bimg="/Content/images/b3.jpg" src="/Content/images/s3.jpg" onmousemove="preview(this);"></li>
+                            <li><img alt="佳能" bimg="/Content/images/b1.jpg" src="/Content/images/s1.jpg" onmousemove="preview(this);"></li>
+                            <li><img alt="佳能" bimg="/Content/images/b3.jpg" src="/Content/images/s3.jpg" onmousemove="preview(this);"></li>
+                            <li><img alt="佳能" bimg="/Content/images/b1.jpg" src="/Content/images/s1.jpg" onmousemove="preview(this);"></li>
+                            <li><img alt="佳能" bimg="/Content/images/b2.jpg" src="/Content/images/s2.jpg" onmousemove="preview(this);"></li>
+                            <li><img alt="佳能" bimg="/Content/images/b1.jpg" src="/Content/images/s1.jpg" onmousemove="preview(this);"></li>
+                            <li><img alt="佳能" bimg="/Content/images/b2.jpg" src="/Content/images/s2.jpg" onmousemove="preview(this);"></li>
+                            <li><img alt="佳能" bimg="/Content/images/b2.jpg" src="/Content/images/s2.jpg" onmousemove="preview(this);"></li>
+                            <li><img alt="佳能" bimg="/Content/images/b1.jpg" src="/Content/images/s1.jpg" onmousemove="preview(this);"></li>
+                            <li><img alt="佳能" bimg="/Content/images/b2.jpg" src="/Content/images/s2.jpg" onmousemove="preview(this);"></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--缩图结束-->
+            </div>
+            <!--产品参数结束-->
+        </div>
+        <div class="about" id="content">
+        </div>
     </div>
+
 </div>
 

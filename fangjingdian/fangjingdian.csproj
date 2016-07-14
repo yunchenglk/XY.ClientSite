@@ -118,10 +118,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="config.txt" />
+    <Content Include="Content\base.css" />
+    <Content Include="Content\base.js" />
     <Content Include="Content\Config.js" />
     <Content Include="Content\css\reset.css" />
     <Content Include="Content\css\responsive.css" />
     <Content Include="Content\css\thems.css" />
+    <Content Include="Content\images\b1.jpg" />
+    <Content Include="Content\images\b2.jpg" />
+    <Content Include="Content\images\b3.jpg" />
     <Content Include="Content\images\banner1.jpg" />
     <Content Include="Content\images\banner2.jpg" />
     <Content Include="Content\images\banner3.jpg" />
@@ -142,14 +147,20 @@
     <Content Include="Content\images\icon7.png" />
     <Content Include="Content\images\icon8.png" />
     <Content Include="Content\images\icon9.png" />
+    <Content Include="Content\images\icon_clubs.gif" />
     <Content Include="Content\images\logo.png" />
     <Content Include="Content\images\nav_ico.png" />
     <Content Include="Content\images\nav_ico_a.png" />
+    <Content Include="Content\images\s1.jpg" />
+    <Content Include="Content\images\s2.jpg" />
+    <Content Include="Content\images\s3.jpg" />
     <Content Include="Content\images\s_btn.png" />
     <Content Include="Content\jBootstrapPage.js" />
+    <Content Include="Content\jquery-1.4.2.min.js" />
     <Content Include="Content\jquery-tmpl.js" />
     <Content Include="Content\jquery.form.js" />
     <Content Include="Content\jquery.HashTable.js" />
+    <Content Include="Content\jquery.jqzoom.js" />
     <Content Include="Content\jquery.scrollLoading.js" />
     <Content Include="Content\js\jquery-1.8.3.min.js" />
     <Content Include="Content\js\js_z.js" />
