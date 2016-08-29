@@ -28,6 +28,8 @@
                 //imghtml += '</li>';
             })
             $("#img_files ul").html(imghtml);
+            $("#img_first").attr("src", Imgs.data[0].FilePathStr);
+            $("#img_first").attr("jqimg", Imgs.data[0].FilePathStr);
         }
     })
 </script>
@@ -51,7 +53,7 @@
         <div class="right-extra" style="margin:100px;">
             <!--产品参数开始-->
             <div>
-                <div id="preview" class="spec-preview"> <span class="jqzoom"><img jqimg="/Content/images/b1.jpg" src="/Content/images/s1.jpg" /></span> </div>
+                <div id="preview" class="spec-preview"> <span class="jqzoom"><img jqimg="/Content/images/b1.jpg" src="/Content/images/s1.jpg" id="img_first" /></span> </div>
                 <!--缩图开始-->
                 <div class="spec-scroll">
                     <a class="prev">&lt;</a> <a class="next">&gt;</a>

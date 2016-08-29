@@ -37,9 +37,9 @@
             $("#Cpzx li:last").css("margin-right", 0);
         }
         //新闻中心
-        var new_result = $.GetApiData(apiurl + "/News/" + urlitems.xwzx + "?type=1&count=4");
+        var new_result = $.GetApiData(apiurl + "/News/" + urlitems.xwzx + "?type=0&count=4");
         if (new_result.status == 1) {
-            $("#new_result_Model").tmpl(new_result_Model.data).appendTo("#Xwzx");
+            $("#new_result_Model").tmpl(new_result.data).appendTo("#Xwzx");
         }
         //解决方案
 
@@ -47,7 +47,7 @@
 </script>
 <script type="text/x-jquery-tmpl" id="pro_result_Model">
     <li>
-        <a href="">
+        <a href="/home/product_show/${ID}">
             <div class="tu"><img src="${sourceWeb}${SlidePic}" alt="" /></div>
             <div class="name">${Title}</div>
         </a>
@@ -56,14 +56,14 @@
 <script type="text/x-jquery-tmpl" id="new_result_Model">
     <li>
         <dl class="clearfix">
-            <a href="">
+            <a href="/Home/News_Show/{{html ID}}">
                 <dt>
-                    09-28
-                    <p>2015 YEAR</p>
+                    {{html CreateTime_.Month}}-{{html CreateTime_.Day}}
+                    <p>{{html CreateTime_.Year}}</p>
                 </dt>
                 <dd>
-                    <div class="title">深圳市芊熠智能硬件有限公司前身深圳市为科科技有限公司</div>
-                    <p>深圳市芊熠智能硬件有限公司前身深圳市为科科技有限公司成立于2013年，总部设在中国深圳。现已发展成为一家拥有多项自主知识产权、专注于道路与安防监控、智慧停车产品，集研发生产与销售于一体的现代化高科技企业。 </p>
+                    <div class="title">${Title}</div>
+                    <p>${Short_Dec}</p>
                 </dd>
             </a>
         </dl>
@@ -102,6 +102,7 @@
         <p>PRODUCT CENTER</p>
     </div>
     <ul class="clearfix" id="Cpzx"></ul>
+    <div class="more"><a href="/Home/Product/">MORE</a></div>
 </div>
 
 <div class="i_me d">
@@ -115,144 +116,144 @@
 </div>
 
 @*<div class="i_m i_mb i_mc e">
-    <div class="i_name">
-        <em>工程</em>案例
-        <p>ENGINEERING CASE</p>
-    </div>
-    <ul class="clearfix">
-        <li>
-            <a href="">
-                <div class="title">卡口系统</div>
-                <img src="/Content/upload/pic5.jpg" alt="" />
-            </a>
-        </li>
-        <li>
-            <a href="">
-                <div class="title">卡口系统</div>
-                <img src="/Content/upload/pic5.jpg" alt="" />
-            </a>
-        </li>
-        <li>
-            <a href="">
-                <div class="title">卡口系统</div>
-                <img src="/Content/upload/pic5.jpg" alt="" />
-            </a>
-        </li>
-    </ul>
-</div>*@
-<div class="i_m i_mb f">
-    <div class="i_name">
-        <em>解决</em>方案
-        <p>SOLUTION</p>
-    </div>
-    <ul class="clearfix">
-        <li>
-            <a href="">
-                <div class="title">视频电子警察系统</div>
-                <img src="/Content/upload/pic4.jpg" alt="" />
-            </a>
-        </li>
-        <li>
-            <a href="">
-                <div class="title">闯红灯抓拍（地感线圈检测）</div>
-                <img src="/Content/upload/pic4.jpg" alt="" />
-            </a>
-        </li>
-        <li>
-            <a href="">
-                <div class="title">闯红灯抓拍 纯视频检测</div>
-                <img src="/Content/upload/pic4.jpg" alt="" />
-            </a>
-        </li>
-    </ul>
-</div>
-<div class="i_md g">
-    <div class="i_name">
-        <em>技术</em>支持
-        <p>TECHNICAL SUPPORT</p>
-    </div>
-    <div class="i_mdm clearfix">
-        <div class="i_mdl">
-            <div class="box_h">
-                <span>常见问题</span>
-                <a href="">MORE></a>
+            <div class="i_name">
+                <em>工程</em>案例
+                <p>ENGINEERING CASE</p>
             </div>
-            <ul>
-                <li class="wen">
-                    <span>问</span>
-                    <div class="nr">1． 文件（或流）打开失败？</div>
-                </li>
-                <li class="da">
-                    <span>答</span>
-                    <div class="nr">
-                        <p>1、 生成文件（流）的编码器比播放器新，播放器只向后兼容。 </p>
-                        <p>2、文件少于4k. </p>
-                        <p>3、 文件中找不到完整的有效数据，可能是应用软件写文件时缓冲区操作有误。</p>
-                    </div>
-                </li>
-                <li class="wen">
-                    <span>问</span>
-                    <div class="nr">2． 文件 （或流）可以打开但无法播放，关闭声音或改变播放速度后可以播放？</div>
-                </li>
-                <li class="da">
-                    <span>答</span>
-                    <div class="nr">
-                        <p>文件头和实际码流不对应。复合流的文件头加到了纯视频流文件（或流）上。</p>
-                    </div>
-                </li>
-                <li class="wen">
-                    <span>问</span>
-                    <div class="nr"> 3． 关闭声音或改变播放速度后文件仍然无法播放，但进度条在走？</div>
-                </li>
-                <li class="da">
-                    <span>答</span>
-                    <div class="nr">
-                        <p>1、录像数据有误。</p>
-                        <p>2、 启动了Netmeeting，或者显卡驱动有缺陷，导致无法显示。</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="i_mdr">
-            <div class="box_h">
-                <span>常见问题</span>
-                <a href="">MORE></a>
-            </div>
-            <ul>
+            <ul class="clearfix">
                 <li>
                     <a href="">
-                        <p>网络SDK开发帮助手册V3.0.5</p>
-                        <em>2015-10-12</em>
+                        <div class="title">卡口系统</div>
+                        <img src="/Content/upload/pic5.jpg" alt="" />
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <p>网络SDK开发帮助手册V3.0.5</p>
-                        <em>2015-10-12</em>
+                        <div class="title">卡口系统</div>
+                        <img src="/Content/upload/pic5.jpg" alt="" />
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <p>网络SDK开发帮助手册V3.0.5</p>
-                        <em>2015-10-12</em>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <p>网络SDK开发帮助手册V3.0.5</p>
-                        <em>2015-10-12</em>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <p>网络SDK开发帮助手册V3.0.5</p>
-                        <em>2015-10-12</em>
+                        <div class="title">卡口系统</div>
+                        <img src="/Content/upload/pic5.jpg" alt="" />
                     </a>
                 </li>
             </ul>
         </div>
-    </div>
-</div>
+        <div class="i_m i_mb f">
+            <div class="i_name">
+                <em>解决</em>方案
+                <p>SOLUTION</p>
+            </div>
+            <ul class="clearfix">
+                <li>
+                    <a href="">
+                        <div class="title">视频电子警察系统</div>
+                        <img src="/Content/upload/pic4.jpg" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="title">闯红灯抓拍（地感线圈检测）</div>
+                        <img src="/Content/upload/pic4.jpg" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="title">闯红灯抓拍 纯视频检测</div>
+                        <img src="/Content/upload/pic4.jpg" alt="" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+    <div class="i_md g">
+        <div class="i_name">
+            <em>技术</em>支持
+            <p>TECHNICAL SUPPORT</p>
+        </div>
+        <div class="i_mdm clearfix">
+            <div class="i_mdl">
+                <div class="box_h">
+                    <span>常见问题</span>
+                    <a href="">MORE></a>
+                </div>
+                <ul>
+                    <li class="wen">
+                        <span>问</span>
+                        <div class="nr">1． 文件（或流）打开失败？</div>
+                    </li>
+                    <li class="da">
+                        <span>答</span>
+                        <div class="nr">
+                            <p>1、 生成文件（流）的编码器比播放器新，播放器只向后兼容。 </p>
+                            <p>2、文件少于4k. </p>
+                            <p>3、 文件中找不到完整的有效数据，可能是应用软件写文件时缓冲区操作有误。</p>
+                        </div>
+                    </li>
+                    <li class="wen">
+                        <span>问</span>
+                        <div class="nr">2． 文件 （或流）可以打开但无法播放，关闭声音或改变播放速度后可以播放？</div>
+                    </li>
+                    <li class="da">
+                        <span>答</span>
+                        <div class="nr">
+                            <p>文件头和实际码流不对应。复合流的文件头加到了纯视频流文件（或流）上。</p>
+                        </div>
+                    </li>
+                    <li class="wen">
+                        <span>问</span>
+                        <div class="nr"> 3． 关闭声音或改变播放速度后文件仍然无法播放，但进度条在走？</div>
+                    </li>
+                    <li class="da">
+                        <span>答</span>
+                        <div class="nr">
+                            <p>1、录像数据有误。</p>
+                            <p>2、 启动了Netmeeting，或者显卡驱动有缺陷，导致无法显示。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="i_mdr">
+                <div class="box_h">
+                    <span>常见问题</span>
+                    <a href="">MORE></a>
+                </div>
+                <ul>
+                    <li>
+                        <a href="">
+                            <p>网络SDK开发帮助手册V3.0.5</p>
+                            <em>2015-10-12</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <p>网络SDK开发帮助手册V3.0.5</p>
+                            <em>2015-10-12</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <p>网络SDK开发帮助手册V3.0.5</p>
+                            <em>2015-10-12</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <p>网络SDK开发帮助手册V3.0.5</p>
+                            <em>2015-10-12</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <p>网络SDK开发帮助手册V3.0.5</p>
+                            <em>2015-10-12</em>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>*@
 
 <div class="i_mg">
     <div class="i_name">

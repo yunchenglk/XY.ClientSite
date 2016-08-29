@@ -2,6 +2,8 @@
 @{
     ViewBag.Title = "Case";
 }
+<script src="~/Content/jquery-tmpl.js"></script>
+<script src="~/Content/jBootstrapPage.js"></script>
 <script type="text/javascript">
     $(function () {
         var cls = $.GetApiData(apiurl + "/Class/" + '@ViewBag.ID');
@@ -9,8 +11,16 @@
             $("#cls_en").html(cls.data.EnTitle);
             $("#cls_name,#cls_name1").html(cls.data.Title)
         }
+        $("#imgItems").bindPage({
+            where: "ClassID|equal|" + '@ViewBag.ID' + "#DR|equal|0",
+            url: apiurl + "/Product/",
+            pagesize: 8,
+            paginationObj: $(".pagination")
+        })
 
-        var new_result = $.GetApiData(apiurl + "/Product/" + '@ViewBag.ID' + "?type=0&count=10");
+
+
+        @*var new_result = $.GetApiData(apiurl + "/Product/" + '@ViewBag.ID' + "?type=0&count=10");
         if (new_result.status == 1) {
             var imghtml = '<ul class="clearfix">';
             $.each(new_result.data, function (i, n) {
@@ -23,8 +33,21 @@
             });
             imghtml += "</ul>";
             $("#imgItems").append(imghtml);
-        }
+        }*@
     })
+    function pageAfter(result, obj) {
+        var imghtml = '<ul class="clearfix">';
+        $.each(result.content, function (i, n) {
+            imghtml += '<li>';
+            imghtml += '<div class="title"><a href="/Home/Product_Show/'+n.ID+'"><img src="' + n.sourceWeb + n.SlidePic + '" /></a></div>';
+            imghtml += '</li>';
+            if ((i + 1) % 2 == 0) {
+                imghtml += '</ul><ul class="clearfix">'
+            }
+        });
+        imghtml += "</ul>";
+        $("#imgItems").append(imghtml);
+    }
 </script>
 <style type="text/css">
     img {
@@ -51,7 +74,9 @@
                 <div class="demo" id="imgItems">
 
                 </div>
-            </div>
+               
+            </div><div class="pages pagination">
+</div>
         </div>
     </div>
 </div>

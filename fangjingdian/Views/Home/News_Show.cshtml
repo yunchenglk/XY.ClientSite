@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "News_Show";
+}
+<style type="text/css">
+    img {
+        width: 90%;
+    }
+</style>
+<script type="text/javascript">
+    $(".m_bg").remove();
+    $(function () {
+        //$(".m_bg").remove();
+        var result = $.GetApiData(apiurl + "/news/" + '@ViewBag.ID');
+        if (result.status == 1) {
+            $("#Title").html(result.data.Title);
+            $("#content").html(result.data.DescriptionStr);
+            //$("#Publisher").html(result.data.Publisher);
+            //$("#Count").html(result.data.Count);
+            //$(".loading").hide();
+        }
+    })
+</script>
+<div class="banner_s"><img src="/Content/upload/banner_a.jpg" alt="" /></div>
+
+<div class="s_bg">
+    <div class="scd clearfix" style="background-color:white; ">
+        <div class="scd_r" style="width:100%;">
+            <div class="r_top r_top_a">
+                <p>News Show</p>
+                <em>新闻中心</em>
+            </div>
+            <div class="scd_rm">
+                <div class="pst" style="border-bottom:none;">
+                    <div class="line">&nbsp;</div>
+                    <p id="EnTitle"></p>
+                    <b id="Title"></b>
+                </div>
+            </div>
+        </div>
+        <div class="about" id="content">
+            内容
+        </div>
+    </div>
+</div>
