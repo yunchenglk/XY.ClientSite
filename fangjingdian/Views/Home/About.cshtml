@@ -9,8 +9,8 @@
         var result = $.GetApiData(apiurl + "/Content/" + '@ViewBag.ID');
         if (result.status == 1) {
             $("#Title").html(result.data.Title);
-            $("#EnTitle").html(result.data.EnTitle);
-            $("#content").html(result.data.DescriptionStr);
+            $("#EnTitle,#EnTitles").html(result.data.EnTitle);
+            $("#content,#contents").html(result.data.DescriptionStr);
             //$("#Publisher").html(result.data.Publisher);
             //$("#Count").html(result.data.Count);
             //$(".loading").hide();
@@ -24,8 +24,8 @@
     <div class="scd clearfix">
         <div class="scd_r" style="width:100%;">
             <div class="r_top r_top_a">
-                <p>ABOUT US</p>
-                <em>关于我们</em>
+                <p id="EnTitles">ABOUT US</p>
+                <em id="Titles">关于我们</em>
             </div>
             <div class="scd_rm">
                 <div class="pst">

@@ -35,11 +35,12 @@ namespace fangjingdian.Controllers
         }
         public ActionResult News(string id)
         {
-            ViewBag.ID = id;
+           
             return View();
         }
-        public ActionResult Case()
+        public ActionResult Case(string id)
         {
+            ViewBag.ID = id;
             return View();
         }
         public ActionResult Solution()

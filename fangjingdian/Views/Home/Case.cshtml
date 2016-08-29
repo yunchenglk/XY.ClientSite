@@ -2,78 +2,54 @@
 @{
     ViewBag.Title = "Case";
 }
+<script type="text/javascript">
+    $(function () {
+        var cls = $.GetApiData(apiurl + "/Class/" + '@ViewBag.ID');
+        if (cls.status == 1) {
+            $("#cls_en").html(cls.data.EnTitle);
+            $("#cls_name,#cls_name1").html(cls.data.Title)
+        }
 
-<h2>Case</h2>
+        var new_result = $.GetApiData(apiurl + "/Product/" + '@ViewBag.ID' + "?type=0&count=10");
+        if (new_result.status == 1) {
+            var imghtml = '<ul class="clearfix">';
+            $.each(new_result.data, function (i, n) {
+                imghtml += '<li>';
+                imghtml += '<div class="title"><img src="' + n.sourceWeb + n.SlidePic + '" /></div>';
+                imghtml += '</li>';
+                if ((i + 1) % 2 == 0) {
+                    imghtml += '</ul><ul class="clearfix">'
+                }
+            });
+            imghtml += "</ul>";
+            $("#imgItems").append(imghtml);
+        }
+    })
+</script>
+<style type="text/css">
+    img {
+     height:200px;
+     width:300px;
+    }
+</style>
 
 <!--幻灯片-->
 <div class="banner_s"><img src="/Content/upload/banner_e.jpg" alt="" /></div>
 <!--幻灯片-->
 <div class="s_bg">
     <div class="scd clearfix">
-        <ul class="scd_l">
-            <li class="now"><a href="">智慧停车案例</a></li>
-            <li><a href="">智能安防案例</a></li>
-            <li><a href="">智能交通案例</a></li>
-        </ul>
-        <div class="scd_r">
+        <div class="scd_r" style="width:100%;">
             <div class="r_top">
-                <p>APPLICATION CASE</p>
-                <em>应用案例</em>
+                <p id="cls_en">TECHNICAL SUPPORT</p>
+                <em id="cls_name">技术支持</em>
             </div>
             <div class="scd_rm">
                 <div class="pst">
                     <div class="line">&nbsp;</div>
-                    <p>SMART PARKING CASE</p>
-                    <b>智慧停车案例</b>
+                    <b id="cls_name1">常见问题</b>
                 </div>
-                <div class="case">
-                    <dl class="clearfix">
-                        <dt><a href=""><img src="/Content/upload/pic8.jpg" alt="" /></a></dt>
-                        <dd>
-                            <div class="title"><a href="">广东省佛山市南海区第六期交通违法抓拍系统项目对应闯红灯</a></div>
-                            <p class="des">广东省佛山市南海区第六期交通违法抓拍系统项目对应闯红灯广东省佛山市南海区第六期交通违法抓拍系统项目对应闯红灯广东省佛山市南海区第六期交通违法抓拍系统项目对应闯红灯广东省佛山市南海区第六期交通违法抓拍系统项目对应闯红灯...</p>
-                            <a href="" class="c_more">MORE>></a>
-                        </dd>
-                    </dl>
-                    <dl class="clearfix">
-                        <dt><a href=""><img src="/Content/upload/pic8.jpg" alt="" /></a></dt>
-                        <dd>
-                            <div class="title"><a href="">广东省佛山市南海区第六期交通违法抓拍系统项目对应闯红灯</a></div>
-                            <p class="des">广东省佛山市南海区第六期交通违法抓拍系统项目对应闯红灯广东省佛山市南海区第六期交通违法抓拍系统项目对应闯红灯广东省佛山市南海区第六期交通违法抓拍系统项目对应闯红灯广东省佛山市南海区第六期交通违法抓拍系统项目对应闯红灯...</p>
-                            <a href="" class="c_more">MORE>></a>
-                        </dd>
-                    </dl>
-                    <dl class="clearfix">
-                        <dt><a href=""><img src="/Content/upload/pic8.jpg" alt="" /></a></dt>
-                        <dd>
-                            <div class="title"><a href="">广东省佛山市南海区第六期交通违法抓拍系统项目对应闯红灯</a></div>
-                            <p class="des">广东省佛山市南海区第六期交通违法抓拍系统项目对应闯红灯广东省佛山市南海区第六期交通违法抓拍系统项目对应闯红灯广东省佛山市南海区第六期交通违法抓拍系统项目对应闯红灯广东省佛山市南海区第六期交通违法抓拍系统项目对应闯红灯...</p>
-                            <a href="" class="c_more">MORE>></a>
-                        </dd>
-                    </dl>
-                    <dl class="clearfix">
-                        <dt><a href=""><img src="/Content/upload/pic8.jpg" alt="" /></a></dt>
-                        <dd>
-                            <div class="title"><a href="">广东省佛山市南海区第六期交通违法抓拍系统项目对应闯红灯</a></div>
-                            <p class="des">广东省佛山市南海区第六期交通违法抓拍系统项目对应闯红灯广东省佛山市南海区第六期交通违法抓拍系统项目对应闯红灯广东省佛山市南海区第六期交通违法抓拍系统项目对应闯红灯广东省佛山市南海区第六期交通违法抓拍系统项目对应闯红灯...</p>
-                            <a href="" class="c_more">MORE>></a>
-                        </dd>
-                    </dl>
-                    <dl class="clearfix">
-                        <dt><a href=""><img src="/Content/upload/pic8.jpg" alt="" /></a></dt>
-                        <dd>
-                            <div class="title"><a href="">广东省佛山市南海区第六期交通违法抓拍系统项目对应闯红灯</a></div>
-                            <p class="des">广东省佛山市南海区第六期交通违法抓拍系统项目对应闯红灯广东省佛山市南海区第六期交通违法抓拍系统项目对应闯红灯广东省佛山市南海区第六期交通违法抓拍系统项目对应闯红灯广东省佛山市南海区第六期交通违法抓拍系统项目对应闯红灯...</p>
-                            <a href="" class="c_more">MORE>></a>
-                        </dd>
-                    </dl>
-                    <div class="pages">
-                        <a href="">《</a>
-                        <a href="" class="now">1</a>
-                        <a href="">2</a>
-                        <a href="">3</a>
-                        <a href="">》</a>
-                    </div>
+                <div class="demo" id="imgItems">
+
                 </div>
             </div>
         </div>
