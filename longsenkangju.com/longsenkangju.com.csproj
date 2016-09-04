@@ -117,14 +117,130 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\css\animate.min.css" />
+    <Content Include="Content\css\base.css" />
+    <Content Include="Content\css\bootstrap-theme.css" />
+    <Content Include="Content\css\bootstrap-theme.min.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\jquery.datetimepicker.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\images\1-05.jpg" />
+    <Content Include="Content\images\1_01.jpg" />
+    <Content Include="Content\images\1_02.jpg" />
+    <Content Include="Content\images\1_03.jpg" />
+    <Content Include="Content\images\1_04.jpg" />
+    <Content Include="Content\images\1_06.jpg" />
+    <Content Include="Content\images\55950bb6ce2e8.jpg" />
+    <Content Include="Content\images\airplan.png" />
+    <Content Include="Content\images\arrow.png" />
+    <Content Include="Content\images\b1.jpg" />
+    <Content Include="Content\images\b2.jpg" />
+    <Content Include="Content\images\b3.jpg" />
+    <Content Include="Content\images\banner.jpg" />
+    <Content Include="Content\images\banner1.jpg" />
+    <Content Include="Content\images\banner2.jpg" />
+    <Content Include="Content\images\bg2.jpg" />
+    <Content Include="Content\images\close.png" />
+    <Content Include="Content\images\erwema.png" />
+    <Content Include="Content\images\favicon.ico" />
+    <Content Include="Content\images\favicon.png" />
+    <Content Include="Content\images\fx.jpg" />
+    <Content Include="Content\images\gift.png" />
+    <Content Include="Content\images\gl.jpg" />
+    <Content Include="Content\images\gs.jpg" />
+    <Content Include="Content\images\heart.png" />
+    <Content Include="Content\images\hkf.png" />
+    <Content Include="Content\images\hwg.jpg" />
+    <Content Include="Content\images\icon-pchelper_5519c47255.png" />
+    <Content Include="Content\images\icon_clubs.gif" />
+    <Content Include="Content\images\icon_code.png" />
+    <Content Include="Content\images\icon_code2.png" />
+    <Content Include="Content\images\icon_code3.png" />
+    <Content Include="Content\images\icon_order.png" />
+    <Content Include="Content\images\index_03.png" />
+    <Content Include="Content\images\index_07.png" />
+    <Content Include="Content\images\index_09.png" />
+    <Content Include="Content\images\index_12.png" />
+    <Content Include="Content\images\item1.jpg" />
+    <Content Include="Content\images\item2.jpg" />
+    <Content Include="Content\images\item3.jpg" />
+    <Content Include="Content\images\item4.jpg" />
+    <Content Include="Content\images\item5.jpg" />
+    <Content Include="Content\images\item6.jpg" />
+    <Content Include="Content\images\kefu.jpg" />
+    <Content Include="Content\images\kefu.png" />
+    <Content Include="Content\images\kf.jpg" />
+    <Content Include="Content\images\life.png" />
+    <Content Include="Content\images\line.png" />
+    <Content Include="Content\images\login.jpg" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\logo1.png" />
+    <Content Include="Content\images\logobg.jpg" />
+    <Content Include="Content\images\logomain5.png" />
+    <Content Include="Content\images\main.jpg" />
+    <Content Include="Content\images\main2.jpg" />
+    <Content Include="Content\images\map.png" />
+    <Content Include="Content\images\password.png" />
+    <Content Include="Content\images\pic07.jpg" />
+    <Content Include="Content\images\s1.jpg" />
+    <Content Include="Content\images\s2.jpg" />
+    <Content Include="Content\images\s3.jpg" />
+    <Content Include="Content\images\saoyisao.png" />
+    <Content Include="Content\images\slide_arrl.png" />
+    <Content Include="Content\images\slide_arrr.png" />
+    <Content Include="Content\images\srdz.jpg" />
+    <Content Include="Content\images\tree.png" />
+    <Content Include="Content\images\tz.jpg" />
+    <Content Include="Content\images\user.png" />
+    <Content Include="Content\images\weibo.png" />
+    <Content Include="Content\images\weixin.png" />
+    <Content Include="Content\images\weixin1.png" />
+    <Content Include="Content\images\wxkf.png" />
+    <Content Include="Content\images\yc.jpg" />
+    <Content Include="Content\images\yw.jpg" />
+    <Content Include="Content\images\zhuan.png" />
+    <Content Include="Content\images\zx.jpg" />
+    <Content Include="Content\js\area.js" />
+    <Content Include="Content\js\base.js" />
+    <Content Include="Content\js\bootstrap.js" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\jquery-1.10.2.min.js" />
+    <Content Include="Content\js\jquery.colorbox-min.js" />
+    <Content Include="Content\js\jquery.datetimepicker.js" />
+    <Content Include="Content\js\jquery.imagezoom.min.js" />
+    <Content Include="Content\js\jquery.jqzoom.js" />
+    <Content Include="Content\js\jquery.js" />
+    <Content Include="Content\js\jquery.tagsinput.js" />
+    <Content Include="Content\js\nav.js" />
+    <Content Include="Content\js\npm.js" />
+    <Content Include="Content\js\popup.mini.js" />
+    <Content Include="Content\js\public.js" />
+    <Content Include="Content\js\TouchSlide.1.1.js" />
+    <Content Include="Content\js\wow.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.22.19-build00125.js" />
     <Content Include="scripts\ai.0.22.19-build00125.min.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="Content\css\bootstrap-theme.css.map" />
+    <Content Include="Content\css\bootstrap.css.map" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="scripts\jquery-1.10.2.js" />
+    <Content Include="scripts\jquery-1.10.2.min.js" />
+    <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
     <Content Include="资料\资料.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -136,6 +252,15 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Home\Products_list.cshtml" />
+    <Content Include="Views\Home\Products_Show.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -145,7 +270,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

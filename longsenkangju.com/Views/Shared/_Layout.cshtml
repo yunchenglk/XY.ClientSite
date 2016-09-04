@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 隆森康居木业有限公司</title>
+    <link rel="stylesheet" href="/content/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="/content/css/animate.min.css" type="text/css" />
+    <link rel="stylesheet" href="/content/css/style.css" type="text/css" />
+    <link href="/content/images/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <script type="text/javascript" src="/content/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/content/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/content/js/popup.mini.js"></script>
+    <script type="text/javascript" src="/content/js/wow.js"></script>
+    <script src="/content/js/TouchSlide.1.1.js"></script>
+    <script src="/content/js/nav.js"></script>
+    <script>new WOW().init();</script>
+</head>
+<body  class="bg">
+    <header id="head">
+        <div class="container">
+            <div class="fadeInLeft wow"><a class="logo" href="index.html"><img src="/content/images/logo.png" /></a></div>
+            <div id="nav" class="fadeInRight animated">
+                <ul>
+                    <li class="active"><a href="/">首　页<span>HOME</span></a></li>
+                    <li><a href="/Home/Products_list">系列产品<span>Series products</span></a></li>
+                    <li><a href="personal.html">私人定制<span>Yc Travel</span></a>
+                    <li><a href="member.html">会员申请<span>Membership Application</span></a></li>
+                </ul>
+            </div>
+            <div class="zhuan"><img src="/content/images/zhuan.png" /></div>
+        </div>
+    </header>
+    @RenderBody()
+
+    <div class="main6">
+        <div class="container">
+            <div class="main6-1">
+                <h2>生活服务</h2>
+                <p><a href="">海外代购</a></p>
+                <a href="">各类疑问解答</a></p>
+            </div>
+            <div class="main6-2">
+                <h2>出行服务</h2>
+                <p><a href="">境内外酒店机票预订</a></p>
+                <p><a href="">旅游行程专属定制</a></p>
+                <p><a href="">升学移民咨询解答</a></p>
+                <p><a href="">目的地实时情况咨询解答</a></p>
+                <p><a href="">签证咨询及代理</a></p>
+                <p><a href="">目的地特殊资源咨询及预订</a></p>
+                <p><a href="">高级会所咨询及预订</a></p>
+            </div>
+            <div class="main6-3">
+                <h2>事业服务</h2>
+                <p><a href="">代理客服</a></p>
+                <p><a href="">供需介绍及指令</a></p>
+                <p><a href="">市场分析</a></p>
+                <p><a href="">营销模式改良</a></p>
+                <p><a href="">公司内部构造搭建</a></p>
+                <p><a href="">海外投资项目咨询</a></p>
+                <p><a href="">新型项目咨询解答</a></p>
+            </div>
+            <div class="main6-4">
+                <h2>联系我们</h2>
+                <p><img src="/content/images/index_03.png" />&nbsp; 上海市浦东新区浦建路145号强生大厦1707室</p>
+                <p><img src="/content/images/index_07.png" />&nbsp; 136828688885</p>
+                <p><img src="/content/images/index_09.png" />&nbsp; 021-60538887 </p>
+                <p><img src="/content/images/index_12.png" />&nbsp; feller_rongkun@163.com</p>
+            </div>
+            <div class="main6-5"><img src="/content/images/line.png" /></div>
+            <div class="main6-6">
+                <img src="/content/images/erwema.png" />
+                <p>私享生活，始于聿琛</p>
+            </div>
+        </div>
+    </div>
+    <!--二维码扫描-->
+    <div class="side_code">
+        <div class="code_div" id="div1" style="background-color: rgb(218, 184, 102);">
+            <em class="icon_code2 code1"></em>
+            <a href="javascript:;" class="code_top"></a>
+        </div>
+        <div class="code_div code_div2" id="div2" onclick="window.scrollTo(0,0);return false;">
+            <em class="icon_code2 code2" id="em1" style="display: block;"></em>
+        </div>
+    </div>
+    <div class="side_code side_left" style="display: none;">
+        <em id="qrCode" class="icon_code code3"> </em>
+        <div class="code_hhtravel"><em class="icon_code1 code4"></em></div>
+        @*<span>关注官方微信<br>接收最新资讯</span>*@
+        <div class="icon_arrow2"></div>
+    </div>
+    <!--二维码扫描-->
+    <div class="footer wow fadeInUp">
+        Copyright©2016　聿琛高端定制旅游　版权所有　<a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action;jsessionid=FkTTXdKpX27NtbKMM7hfJcJK13JS1JYvDvWLJZqnh8CX1BpJlJhx!871614666" target="_blank">粤ICP备123456789号</a>
+    </div>
+    <!--弹出框-->
+    <div class="popWeixin">
+        <em class="closeWeixin popup-close">×</em>
+        <div class="weixin_qr">
+            <div class="qr_line1">
+                <img id="CSPhoto" src="/content/images/logomain5.png">
+                <div class="weixinline">
+                    <div class="weixin_icon icon_img"></div><div class="weixindesc">微信私人客服</div>
+                </div>
+                <div class="weixinline2" id="CSName">客服一</div>
+            </div>
+            <div class="erweima">
+                <img src="/content/images/arrow.png" class="weixinarrow">
+                <img id="siderWeixinBigImg" src="/content/images/icon_code.png" alt="请在微信中搜索'聿琛'添加私人客服">
+                <div class="erweima_desc">微信扫码加好友，在线咨询</div>
+            </div>
+        </div>
+        <div class="workingTime">
+            <img src="/content/images/yc.jpg">
+        </div>
+    </div>
+</body>
+</html>
