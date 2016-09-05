@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "News_show";
+}
+<script type="text/javascript">
+    $(function () {
+        var result = $.GetApiData(apiurl + "/News/" + '@ViewBag.ID');
+        if (result.status == 1) {
+            $("#Title").html(result.data.Title);
+            $(".info1").html(result.data.DescriptionStr);
+            $("#Publisher").html(result.data.Publisher);
+            $("#Count").html(result.data.Count);
+            $("#createtime").html("更新时间：" + result.data.CreateTime_.Year + "-" + result.data.CreateTime_.Month + "-" + result.data.CreateTime_.Day + " " + result.data.CreateTime_.Hour + ":" + result.data.CreateTime_.Minute + ":" + result.data.CreateTime_.Second);
+            //$(".loading").hide();
+        }
+    })
+</script>
+<div class="conbox">
+    <div class="sub-list">
+        <h1 id="Title"> </h1>
+        <div class="text">
+            <span class="pub-time" id="createtime">更新时间：2016-03-26 11:32</span>
+            <span class="where">来源：<a id="Publisher"></a></span>
+            <span class="where">阅读：<a id="Count">67</a> 次</span>
+        </div>
+        <div class="info1">
+        </div>
+    </div>
+</div>
+ 

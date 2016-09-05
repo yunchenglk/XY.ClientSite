@@ -117,6 +117,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Config.js" />
     <Content Include="Content\css\animate.min.css" />
     <Content Include="Content\css\base.css" />
     <Content Include="Content\css\bootstrap-theme.css" />
@@ -202,6 +203,8 @@
     <Content Include="Content\images\yw.jpg" />
     <Content Include="Content\images\zhuan.png" />
     <Content Include="Content\images\zx.jpg" />
+    <Content Include="Content\jBootstrapPage.js" />
+    <Content Include="Content\jquery-tmpl.js" />
     <Content Include="Content\js\area.js" />
     <Content Include="Content\js\base.js" />
     <Content Include="Content\js\bootstrap.js" />
@@ -231,6 +234,7 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Properties\PublishProfiles\longsenkangju.pubxml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -261,6 +265,9 @@
     <Content Include="scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\Products_list.cshtml" />
     <Content Include="Views\Home\Products_Show.cshtml" />
+    <Content Include="Views\Home\News_list.cshtml" />
+    <Content Include="Views\Home\News_show.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

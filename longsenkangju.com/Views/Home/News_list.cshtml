@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "News_list";
+}
+<style type="text/css">
+    li {
+        list-style-type: none;
+    }
+
+    .pages li {
+       display:inline;
+    }
+</style>
+<script src="~/Content/jquery-tmpl.js"></script>
+<script src="~/Content/jBootstrapPage.js"></script>
+<script type="text/x-jquery-tmpl" id="dataModel">
+    <li>
+        <div class="news_time1">
+            <span class="day">${CreateTime_.Day}</span>
+            <span class="year">${CreateTime_.Year}-${CreateTime_.Month}</span>
+            <span class="author">隆森康居木业有限公司</span>
+        </div>
+        <div class="news_cont">
+            <h2><a href="/Home/News_show/${ID}" target="_blank">${Title}</a></h2>
+            <p class="demo">
+                <a href="/Home/News_show/${ID}" target="_blank">
+                    <span>
+                        {{html takeshortdec(Short_Dec)}}
+                    </span>
+                </a>
+            </p>
+            <p class="vis"><a href="/Home/News_show/${ID}" class="more btn">查看更多 &gt;&gt;</a>浏览次数：${Count} &nbsp;&nbsp; <a href="#"></a> &nbsp; &nbsp;</p>
+        </div>
+    </li>
+</script>
+<script type="text/javascript">
+    $(function () {
+        $(".news_list1").bindPage({
+            where: "ClassID|equal|04D1B35F-114E-4A4D-8FE9-0F3F9CB8B549#DR|equal|0",
+            url: apiurl + "/news/",
+            pagesize: 12,
+            paginationObj: $(".pages")
+        })
+    })
+    function takeshortdec(txt) {
+        return txt.substr(0, 200);
+    }
+</script>
+
+<div class="conbox">
+    <div class="news_list1">
+        <ul></ul>
+    </div>
+    <div class="pages">
+        @*<span class="rows">共 366 条记录</span>
+            <a class="prev" href="">上一页</a>
+            <a class="num" href="">1</a>
+            <span class="current">2</span>
+            <a class="num" href="">3</a>
+            <a class="num" href="">4</a>
+            <a class="num" href="">5</a>
+            <a class="num" href="">6</a>
+            <a class="num" href="">7</a>
+            <a class="num" href="">8</a>
+            <a class="next" href="">下一页</a>
+            <a class="end" href="">46</a>*@
+    </div>
+</div>

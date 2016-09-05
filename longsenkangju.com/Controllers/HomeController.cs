@@ -13,10 +13,29 @@ namespace longsenkangju.com.Controllers
         {
             return View();
         }
-        public ActionResult Products_list() {
+        public ActionResult Products_list(string id)
+        {
+            ViewBag.ID = id;
             return View();
         }
-        public ActionResult Products_Show() {
+        public ActionResult Products_Show(string id)
+        {
+            ViewBag.ID = id;
+            return View();
+        }
+        public ActionResult News_list(string id)
+        {
+            ViewBag.ID = id;
+            return View();
+        }
+        public ActionResult News_show(string id)
+        {
+            ViewBag.ID = id;
+            return View();
+        }
+        public ActionResult About(string id)
+        {
+            ViewBag.ID = id;
             return View();
         }
     }
