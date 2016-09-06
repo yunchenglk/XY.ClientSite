@@ -7,8 +7,8 @@ input , textarea , select{font-family:"Microsoft Yahei"; color:#5B5B5B; font-siz
 .header{ width:100%; margin:0px auto; position:relative; border-bottom:1px solid #ddd; position:absolute; left:0; top:0; z-index:9999;}
 .h_fix{ position:fixed; left:0; top:0; z-index:99999; background:#FFF;}
 .header .head{ width:1120px; height:70px; margin:0px auto; position:relative;}
-.head .logo{ width:157px; height:46px; float:left; margin-top:10px;}
-.head .logo img{ width:157px; height:46px; vertical-align:top;}
+.head .logo{  height:46px; float:left; margin-top:10px;}
+.head .logo img{  height:46px; vertical-align:top;}
 .head .nav{  float:left; margin-left:50px; text-align:left; margin-top:20px;}
 .head .nav li{ display:inline-block; *display:inline; zoom:1; height:30px; line-height:30px; margin-right:13px;}
 .head .nav li a{ font-size:14px; color:#fff; display:inline-block; *display:inline; zoom:1; height:30px; line-height:30px; padding:0px 10px;}
