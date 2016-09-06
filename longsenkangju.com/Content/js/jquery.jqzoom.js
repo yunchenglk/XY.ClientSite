@@ -113,9 +113,9 @@
 
 
 
-				    $("div.jqZoomPup").width((settings.xzoom)/scalex );
+				    $("div.jqZoomPup").width(168 );
 
-		    		$("div.jqZoomPup").height((settings.yzoom)/scaley);
+		    		$("div.jqZoomPup").height(181);
 
                     if(settings.lens){
                     $("div.jqZoomPup").css('visibility','visible');

@@ -1,38 +1,70 @@
 ﻿
 @{
-    ViewBag.Title = "Products_Show";
+    ViewBag.Title = "隆森康居";
 }
 <link href="/content/css/base.css" rel="stylesheet" type="text/css" />
-
 <script type="text/javascript" src="/content/js/jquery.jqzoom.js"></script>
-<script type="text/javascript" src="/content/js/base.js"></script><div class="container">
+<script type="text/javascript" src="/content/js/base.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var result = $.GetApiData(apiurl + "/Product/" + '@ViewBag.ID');
+        if (result.status == 1) {
+            $("#Title").html(result.data.Title);
+            //$("#EnTitle").html(result.data.EnTitle);
+            $("#content").html(result.data.DescriptionStr);
+            //$("#Publisher").html(result.data.Publisher);
+            //$("#Count").html(result.data.Count);
+            //$(".loading").hide();
+            $("#xh").html(result.data.Attr[0].val.Value);
+            $("#xl").html(result.data.Attr[4].val.Value);
+            $("#cz").html(result.data.Attr[1].val.Value);
+            $("#yt").html(result.data.Attr[2].val.Value);
+            $("#jg").html(result.data.Attr[3].val.Value);
+        }
+        //获取图片
+        var Imgs = $.GetApiData(apiurl + "/Files?RelationID=" + '@ViewBag.ID');
+        if (Imgs.status == 1) {
+            var imghtml = '';
+            $.each(Imgs.data, function (i, n) {
+                imghtml += ' <li><img alt="防静电地板" bimg="' + n.FilePathStr + '" src="' + n.FilePathStr + '" onmousemove="preview(this);"></li>';
+            })
+            $("#img_files ul").html(imghtml);
+            $("#img_first").attr("src", Imgs.data[0].FilePathStr);
+            $("#img_first").attr("jqimg", Imgs.data[0].FilePathStr);
+        }
+    })
+</script>
+<style type="text/css">
+    b {
+     font-size:18px;
+    }
+</style>
+<div class="container">
     <div class="member-box">
         <h2>产品系列<span>APPLICATION FOR MEMBERSHIP</span></h2>
-        <div style="margin:15px;">
-            <div id="preview" class="spec-preview"> 
-                <span class="jqzoom"><img jqimg="/content/images/b1.jpg" src="/content/images/s1.jpg" /></span> 
+        <div style="margin:20px;float:left;">
+            <div id="preview" class="spec-preview">
+                <span class="jqzoom"><img jqimg="" src="" style="max-width:350px; max-height:350px;" id="img_first" /></span>
             </div>
             <!--缩图开始-->
             <div class="spec-scroll">
                 <a class="prev">&lt;</a> <a class="next">&gt;</a>
-                <div class="items">
-                    <ul>
-                        <li><img alt="佳能" bimg="/content/images/b1.jpg" src="/content/images/s1.jpg" onmousemove="preview(this);"></li>
-                        <li><img alt="佳能" bimg="/content/images/b2.jpg" src="/content/images/s2.jpg" onmousemove="preview(this);"></li>
-                        <li><img alt="佳能" bimg="/content/images/b3.jpg" src="/content/images/s3.jpg" onmousemove="preview(this);"></li>
-                        <li><img alt="佳能" bimg="/content/images/b1.jpg" src="/content/images/s1.jpg" onmousemove="preview(this);"></li>
-                        <li><img alt="佳能" bimg="/content/images/b3.jpg" src="/content/images/s3.jpg" onmousemove="preview(this);"></li>
-                        <li><img alt="佳能" bimg="/content/images/b1.jpg" src="/content/images/s1.jpg" onmousemove="preview(this);"></li>
-                        <li><img alt="佳能" bimg="/content/images/b2.jpg" src="/content/images/s2.jpg" onmousemove="preview(this);"></li>
-                        <li><img alt="佳能" bimg="/content/images/b1.jpg" src="/content/images/s1.jpg" onmousemove="preview(this);"></li>
-                        <li><img alt="佳能" bimg="/content/images/b2.jpg" src="/content/images/s2.jpg" onmousemove="preview(this);"></li>
-                        <li><img alt="佳能" bimg="/content/images/b2.jpg" src="/content/images/s2.jpg" onmousemove="preview(this);"></li>
-                        <li><img alt="佳能" bimg="/content/images/b1.jpg" src="/content/images/s1.jpg" onmousemove="preview(this);"></li>
-                        <li><img alt="佳能" bimg="/content/images/b2.jpg" src="/content/images/s2.jpg" onmousemove="preview(this);"></li>
-                    </ul>
+                <div class="items" id="img_files">
+                    <ul></ul>
                 </div>
             </div>
             <!--缩图结束-->
         </div>
+        <div style="margin:20px;float:left; line-height:50px; font-size:14px;">
+            <h1 style="margin:20px 0; font-weight:bold;" id="Title">产品特性</h1>
+            <p><b>型号：</b><span id="xh">3330</span></p>
+            <p><b>系列：</b><span id="xl">全木门系列</span></p>
+            <p><b>材质：</b><span id="cz">优质实木面板+实木填芯</span></p>
+            <p><b>用途：</b><span id="yt">室内门</span></p>
+            <p><b>官方指导价：</b>￥<span id="jg"></span></p>
+            <p>（仅供参考，以最终成交价为准）</p>
+        </div>
+        <div style="clear:both;"></div>
+        <div style="margin:20px;" id="content"></div>
     </div>
 </div>

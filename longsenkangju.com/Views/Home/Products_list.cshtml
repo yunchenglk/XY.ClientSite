@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Products_list";
+    ViewBag.Title = "隆森康居";
 }
 <script src="~/Content/jquery-tmpl.js"></script>
 <script src="~/Content/jBootstrapPage.js"></script>
@@ -32,20 +32,20 @@
 </script>
 <script type="text/x-jquery-tmpl" id="dataModel">
     <li class="item">
-        <img src="/content/images/hwg.jpg" alt="" height="164">
+        <img src="${sourceWeb}${SlidePic}" alt="" height="164" width="280">
         <div class="content">
-            <p class="title"> 产品特性 </p>
-            <p>型号：N723</p>
-            <p>系列：木质门系列</p>
-            <p>材质：表面云彩梦幻漆+MDF+轻型骨架+铁衫木內筋</p>
-            <p>用途：室内门</p>
-            <p>官方指导价：￥2299</p>
-            <a href="/Home/Products_Show" class="more content1">了解更多</a>
+            <p class="title"> ${Title} </p>
+            <p>型号：${Attr[0].val.Value}</p>
+            <p>系列：${Attr[4].val.Value}</p>
+            <p>材质：${Attr[1].val.Value}</p>
+            <p>用途：${Attr[2].val.Value}</p>
+            <p>官方指导价：￥${Attr[3].val.Value}</p>
+            <a href="/Home/Products_Show/${ID}" class="more content1">了解更多</a>
         </div>
     </li>
 </script>
 <!--内容-->
-<div class="conbox">
+<div class="conbox"  style="min-height:500px;">
     <div class="container mt20" id="container">
         <div class="s-list-left">
             <ul>
@@ -57,4 +57,4 @@
         </ul>
     </div>
 </div>
-<div style="clear:both;"></div>
+
