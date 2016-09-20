@@ -30,7 +30,7 @@ hr {   border: none;  height: 1px;}
 /*首页样式*/
 #head { background: #000; height: 110px;}
 .logo{ float: left; margin-top: 10px;}
-#nav{height:35px;float:left; margin:35px 0 0 100px;}
+#nav{height:35px;float:left; margin:35px 0 0 60px;}
 #nav li{float:left;height:40px;position:relative; text-align: center;}
 #nav li.line_off{background:none}
 #nav a{display:block;float:left;height:35px;padding-top:5px;line-height:18px;font-size:17px;color:#DAB866;position:relative; padding: 8px 20px;}
