@@ -1,0 +1,66 @@
+﻿@charset utf-8;
+
+#slideBox {
+	width:1020px;
+	overflow:hidden;
+}
+#slideBox .J_slide_list {
+	width:3600px;
+}
+#slideBox .J_slide_list .J_slide_item {
+	width:1024px;
+	height:298px;
+	float:left;
+}
+#slideBox .J_slide_list .J_slide_item img {
+	vertical-align:top;
+}
+#slideBox .J_slide_trigger {
+	width:1014px;
+	height:32px;
+	margin-top:1px;
+}
+#slideBox .J_slide_trigger li, .J_slide_trigger a {
+	width:15px;
+	overflow:hidden;
+}
+#slideBox .J_slide_trigger{
+	text-align:center;
+	width:145px;
+	margin-top:5px;
+}
+#slideBox .J_slide_trigger li {
+	display:inline;
+	margin-left:7px;
+	height:15px;
+	line-height:15px;
+	background-color:#fff;
+	border:3px solid #213f88;
+	border-radius:15px;
+}
+#slideBox .J_slide_trigger li:hover,#slideBox .J_slide_trigger li.cur  {
+	background-color:#213f88;
+	border:3px solid #213f88;
+}
+#slideBox .J_slide_trigger li a {
+	display:block;
+	height:32px;
+	color:#fff;
+	font-family:"Microsoft Yahei", "微软雅黑";
+}
+#slideBox .J_slide_trigger li.cur a, .J_slide_trigger li a:hover {
+	color:#FFF;
+	background-color:#213f88;
+	text-decoration:none;
+}
+.J_slide_advance {
+	width:705px;
+	float:left;
+	height:148px;
+	margin-top:1px;
+}
+.J_slide_advance p {
+	width:199px;
+	margin-right:1px;
+	float:left;
+}
