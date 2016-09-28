@@ -12,18 +12,13 @@ namespace fangshui.Controllers
         {
             return View();
         }
-
-        public ActionResult About()
+        public ActionResult About(string id)
         {
-            ViewBag.Message = "Your application description page.";
-
+            ViewBag.ID = id;
             return View();
         }
-
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
