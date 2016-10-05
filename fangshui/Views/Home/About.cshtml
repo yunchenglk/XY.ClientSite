@@ -1,7 +1,58 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<script type="text/javascript">
+    $(function () {
+        var result = $.GetApiData(apiurl + "/Content/" + '@ViewBag.ID');
+        if (result.status == 1) {
+            $("#Title,#Titles").html(result.data.Title);
+            $("#EnTitle,#EnTitles").html(result.data.EnTitle);
+            $("#content,#contents").html(result.data.DescriptionStr);
+            //$("#Publisher").html(result.data.Publisher);
+            //$("#Count").html(result.data.Count);
+            //$(".loading").hide();
+        }
+    })
+</script>
 
-<p>Use this area to provide additional information.</p>
+
+
+
+<div class="arc-con wrap">
+   
+    <div class="fr" style="width:100%;">
+        <div class="place">
+            <div class="place1">
+                <div class="left" id="Title">关于我们</div>
+                <div class="right">当前页面：<a href="/">首页</a>><label id="Titles">关于我们</label></div>
+            </div>
+        </div>
+        <div class="arc-content">
+            <h1>专业致力于各类防水、堵漏技术的研究</h1>
+            <div class="aside">发布者：          发布时间：2016-06-23</div>
+            <div class="content">
+                <img src="/content/images/arc.png" /><br /><br />
+                <p>
+                    卫生间漏水维修前，先要判断出卫生间漏水的原因，两种漏水原因的判断方法如下：
+                    Ⅰ：判断地面渗水的方法：只要地面用水，楼下就有渗漏水现象，地面不使用水时，楼下不再渗漏水。
+                    Ⅱ：判断水管渗漏水的方法：一般水管渗漏水量大，并且有持续性；往地漏，手盆，坐便倒水即可判断下水管没有问题，
+                    如果卫生间连续几天都没使用水，但是还有渗漏水现象，并且渗漏水没有减轻，即为上水管问题。
+                    一，如果卫生间是防水层渗漏水，而不是上下水管漏水的情况。都是不需要刨瓷砖就可以维修好的了。
+                    维修方法很简单就是使用新型的渗透型防水剂在卫生间表面再做遍防水，让水不进入地下，直接从水道流走。可到网上找
+                    亿家防水。了解更多详细情况。
+                    二，如果是上下水管的问题。而且水管是在地下，就需要考虑刨瓷砖，但并非必须重新装修卫生间。比如如果是进水管漏
+                    水，可改明管，不用漏水的水管。如果是下水管漏水，也是要找到漏水的具体位置，根据情况来确定是部分刨砖来解决，
+                    也是没有必要全部刨。
+                    下面解决问题的方法：
+                    1、将表面的灰尘、油污、积水等处理干净，并保持表面干燥 ；
+                    2、如果瓷砖缝是用填缝剂填的，需要用刀划出一个小槽；
+                    3、在瓷砖面、瓷砖缝、墙缝、管根等水泥部位，喷渗透型防水剂，一定要喷涂均匀；4、待防水剂9成干以后（大约2小时
+                    以后），用填缝膏填实所有瓷砖缝及破损和缺陷部位，管根周围等薄弱环节用填缝膏涂刷加固；5、地面与墙面连接处以及
+                    管根周围用塑钢泥做防水边；6、防水施工结束后，24小时内施工部位不能淋水。
+                    厕所卫生间用水频繁，防水处理不好就会出现渗漏水，只要找出卫生间漏水的部位和原因，及时维修，就可以保持家里的
+                    安全和舒心。
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
