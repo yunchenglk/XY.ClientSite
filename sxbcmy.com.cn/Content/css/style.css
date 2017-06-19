@@ -1692,8 +1692,7 @@ a.btn-u-large {
 }
 .social-icons li:hover a {
 	background-position:0 -38px;
-}
-
+} 
 .social_amazon {background: url(../img/icons/social/amazon.png) no-repeat;}
 .social_behance {background: url(../img/icons/social/behance.png) no-repeat;}
 .social_blogger {background: url(../img/icons/social/blogger.png) no-repeat;}
