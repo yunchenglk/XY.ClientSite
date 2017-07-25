@@ -15,7 +15,6 @@ namespace StudentInfo.Controllers
             this.id = id;
             this.name = name;
         }
-
     }
     public class HomeController : Controller
     {
@@ -41,18 +40,9 @@ namespace StudentInfo.Controllers
         {
             return View();
         }
-
-        [HttpPost]
-        public JsonResult GetSheng(int? id)
+        public ActionResult upStudentFile()
         {
-            List<sheng> list = new List<sheng>();
-            string[] names = { "山西", "北京", "河北", "陕西", "河南", "广东", "深圳", "上海", "四川", "哈尔冰", "黑龙江", "吉林" };
-            for (int i = 1; i < 11; i++)
-            {
-
-                list.Add(new sheng(i, names[i]));
-            }
-            return Json(list, JsonRequestBehavior.AllowGet);
+            return View();
         }
     }
 }

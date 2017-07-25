@@ -26,7 +26,7 @@
         $("select[gp=scy]").first().on("change", function () {
             secover();
         })
-       // $("select[gp=scy]").first().unbind();
+        // $("select[gp=scy]").first().unbind();
     })
     //获取市
     function secover() {
@@ -42,7 +42,7 @@
                 type: "POST",
                 data: { id: v, m: Math.random() },
                 success: function (data) {
-                   // alert(data.length);
+                    // alert(data.length);
                     $.each(data, function (x, y) {
                         $("select[gp=scy]:eq(1)").append("<option  value='" + y.id + "'>" + y.name + "</option>");
                     });
@@ -50,6 +50,7 @@
             })
         }
     }
+  
 
 </script>
 <style type="text/css">
@@ -60,7 +61,7 @@
 </style>
 <div class="company_identify">
     <div class="manage-head">
-        <h6 class="padding-left manage-head-con">编辑学生信息</h6>
+        <h6 class="padding-left manage-head-con" id="Testid">编辑学生信息</h6>
     </div>
     <form name="setp0" action="#" method="post" autocomplete="off">
         <div class="basic-info-detail clearfix">
