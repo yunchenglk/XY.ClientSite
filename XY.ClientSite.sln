@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.15
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bjsjhp.cn", "bjsjhp.cn\bjsjhp.cn.csproj", "{AEE4CEF5-C006-4E27-AC51-372BD3880465}"
 EndProject
@@ -28,6 +28,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentInfo", "StudentInfo\StudentInfo.csproj", "{096704D9-F4EF-4C1B-BBF7-931758A20E40}"
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "nodeTest", "nodeTest\nodeTest.njsproj", "{48162B2E-F737-4BA5-AD07-ABFE1A1F3723}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yellow", "yellow\yellow.csproj", "{F7504940-C61F-4C36-ACBE-15B650946B7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,8 +89,15 @@ Global
 		{48162B2E-F737-4BA5-AD07-ABFE1A1F3723}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48162B2E-F737-4BA5-AD07-ABFE1A1F3723}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48162B2E-F737-4BA5-AD07-ABFE1A1F3723}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7504940-C61F-4C36-ACBE-15B650946B7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7504940-C61F-4C36-ACBE-15B650946B7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7504940-C61F-4C36-ACBE-15B650946B7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7504940-C61F-4C36-ACBE-15B650946B7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D5EF73D-1C56-4D72-B14E-8835AB01A387}
 	EndGlobalSection
 EndGlobal
